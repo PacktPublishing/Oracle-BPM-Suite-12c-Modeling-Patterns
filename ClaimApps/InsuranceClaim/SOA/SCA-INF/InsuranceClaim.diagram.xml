@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dgm:gDiagram xmlns:dgm="http://xmlns.oracle.com/sca/soadgm">
+    <dgm:gService name="InsuranceClaimCase.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="429" width="137" height="168">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="422" width="156" height="182">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="InsuranceClaimCase.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/CaseService#wsdl.interface(CaseServicePortType)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>startCase</dgm:item>
+            <dgm:item>attainMilestone</dgm:item>
+            <dgm:item>revokeMilestone</dgm:item>
+            <dgm:item>abortCase</dgm:item>
+            <dgm:item>suspendCase</dgm:item>
+            <dgm:item>resumeCase</dgm:item>
+            <dgm:item>closeCase</dgm:item>
+            <dgm:item>reopenCase</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="FNOLProcess.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="67" width="137" height="96">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="60" width="156" height="110">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="FNOLProcess.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/FNOLProcess#wsdl.interface(FNOLProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/FNOLProcess#wsdl.interface(FNOLProcessPortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>start</dgm:item>
+            <dgm:item>end</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="DispatcherProcess.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="631" width="137" height="96">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="624" width="156" height="110">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="DispatcherProcess.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/DispatcherProcess#wsdl.interface(DispatcherProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/DispatcherProcess#wsdl.interface(DispatcherProcessPortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>start</dgm:item>
+            <dgm:item>end</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="VerificationProcess.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="788" width="137" height="96">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="781" width="156" height="110">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="VerificationProcess.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/VerificationProcess#wsdl.interface(VerificationProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/VerificationProcess#wsdl.interface(VerificationProcessPortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>start</dgm:item>
+            <dgm:item>end</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="ValidationProcess.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="299" width="137" height="96">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="292" width="156" height="110">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="ValidationProcess.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/ValidationProcess#wsdl.interface(ValidationProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/ValidationProcess#wsdl.interface(ValidationProcessPortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>start</dgm:item>
+            <dgm:item>end</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="CustomerAcceptanceProcess.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="928" width="137" height="96">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="921" width="156" height="110">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="CustomerAcceptanceProcess.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/CustomerAcceptanceProcess#wsdl.interface(CustomerAcceptanceProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/CustomerAcceptanceProcess#wsdl.interface(CustomerAcceptanceProcessPortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>start</dgm:item>
+            <dgm:item>end</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gComponent name="InsuranceClaimCase">
+        <dgm:body borderWidth="2" arcRad="20" X="267" Y="403" width="130" height="186">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="257" Y="396" width="150" height="202">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="InsuranceClaimCase.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/CaseService#wsdl.interface(CaseServicePortType)"/>
+        <dgm:outputPort name="InsuranceClaimCaseRules_InsuranceClaimCaseRules" X="120" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpm/case/caseDecision/InsuranceClaimCaseRules_InsuranceClaimCaseRules#wsdl.interface(IDecisionService)" callbackInterface="http://xmlns.oracle.com/bpm/case/caseDecision/InsuranceClaimCaseRules_InsuranceClaimCaseRules#wsdl.interface(IDecisionService)"/>
+        <dgm:outputPort name="FNOLProcess.service.reference" X="120" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/FNOLProcess#wsdl.interface(FNOLProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/FNOLProcess#wsdl.interface(FNOLProcessPortTypeCallBack)"/>
+        <dgm:outputPort name="VerificationProcess.service.reference" X="120" Y="65" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/VerificationProcess#wsdl.interface(VerificationProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/VerificationProcess#wsdl.interface(VerificationProcessPortTypeCallBack)"/>
+        <dgm:outputPort name="DispatcherProcess.service.reference" X="120" Y="90" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/DispatcherProcess#wsdl.interface(DispatcherProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/DispatcherProcess#wsdl.interface(DispatcherProcessPortTypeCallBack)"/>
+        <dgm:outputPort name="ValidationProcess.service.reference" X="120" Y="115" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/ValidationProcess#wsdl.interface(ValidationProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/ValidationProcess#wsdl.interface(ValidationProcessPortTypeCallBack)"/>
+        <dgm:outputPort name="CustomerAcceptanceProcess.service.reference" X="120" Y="140" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/CustomerAcceptanceProcess#wsdl.interface(CustomerAcceptanceProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/CustomerAcceptanceProcess#wsdl.interface(CustomerAcceptanceProcessPortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/case20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="InsuranceClaimCaseRules">
+        <dgm:body borderWidth="2" arcRad="20" X="540" Y="119" width="130" height="61">
+            <dgm:borderColor r="178" g="138" b="53"/>
+            <dgm:lightBgColor r="255" g="226" b="142"/>
+            <dgm:darkBgColor r="255" g="198" b="77"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="530" Y="112" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="InsuranceClaimCaseRules_InsuranceClaimCaseRules" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpm/case/caseDecision/InsuranceClaimCaseRules_InsuranceClaimCaseRules#wsdl.interface(IDecisionService)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/rules/plugins/resources/images/soa/decision_20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="FNOLProcess">
+        <dgm:body borderWidth="2" arcRad="20" X="540" Y="26" width="130" height="61">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="530" Y="19" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="FNOLProcess.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/FNOLProcess#wsdl.interface(FNOLProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/FNOLProcess#wsdl.interface(FNOLProcessPortTypeCallBack)"/>
+        <dgm:outputPort name="HumanTasks.FNOLUserTask.reference" X="120" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="FNOLUserTask">
+        <dgm:body borderWidth="2" arcRad="20" X="779" Y="52" width="130" height="61">
+            <dgm:borderColor r="109" g="136" b="65"/>
+            <dgm:lightBgColor r="201" g="224" b="155"/>
+            <dgm:darkBgColor r="157" g="195" b="93"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="769" Y="45" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="TaskService" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/workflow/resources/images/humantask_20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="VerificationProcess">
+        <dgm:body borderWidth="2" arcRad="20" X="540" Y="793" width="130" height="86">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="530" Y="786" width="150" height="102">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="VerificationProcess.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/VerificationProcess#wsdl.interface(VerificationProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/VerificationProcess#wsdl.interface(VerificationProcessPortTypeCallBack)"/>
+        <dgm:outputPort name="HumanTasks.EVerificationUserTask.reference" X="120" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:outputPort name="HumanTasks.RVerificationUserTask.reference" X="120" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="DispatcherProcess">
+        <dgm:body borderWidth="2" arcRad="20" X="540" Y="565" width="130" height="110">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="530" Y="558" width="150" height="126">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="DispatcherProcess.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/DispatcherProcess#wsdl.interface(DispatcherProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/DispatcherProcess#wsdl.interface(DispatcherProcessPortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="23" Y="4" width="20" height="20"/>
+        <dgm:publishEvents>
+            <dgm:item>DispatchServiceEvent</dgm:item>
+        </dgm:publishEvents>
+        <dgm:publishPort name="" X="120" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/circleEvent.png"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="EVerificationUserTask">
+        <dgm:body borderWidth="2" arcRad="20" X="779" Y="758" width="130" height="61">
+            <dgm:borderColor r="109" g="136" b="65"/>
+            <dgm:lightBgColor r="201" g="224" b="155"/>
+            <dgm:darkBgColor r="157" g="195" b="93"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="769" Y="751" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="TaskService" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/workflow/resources/images/humantask_20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="RVerificationUserTask">
+        <dgm:body borderWidth="2" arcRad="20" X="779" Y="853" width="130" height="61">
+            <dgm:borderColor r="109" g="136" b="65"/>
+            <dgm:lightBgColor r="201" g="224" b="155"/>
+            <dgm:darkBgColor r="157" g="195" b="93"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="769" Y="846" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="TaskService" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/workflow/resources/images/humantask_20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="ValidationProcess">
+        <dgm:body borderWidth="2" arcRad="20" X="540" Y="438" width="130" height="61">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="530" Y="431" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="ValidationProcess.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/ValidationProcess#wsdl.interface(ValidationProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/ValidationProcess#wsdl.interface(ValidationProcessPortTypeCallBack)"/>
+        <dgm:outputPort name="HumanTasks.ValidationUserTask.reference" X="120" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="ValidationUserTask">
+        <dgm:body borderWidth="2" arcRad="20" X="779" Y="389" width="130" height="61">
+            <dgm:borderColor r="109" g="136" b="65"/>
+            <dgm:lightBgColor r="201" g="224" b="155"/>
+            <dgm:darkBgColor r="157" g="195" b="93"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="769" Y="382" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="TaskService" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/workflow/resources/images/humantask_20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="CustomerAcceptanceProcess">
+        <dgm:body borderWidth="2" arcRad="20" X="540" Y="913" width="130" height="110">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="530" Y="906" width="150" height="126">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="CustomerAcceptanceProcess.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/CustomerAcceptanceProcess#wsdl.interface(CustomerAcceptanceProcessPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/CustomerAcceptanceProcess#wsdl.interface(CustomerAcceptanceProcessPortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="23" Y="4" width="20" height="20"/>
+        <dgm:publishEvents>
+            <dgm:item>CustomerRejectionEvent</dgm:item>
+        </dgm:publishEvents>
+        <dgm:publishPort name="" X="120" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/circleEvent.png"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="RejectionHandlerProcess">
+        <dgm:body borderWidth="2" arcRad="20" X="540" Y="212" width="130" height="110">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="530" Y="205" width="150" height="126">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="HumanTasks.ValidationUserTask.reference" X="120" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="23" Y="4" width="20" height="20"/>
+        <dgm:subscribeEvents>
+            <dgm:item>CustomerRejectionEvent</dgm:item>
+        </dgm:subscribeEvents>
+        <dgm:subscribePort name="" X="-10" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/circleEvent.png"/>
+    </dgm:gComponent>
+    <dgm:gWireLink source="InsuranceClaimCase.service" target="InsuranceClaimCase/InsuranceClaimCase.service" width="2">
+        <dgm:gSegment X1="168" Y1="439" X2="192" Y2="439"/>
+        <dgm:gSegment X1="192" Y1="439" X2="192" Y2="428"/>
+        <dgm:gSegment X1="192" Y1="428" X2="257" Y2="428"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="InsuranceClaimCase/InsuranceClaimCaseRules_InsuranceClaimCaseRules" target="InsuranceClaimCaseRules/InsuranceClaimCaseRules_InsuranceClaimCaseRules" width="2">
+        <dgm:gSegment X1="407" Y1="428" X2="431" Y2="428"/>
+        <dgm:gSegment X1="431" Y1="428" X2="431" Y2="144"/>
+        <dgm:gSegment X1="431" Y1="144" X2="530" Y2="144"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="FNOLProcess/HumanTasks.FNOLUserTask.reference" target="FNOLUserTask/TaskService" width="2">
+        <dgm:gSegment X1="680" Y1="51" X2="704" Y2="51"/>
+        <dgm:gSegment X1="704" Y1="51" X2="704" Y2="77"/>
+        <dgm:gSegment X1="704" Y1="77" X2="769" Y2="77"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="InsuranceClaimCase/FNOLProcess.service.reference" target="FNOLProcess/FNOLProcess.service" width="2">
+        <dgm:gSegment X1="407" Y1="453" X2="446" Y2="453"/>
+        <dgm:gSegment X1="446" Y1="453" X2="446" Y2="51"/>
+        <dgm:gSegment X1="446" Y1="51" X2="530" Y2="51"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="FNOLProcess.service" target="FNOLProcess/FNOLProcess.service" width="2">
+        <dgm:gSegment X1="168" Y1="77" X2="431" Y2="77"/>
+        <dgm:gSegment X1="431" Y1="77" X2="431" Y2="51"/>
+        <dgm:gSegment X1="431" Y1="51" X2="530" Y2="51"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="InsuranceClaimCase/VerificationProcess.service.reference" target="VerificationProcess/VerificationProcess.service" width="2">
+        <dgm:gSegment X1="407" Y1="478" X2="491" Y2="478"/>
+        <dgm:gSegment X1="491" Y1="478" X2="491" Y2="818"/>
+        <dgm:gSegment X1="491" Y1="818" X2="530" Y2="818"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="DispatcherProcess.service" target="DispatcherProcess/DispatcherProcess.service" width="2">
+        <dgm:gSegment X1="168" Y1="641" X2="431" Y2="641"/>
+        <dgm:gSegment X1="431" Y1="641" X2="431" Y2="590"/>
+        <dgm:gSegment X1="431" Y1="590" X2="530" Y2="590"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="InsuranceClaimCase/DispatcherProcess.service.reference" target="DispatcherProcess/DispatcherProcess.service" width="2">
+        <dgm:gSegment X1="407" Y1="503" X2="476" Y2="503"/>
+        <dgm:gSegment X1="476" Y1="503" X2="476" Y2="590"/>
+        <dgm:gSegment X1="476" Y1="590" X2="530" Y2="590"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="VerificationProcess/HumanTasks.EVerificationUserTask.reference" target="EVerificationUserTask/TaskService" width="2">
+        <dgm:gSegment X1="680" Y1="818" X2="704" Y2="818"/>
+        <dgm:gSegment X1="704" Y1="818" X2="704" Y2="783"/>
+        <dgm:gSegment X1="704" Y1="783" X2="769" Y2="783"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="VerificationProcess/HumanTasks.RVerificationUserTask.reference" target="RVerificationUserTask/TaskService" width="2">
+        <dgm:gSegment X1="680" Y1="843" X2="704" Y2="843"/>
+        <dgm:gSegment X1="704" Y1="843" X2="704" Y2="878"/>
+        <dgm:gSegment X1="704" Y1="878" X2="769" Y2="878"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="VerificationProcess.service" target="VerificationProcess/VerificationProcess.service" width="2">
+        <dgm:gSegment X1="168" Y1="798" X2="431" Y2="798"/>
+        <dgm:gSegment X1="431" Y1="798" X2="431" Y2="818"/>
+        <dgm:gSegment X1="431" Y1="818" X2="530" Y2="818"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="ValidationProcess/HumanTasks.ValidationUserTask.reference" target="ValidationUserTask/TaskService" width="2">
+        <dgm:gSegment X1="680" Y1="463" X2="704" Y2="463"/>
+        <dgm:gSegment X1="704" Y1="463" X2="704" Y2="414"/>
+        <dgm:gSegment X1="704" Y1="414" X2="769" Y2="414"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="ValidationProcess.service" target="ValidationProcess/ValidationProcess.service" width="2">
+        <dgm:gSegment X1="168" Y1="309" X2="506" Y2="309"/>
+        <dgm:gSegment X1="506" Y1="309" X2="506" Y2="463"/>
+        <dgm:gSegment X1="506" Y1="463" X2="530" Y2="463"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="InsuranceClaimCase/ValidationProcess.service.reference" target="ValidationProcess/ValidationProcess.service" width="2">
+        <dgm:gSegment X1="407" Y1="528" X2="461" Y2="528"/>
+        <dgm:gSegment X1="461" Y1="528" X2="461" Y2="463"/>
+        <dgm:gSegment X1="461" Y1="463" X2="530" Y2="463"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="InsuranceClaimCase/CustomerAcceptanceProcess.service.reference" target="CustomerAcceptanceProcess/CustomerAcceptanceProcess.service" width="2">
+        <dgm:gSegment X1="407" Y1="553" X2="446" Y2="553"/>
+        <dgm:gSegment X1="446" Y1="553" X2="446" Y2="938"/>
+        <dgm:gSegment X1="446" Y1="938" X2="530" Y2="938"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="RejectionHandlerProcess/HumanTasks.ValidationUserTask.reference" target="ValidationUserTask/TaskService" width="2">
+        <dgm:gSegment X1="680" Y1="237" X2="719" Y2="237"/>
+        <dgm:gSegment X1="719" Y1="237" X2="719" Y2="414"/>
+        <dgm:gSegment X1="719" Y1="414" X2="769" Y2="414"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="CustomerAcceptanceProcess.service" target="CustomerAcceptanceProcess/CustomerAcceptanceProcess.service" width="2">
+        <dgm:gSegment X1="168" Y1="938" X2="530" Y2="938"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+</dgm:gDiagram>

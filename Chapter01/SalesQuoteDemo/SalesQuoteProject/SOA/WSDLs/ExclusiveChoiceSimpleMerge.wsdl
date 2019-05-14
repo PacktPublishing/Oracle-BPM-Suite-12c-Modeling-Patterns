@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<wsdl:definitions targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/ExclusiveChoiceSimpleMerge" xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnProcess/ExclusiveChoiceSimpleMerge"  xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"  xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"  xmlns:tns6="http://www.mycompany.com/ns/salesquote"  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" >
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/ExclusiveChoiceSimpleMerge">
+            <xsd:import namespace="http://www.mycompany.com/ns/salesquote" schemaLocation="../Schemas/Quote.xsd"/>
+            <xsd:element name="newQuoteApplication">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="tns6:QuoteRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="quoteDocsReceived">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="tns6:QuoteRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="endResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="tns6:QuoteRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="reQuoteApplication">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="tns6:QuoteRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="newQuoteApplication">
+        <wsdl:part name="parameters" element="tns:newQuoteApplication"/>
+    </wsdl:message>
+    <wsdl:message name="quoteDocsReceived">
+        <wsdl:part name="parameters" element="tns:quoteDocsReceived"/>
+    </wsdl:message>
+    <wsdl:message name="endResponse">
+        <wsdl:part name="parameters" element="tns:endResponse"/>
+    </wsdl:message>
+    <wsdl:message name="reQuoteApplication">
+        <wsdl:part name="parameters" element="tns:reQuoteApplication"/>
+    </wsdl:message>
+    <wsdl:portType name="ExclusiveChoiceSimpleMergePortTypeCallBack">
+        <wsdl:operation name="end">
+            <wsdl:input message="tns:endResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="ExclusiveChoiceSimpleMergePortType">
+        <wsdl:operation name="newQuoteApplication">
+            <wsdl:input message="tns:newQuoteApplication"/>
+        </wsdl:operation>
+        <wsdl:operation name="reQuoteApplication">
+            <wsdl:input message="tns:reQuoteApplication"/>
+        </wsdl:operation>
+        <wsdl:operation name="quoteDocsReceived">
+            <wsdl:input message="tns:quoteDocsReceived"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <plnk:partnerLinkType name="ExclusiveChoiceSimpleMergePortTypePartnerLinkType">
+        <plnk:role name="ExclusiveChoiceSimpleMergePortTypeProvider">
+            <plnk:portType name="tns:ExclusiveChoiceSimpleMergePortType"/>
+        </plnk:role>
+    </plnk:partnerLinkType>
+</wsdl:definitions>

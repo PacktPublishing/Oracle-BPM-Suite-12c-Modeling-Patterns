@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.64.93"
+          id="Payments" Package="ValidateClaimTaskUI_ValidateClaimTask"
+          BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Payments"
+          isJavaBased="false">
+  <Attribute Name="paymentMethod" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="nextSiblingNamespace"
+                  Value="http://www.Claim4Insurance.org"/>
+        <Property Name="nextSibling" Value="payeeName"/>
+        <Property Name="minOccurs" Value="0"/>
+        <Property Name="maxOccurs" Value="1"/>
+        <Property Name="LABEL" Value="Payment Method"/>
+        <Property Name="LeafElement_hint" Value="LeafElement_no_attribute"/>
+        <Property Name="nillable" Value="false"/>
+        <Property Name="originalName" Value="paymentMethod"/>
+        <Property Name="targetNamespace"
+                  Value="http://www.Claim4Insurance.org"/>
+        <Property Name="type" Value="java.lang.String"/>
+        <Property Name="enumeration"
+                  Value="[Credit, Debit, Paypal, Wire, Check]"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="payeeName" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="nextSiblingNamespace"
+                  Value="http://www.Claim4Insurance.org"/>
+        <Property Name="nextSibling" Value="payeeAddress"/>
+        <Property Name="minOccurs" Value="0"/>
+        <Property Name="maxOccurs" Value="1"/>
+        <Property Name="LABEL" Value="Payee Name"/>
+        <Property Name="LeafElement_hint" Value="LeafElement_no_attribute"/>
+        <Property Name="nillable" Value="false"/>
+        <Property Name="originalName" Value="payeeName"/>
+        <Property Name="targetNamespace"
+                  Value="http://www.Claim4Insurance.org"/>
+        <Property Name="type" Value="java.lang.String"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="paymentAmount" Type="java.lang.Long">
+    <Properties>
+      <CustomProperties>
+        <Property Name="minInclusive" Value="-9223372036854775808"/>
+        <Property Name="originalName" Value="paymentAmount"/>
+        <Property Name="LeafElement_hint" Value="LeafElement_no_attribute"/>
+        <Property Name="nextSiblingNamespace"
+                  Value="http://www.Claim4Insurance.org"/>
+        <Property Name="nextSibling" Value="invoiceNumber"/>
+        <Property Name="fractionDigits" Value="0"/>
+        <Property Name="nillable" Value="false"/>
+        <Property Name="LABEL" Value="Payment Amount"/>
+        <Property Name="maxOccurs" Value="1"/>
+        <Property Name="maxInclusive" Value="9223372036854775807"/>
+        <Property Name="type" Value="java.lang.Long"/>
+        <Property Name="targetNamespace"
+                  Value="http://www.Claim4Insurance.org"/>
+        <Property Name="minOccurs" Value="0"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="invoiceNumber" Type="java.math.BigInteger">
+    <Properties>
+      <CustomProperties>
+        <Property Name="nextSiblingNamespace"
+                  Value="http://www.Claim4Insurance.org"/>
+        <Property Name="nextSibling" Value="invoiceDate"/>
+        <Property Name="minOccurs" Value="0"/>
+        <Property Name="fractionDigits" Value="0"/>
+        <Property Name="maxOccurs" Value="1"/>
+        <Property Name="LABEL" Value="Invoice Number"/>
+        <Property Name="LeafElement_hint" Value="LeafElement_no_attribute"/>
+        <Property Name="nillable" Value="false"/>
+        <Property Name="originalName" Value="invoiceNumber"/>
+        <Property Name="targetNamespace"
+                  Value="http://www.Claim4Insurance.org"/>
+        <Property Name="type" Value="java.math.BigInteger"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="invoiceDate" Type="java.sql.Timestamp">
+    <Properties>
+      <CustomProperties>
+        <Property Name="nextSiblingNamespace"
+                  Value="http://www.Claim4Insurance.org"/>
+        <Property Name="nextSibling" Value="memo"/>
+        <Property Name="minOccurs" Value="0"/>
+        <Property Name="maxOccurs" Value="1"/>
+        <Property Name="LABEL" Value="Invoice Date"/>
+        <Property Name="LeafElement_hint" Value="LeafElement_no_attribute"/>
+        <Property Name="nillable" Value="false"/>
+        <Property Name="originalName" Value="invoiceDate"/>
+        <Property Name="targetNamespace"
+                  Value="http://www.Claim4Insurance.org"/>
+        <Property Name="type" Value="dateTime"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <Attribute Name="memo" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="minOccurs" Value="0"/>
+        <Property Name="maxOccurs" Value="1"/>
+        <Property Name="LABEL" Value="Memo"/>
+        <Property Name="LeafElement_hint" Value="LeafElement_no_attribute"/>
+        <Property Name="nillable" Value="false"/>
+        <Property Name="originalName" Value="memo"/>
+        <Property Name="targetNamespace"
+                  Value="http://www.Claim4Insurance.org"/>
+        <Property Name="type" Value="java.lang.String"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <AccessorAttribute id="payeeAddress" IsCollection="true"
+                     BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Address"
+                     CollectionBeanClass="ValidateClaimTaskUI_ValidateClaimTask.Address_payeeAddress_Operations">
+    <Properties>
+      <Property Name="nextSiblingNamespace"
+                Value="http://www.Claim4Insurance.org"/>
+      <Property Name="nextSibling" Value="paymentAmount"/>
+      <Property Name="minOccurs" Value="0"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Payee Address"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="payeeAddress"/>
+      <Property Name="targetNamespace" Value="http://www.Claim4Insurance.org"/>
+    </Properties>
+  </AccessorAttribute>
+</JavaBean>

@@ -1,0 +1,203 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <ns1:startCaseInputMessage xmlns:ns1="http://xmlns.oracle.com/CaseService/types"
+                               xmlns:ns2="http://xmlns.oracle.com/bpm/case">
+      <ns2:case>
+        <ns2:caseId>1122</ns2:caseId>
+        <ns2:caseHeader>
+          <ns2:caseId>1122</ns2:caseId>
+          <ns2:caseNumber>1122</ns2:caseNumber>
+          <ns2:caseName>1122</ns2:caseName>
+          <ns2:caseDisplayName></ns2:caseDisplayName>
+          <ns2:title></ns2:title>
+          <ns2:summary></ns2:summary>
+          <ns2:priority>1</ns2:priority>
+          <ns2:createdBy></ns2:createdBy>
+          <ns2:createdByDisplayName></ns2:createdByDisplayName>
+          <ns2:createdDate>2014-12-12T00:00:00</ns2:createdDate>
+          <ns2:state>Y</ns2:state>
+          <ns2:stateDisplayName></ns2:stateDisplayName>
+          <ns2:userDefinedStatus></ns2:userDefinedStatus>
+          <ns2:userDefinedStatusDisplayName></ns2:userDefinedStatusDisplayName>
+          <ns2:ecmFolder></ns2:ecmFolder>
+          <ns2:caseDefinitionId>1122</ns2:caseDefinitionId>
+          <ns2:caseDefinitionName>1122</ns2:caseDefinitionName>
+          <ns2:caseNamespace>1122</ns2:caseNamespace>
+          <ns2:identificationKey></ns2:identificationKey>
+          <ns2:category>
+            <ns2:name>InsuranceClaim</ns2:name>
+            <ns2:displayName>InsuranceClaim</ns2:displayName>
+          </ns2:category>
+          <ns2:outcome></ns2:outcome>
+          <ns2:outcomeDisplayName></ns2:outcomeDisplayName>
+          <ns2:sca>
+            <ns2:applicationName></ns2:applicationName>
+            <ns2:componentName></ns2:componentName>
+            <ns2:compositeDN></ns2:compositeDN>
+            <ns2:compositeInstanceId></ns2:compositeInstanceId>
+            <ns2:compositeName></ns2:compositeName>
+            <ns2:compositeVersion></ns2:compositeVersion>
+            <ns2:ecid></ns2:ecid>
+            <ns2:parentComponentInstanceId></ns2:parentComponentInstanceId>
+            <ns2:parentComponentInstRefId></ns2:parentComponentInstRefId>
+            <ns2:headerProperties></ns2:headerProperties>
+            <ns2:invokedComponent></ns2:invokedComponent>
+          </ns2:sca>
+          <ns2:caseSummaryFormURI></ns2:caseSummaryFormURI>
+          <ns2:organizationalUnitId></ns2:organizationalUnitId>
+          <ns2:completedCaseActivityList></ns2:completedCaseActivityList>
+          <ns2:userPermissions>
+            <ns2:userId></ns2:userId>
+          </ns2:userPermissions>
+          <ns2:userActions></ns2:userActions>
+        </ns2:caseHeader>
+        <ns2:stakeHolders></ns2:stakeHolders>
+        <ns2:milestones></ns2:milestones>
+        <ns2:data>
+          <ns2:id>1122</ns2:id>
+          <ns2:caseId>1122</ns2:caseId>
+          <ns2:name>InsuranceClaim</ns2:name>
+          <ns2:displayName>InsuranceClaim</ns2:displayName>
+          <ns2:state></ns2:state>
+          <ns2:data>&lt;ns2:Claim&gt; &lt;ns2:DeclainClaim&gt;
+                    &lt;ns2:caseDeclineDate&gt;2014-12-12T00:00:00&lt;/ns2:caseDeclineDate&gt;
+                    &lt;ns2:reason&gt;ABC&lt;/ns2:reason&gt; &lt;ns2:comments&gt;ABC&lt;/ns2:comments&gt;
+                    &lt;/ns2:DeclainClaim&gt; &lt;ns2:Settlement&gt; &lt;ns2:offers&gt;
+                    &lt;ns2:version&gt;23&lt;/ns2:version&gt; &lt;ns2:uploadOffer&gt;StringValue&lt;/ns2:uploadOffer&gt;
+                    &lt;ns2:uploadDate&gt;2014-12-12T00:00:00&lt;/ns2:uploadDate&gt;
+                    &lt;ns2:sentDate&gt;2014-12-12T00:00:00&lt;/ns2:sentDate&gt;
+                    &lt;ns2:comment&gt;StringValue&lt;/ns2:comment&gt; &lt;/ns2:offers&gt; &lt;ns2:payments&gt;
+                    &lt;ns2:paymentMethod&gt;Credit&lt;/ns2:paymentMethod&gt;
+                    &lt;ns2:payeeName&gt;StringValue&lt;/ns2:payeeName&gt; &lt;ns2:payeeAddress&gt;
+                    &lt;ns2:locationType&gt;Street&lt;/ns2:locationType&gt;
+                    &lt;ns2:addressLine1&gt;StringValue&lt;/ns2:addressLine1&gt;
+                    &lt;ns2:addressLine2&gt;StringValue&lt;/ns2:addressLine2&gt;
+                    &lt;ns2:addressLine3&gt;StringValue&lt;/ns2:addressLine3&gt;
+                    &lt;ns2:city&gt;StringValue&lt;/ns2:city&gt; &lt;ns2:country&gt;StringValue&lt;/ns2:country&gt;
+                    &lt;ns2:state&gt;StringValue&lt;/ns2:state&gt; &lt;ns2:zipCode&gt;StringValue&lt;/ns2:zipCode&gt;
+                    &lt;/ns2:payeeAddress&gt; &lt;ns2:paymentAmount&gt;23&lt;/ns2:paymentAmount&gt;
+                    &lt;ns2:invoiceNumber&gt;23&lt;/ns2:invoiceNumber&gt;
+                    &lt;ns2:invoiceDate&gt;2014-12-12T00:00:00&lt;/ns2:invoiceDate&gt;
+                    &lt;ns2:memo&gt;StringValue&lt;/ns2:memo&gt; &lt;/ns2:payments&gt;
+                    &lt;ns2:faultSubject&gt;StringValue&lt;/ns2:faultSubject&gt; &lt;/ns2:Settlement&gt; &lt;ns2:FNOL&gt;
+                    &lt;ns2:lossType&gt;AccidentWithInjury&lt;/ns2:lossType&gt;
+                    &lt;ns2:lossDate&gt;2014-12-12T00:00:00&lt;/ns2:lossDate&gt;
+                    &lt;ns2:reportedChannel&gt;Agent&lt;/ns2:reportedChannel&gt;
+                    &lt;ns2:description&gt;StringValue&lt;/ns2:description&gt; &lt;ns2:lossAddress&gt;
+                    &lt;ns2:locationType&gt;Street&lt;/ns2:locationType&gt;
+                    &lt;ns2:addressLine1&gt;StringValue&lt;/ns2:addressLine1&gt;
+                    &lt;ns2:addressLine2&gt;StringValue&lt;/ns2:addressLine2&gt;
+                    &lt;ns2:addressLine3&gt;StringValue&lt;/ns2:addressLine3&gt;
+                    &lt;ns2:city&gt;StringValue&lt;/ns2:city&gt; &lt;ns2:country&gt;StringValue&lt;/ns2:country&gt;
+                    &lt;ns2:state&gt;StringValue&lt;/ns2:state&gt; &lt;ns2:zipCode&gt;StringValue&lt;/ns2:zipCode&gt;
+                    &lt;/ns2:lossAddress&gt; &lt;ns2:lossDetails&gt;
+                    &lt;ns2:noOfVehiclesInvolved&gt;StringValue&lt;/ns2:noOfVehiclesInvolved&gt;
+                    &lt;ns2:noOfWitness&gt;StringValue&lt;/ns2:noOfWitness&gt;
+                    &lt;ns2:whoWasDriving&gt;StringValue&lt;/ns2:whoWasDriving&gt;
+                    &lt;ns2:vehicleTowed&gt;StringValue&lt;/ns2:vehicleTowed&gt;
+                    &lt;ns2:towingRequest&gt;StringValue&lt;/ns2:towingRequest&gt;
+                    &lt;ns2:damageDescription&gt;StringValue&lt;/ns2:damageDescription&gt;
+                    &lt;ns2:injuryDescription&gt;StringValue&lt;/ns2:injuryDescription&gt;
+                    &lt;ns2:policeReportFiled&gt;StringValue&lt;/ns2:policeReportFiled&gt;
+                    &lt;ns2:policeReportFiledDate&gt;2014-12-12T00:00:00&lt;/ns2:policeReportFiledDate&gt;
+                    &lt;ns2:policereportNumber&gt;StringValue&lt;/ns2:policereportNumber&gt;
+                    &lt;ns2:policeDepartment&gt;StringValue&lt;/ns2:policeDepartment&gt; &lt;/ns2:lossDetails&gt;
+                    &lt;ns2:involvedParties&gt; &lt;ns2:involvementType&gt;Claimant&lt;/ns2:involvementType&gt;
+                    &lt;ns2:partyDetails&gt; &lt;ns2:salutation&gt;StringValue&lt;/ns2:salutation&gt;
+                    &lt;ns2:fName&gt;StringValue&lt;/ns2:fName&gt; &lt;ns2:mName&gt;StringValue&lt;/ns2:mName&gt;
+                    &lt;ns2:lName&gt;StringValue&lt;/ns2:lName&gt;
+                    &lt;ns2:maritialStatus&gt;StringValue&lt;/ns2:maritialStatus&gt;
+                    &lt;ns2:gender&gt;StringValue&lt;/ns2:gender&gt; &lt;ns2:DOB&gt;2014-12-12T00:00:00&lt;/ns2:DOB&gt;
+                    &lt;ns2:SSN&gt;StringValue&lt;/ns2:SSN&gt; &lt;ns2:nationality&gt;StringValue&lt;/ns2:nationality&gt;
+                    &lt;ns2:contact&gt; &lt;ns2:email&gt;StringValue&lt;/ns2:email&gt;
+                    &lt;ns2:workPhone&gt;StringValue&lt;/ns2:workPhone&gt; &lt;ns2:fax&gt;StringValue&lt;/ns2:fax&gt;
+                    &lt;ns2:cell&gt;StringValue&lt;/ns2:cell&gt; &lt;ns2:homePhone&gt;StringValue&lt;/ns2:homePhone&gt;
+                    &lt;/ns2:contact&gt; &lt;ns2:contact&gt; &lt;ns2:email&gt;StringValue&lt;/ns2:email&gt;
+                    &lt;ns2:workPhone&gt;StringValue&lt;/ns2:workPhone&gt; &lt;ns2:fax&gt;StringValue&lt;/ns2:fax&gt;
+                    &lt;ns2:cell&gt;StringValue&lt;/ns2:cell&gt; &lt;ns2:homePhone&gt;StringValue&lt;/ns2:homePhone&gt;
+                    &lt;/ns2:contact&gt; &lt;ns2:address&gt; &lt;ns2:locationType&gt;Street&lt;/ns2:locationType&gt;
+                    &lt;ns2:addressLine1&gt;StringValue&lt;/ns2:addressLine1&gt;
+                    &lt;ns2:addressLine2&gt;StringValue&lt;/ns2:addressLine2&gt;
+                    &lt;ns2:addressLine3&gt;StringValue&lt;/ns2:addressLine3&gt;
+                    &lt;ns2:city&gt;StringValue&lt;/ns2:city&gt; &lt;ns2:country&gt;StringValue&lt;/ns2:country&gt;
+                    &lt;ns2:state&gt;StringValue&lt;/ns2:state&gt; &lt;ns2:zipCode&gt;StringValue&lt;/ns2:zipCode&gt;
+                    &lt;/ns2:address&gt; &lt;ns2:address&gt; &lt;ns2:locationType&gt;Street&lt;/ns2:locationType&gt;
+                    &lt;ns2:addressLine1&gt;StringValue&lt;/ns2:addressLine1&gt;
+                    &lt;ns2:addressLine2&gt;StringValue&lt;/ns2:addressLine2&gt;
+                    &lt;ns2:addressLine3&gt;StringValue&lt;/ns2:addressLine3&gt;
+                    &lt;ns2:city&gt;StringValue&lt;/ns2:city&gt; &lt;ns2:country&gt;StringValue&lt;/ns2:country&gt;
+                    &lt;ns2:state&gt;StringValue&lt;/ns2:state&gt; &lt;ns2:zipCode&gt;StringValue&lt;/ns2:zipCode&gt;
+                    &lt;/ns2:address&gt; &lt;/ns2:partyDetails&gt; &lt;/ns2:involvedParties&gt; &lt;ns2:serviceProvider&gt;
+                    &lt;ns2:providerName&gt;StringValue&lt;/ns2:providerName&gt;
+                    &lt;ns2:messageSubject&gt;StringValue&lt;/ns2:messageSubject&gt;
+                    &lt;ns2:messageDetails&gt;StringValue&lt;/ns2:messageDetails&gt; &lt;/ns2:serviceProvider&gt;
+                    &lt;ns2:sensitivity&gt;Expert&lt;/ns2:sensitivity&gt; &lt;ns2:fastTrackFlag&gt;Yes&lt;/ns2:fastTrackFlag&gt;
+                    &lt;ns2:claimValidated&gt;Yes&lt;/ns2:claimValidated&gt; &lt;ns2:policyDetails&gt;
+                    &lt;ns2:policyName&gt;&lt;/ns2:policyName&gt; &lt;ns2:policyNumber&gt;&lt;/ns2:policyNumber&gt;
+                    &lt;ns2:primaryInsured&gt;&lt;/ns2:primaryInsured&gt; &lt;ns2:insuredItem&gt;&lt;/ns2:insuredItem&gt;
+                    &lt;/ns2:policyDetails&gt; &lt;/ns2:FNOL&gt; &lt;ns2:CloseClaimCase&gt;
+                    &lt;ns2:caseCloseDate&gt;2014-12-12T00:00:00&lt;/ns2:caseCloseDate&gt;
+                    &lt;ns2:reason&gt;StringValue&lt;/ns2:reason&gt; &lt;ns2:comments&gt;StringValue&lt;/ns2:comments&gt;
+                    &lt;/ns2:CloseClaimCase&gt; &lt;ns2:Appraisal&gt; &lt;ns2:examineDamage&gt;
+                    &lt;ns2:examineDateTime&gt;2014-12-12T00:00:00&lt;/ns2:examineDateTime&gt; &lt;ns2:address&gt;
+                    &lt;ns2:locationType&gt;Street&lt;/ns2:locationType&gt;
+                    &lt;ns2:addressLine1&gt;StringValue&lt;/ns2:addressLine1&gt;
+                    &lt;ns2:addressLine2&gt;StringValue&lt;/ns2:addressLine2&gt;
+                    &lt;ns2:addressLine3&gt;StringValue&lt;/ns2:addressLine3&gt;
+                    &lt;ns2:city&gt;StringValue&lt;/ns2:city&gt; &lt;ns2:country&gt;StringValue&lt;/ns2:country&gt;
+                    &lt;ns2:state&gt;StringValue&lt;/ns2:state&gt; &lt;ns2:zipCode&gt;StringValue&lt;/ns2:zipCode&gt;
+                    &lt;/ns2:address&gt; &lt;ns2:claimantPresent&gt;Yes&lt;/ns2:claimantPresent&gt;
+                    &lt;ns2:photosUploaded&gt;Yes&lt;/ns2:photosUploaded&gt; &lt;/ns2:examineDamage&gt;
+                    &lt;ns2:vehicalDetails&gt; &lt;ns2:vehicalBuild&gt; &lt;ns2:make&gt;StringValue&lt;/ns2:make&gt;
+                    &lt;ns2:model&gt;StringValue&lt;/ns2:model&gt; &lt;ns2:year&gt;StringValue&lt;/ns2:year&gt;
+                    &lt;ns2:color&gt;StringValue&lt;/ns2:color&gt;
+                    &lt;ns2:lisenceNumber&gt;StringValue&lt;/ns2:lisenceNumber&gt;
+                    &lt;ns2:VINNumber&gt;23&lt;/ns2:VINNumber&gt;
+                    &lt;ns2:registrationVerified&gt;Yes&lt;/ns2:registrationVerified&gt; &lt;/ns2:vehicalBuild&gt;
+                    &lt;ns2:vehicalDamage&gt; &lt;ns2:driverFront&gt;Yes&lt;/ns2:driverFront&gt;
+                    &lt;ns2:passangerFront&gt;Yes&lt;/ns2:passangerFront&gt;
+                    &lt;ns2:driverSide&gt;Yes&lt;/ns2:driverSide&gt; &lt;ns2:passangerSide&gt;Yes&lt;/ns2:passangerSide&gt;
+                    &lt;ns2:driverRear&gt;Yes&lt;/ns2:driverRear&gt; &lt;ns2:passangerRear&gt;Yes&lt;/ns2:passangerRear&gt;
+                    &lt;ns2:frontEnd&gt;Yes&lt;/ns2:frontEnd&gt; &lt;ns2:rearEnd&gt;Yes&lt;/ns2:rearEnd&gt;
+                    &lt;ns2:roof&gt;Yes&lt;/ns2:roof&gt; &lt;ns2:damage&gt;Yes&lt;/ns2:damage&gt;
+                    &lt;ns2:fireDamage&gt;Yes&lt;/ns2:fireDamage&gt; &lt;ns2:interior&gt;Yes&lt;/ns2:interior&gt;
+                    &lt;ns2:allPanels&gt;Yes&lt;/ns2:allPanels&gt; &lt;ns2:engine&gt;Yes&lt;/ns2:engine&gt;
+                    &lt;ns2:totalLoss&gt;Yes&lt;/ns2:totalLoss&gt; &lt;ns2:window&gt;Yes&lt;/ns2:window&gt;
+                    &lt;ns2:windsheild&gt;Yes&lt;/ns2:windsheild&gt; &lt;ns2:underCarriage&gt;Yes&lt;/ns2:underCarriage&gt;
+                    &lt;ns2:description&gt;StringValue&lt;/ns2:description&gt; &lt;/ns2:vehicalDamage&gt;
+                    &lt;/ns2:vehicalDetails&gt; &lt;ns2:estimatedCost&gt;
+                    &lt;ns2:estimationCompleted&gt;Yes&lt;/ns2:estimationCompleted&gt;
+                    &lt;ns2:estimatedCost&gt;23&lt;/ns2:estimatedCost&gt;
+                    &lt;ns2:comment&gt;StringValue&lt;/ns2:comment&gt;
+                    &lt;ns2:estimationDescription&gt;StringValue&lt;/ns2:estimationDescription&gt;
+                    &lt;/ns2:estimatedCost&gt; &lt;ns2:declaration&gt;
+                    &lt;ns2:declarationDocumentUploaded&gt;Yes&lt;/ns2:declarationDocumentUploaded&gt;
+                    &lt;/ns2:declaration&gt; &lt;/ns2:Appraisal&gt; &lt;ns2:Evaluation&gt; &lt;ns2:track&gt;
+                    &lt;ns2:reserve&gt; &lt;ns2:reserveAmount&gt;&lt;/ns2:reserveAmount&gt;
+                    &lt;ns2:payments&gt;&lt;/ns2:payments&gt; &lt;ns2:outstandingReserve&gt;&lt;/ns2:outstandingReserve&gt;
+                    &lt;ns2:lastUpdated&gt;StringValue&lt;/ns2:lastUpdated&gt;
+                    &lt;ns2:comments&gt;StringValue&lt;/ns2:comments&gt; &lt;/ns2:reserve&gt; &lt;/ns2:track&gt;
+                    &lt;/ns2:Evaluation&gt; &lt;/ns2:Claim&gt;</ns2:data>
+          <ns2:updatedDate>2014-12-12T00:00:00</ns2:updatedDate>
+          <ns2:updatedBy>CSR</ns2:updatedBy>
+          <ns2:updatedByDisplayName></ns2:updatedByDisplayName>
+          <ns2:caseDataFormUrl></ns2:caseDataFormUrl>
+          <ns2:comment>
+            <ns2:id>1122</ns2:id>
+            <ns2:caseId>1122</ns2:caseId>
+            <ns2:comment>1122</ns2:comment>
+            <ns2:caseObjectId>1122</ns2:caseObjectId>
+            <ns2:caseObjectType>1122</ns2:caseObjectType>
+            <ns2:isSystemComment>true</ns2:isSystemComment>
+            <ns2:dateAdded>2014-12-12T00:00:00</ns2:dateAdded>
+            <ns2:addedBy>CSR</ns2:addedBy>
+            <ns2:addedByDisplayName>CSR</ns2:addedByDisplayName>
+          </ns2:comment>
+        </ns2:data>
+        <ns2:links></ns2:links>
+        <ns2:comments></ns2:comments>
+        <ns2:caseFabricHeaderProperty></ns2:caseFabricHeaderProperty>
+      </ns2:case>
+    </ns1:startCaseInputMessage>
+  </soap:Body>
+</soap:Envelope>

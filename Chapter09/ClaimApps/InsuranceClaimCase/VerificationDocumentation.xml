@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.97" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="Verification">
+        <topicDocumentations>
+            <topicDocumentation name="Verification">
+                <descriptions>
+                    <description locale="en">Verification</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT10124408186553">
+                <labels>
+                    <label locale="en">EVerificationTask</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT10124424282175">
+                <labels>
+                    <label locale="en">RVerificationTask</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT10124344510353">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT10124344510618">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW10124394932129">
+                <labels>
+                    <label locale="en">CheckSensitivity?</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT10128640824050">
+                <labels>
+                    <label locale="en">DispatchServiceProvider</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf34"/>
+            <topicDocumentation name="sf31">
+                <labels>
+                    <label locale="en">ExpertAgent</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf32"/>
+            <topicDocumentation name="sf35"/>
+            <topicDocumentation name="sf37"/>
+            <topicDocumentation name="sf39"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.64.93"
+          id="fastTrack_fastTrack_Operations"
+          Package="UpdateClaimTaskUI_UpdateClaimTask"
+          BeanClass="UpdateClaimTaskUI_UpdateClaimTask.fastTrack_fastTrack_Operations"
+          isJavaBased="false">
+  <BuiltinOperation id="CreateInsert"/>
+  <BuiltinOperation id="Delete"/>
+</JavaBean>

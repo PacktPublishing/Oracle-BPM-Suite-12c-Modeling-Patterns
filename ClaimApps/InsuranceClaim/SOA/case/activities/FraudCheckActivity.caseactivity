@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<caseActivity targetNamespace="http://xmlns.oracle.com/InsuranceClaimCase/FraudCheckActivity" xmlns:ns2="http://xmlns.oracle.com/bpm/case/metadata/extension" xmlns="http://xmlns.oracle.com/bpm/case/activity" xmlns:ns4="http://xmlns.oracle.com/bpm/case/metadata/common" xmlns:ns3="http://xmlns.oracle.com/bpm/case/metadata">
+    <name>FraudCheckActivity</name>
+    <activityDefinitionId>${domain_id}_${process_id}_${process_revision}_FraudCheckActivity</activityDefinitionId>
+    <activityType>BPMN</activityType>
+    <repeatable>false</repeatable>
+    <required>false</required>
+    <manual>false</manual>
+    <isGlobal>false</isGlobal>
+    <isConditional>true</isConditional>
+    <bpmnActivity>
+        <parameters>
+            <inputs>
+                <parameter>
+                    <caseDataInput>
+                        <activityParamName>FraudCheckProcessIN</activityParamName>
+                        <elementName>Claim</elementName>
+                        <caseDataName>FNOLProcessIN</caseDataName>
+                    </caseDataInput>
+                </parameter>
+            </inputs>
+            <outputs>
+                <output>
+                    <parameters>
+                        <parameter>
+                            <nmOutput>
+                                <activityParamName>FraudCheckProcessOUT</activityParamName>
+                                <elementName>Claim</elementName>
+                            </nmOutput>
+                        </parameter>
+                    </parameters>
+                    <endpoint>EVT10436999382259</endpoint>
+                    <operationName>end</operationName>
+                </output>
+            </outputs>
+        </parameters>
+        <componentInfo>
+            <referenceName>FraudCheckProcess.service.reference</referenceName>
+            <namespace>http://xmlns.oracle.com/bpmn/bpmnProcess/FraudCheckProcess</namespace>
+            <operationName>start</operationName>
+            <isSynchronous>false</isSynchronous>
+        </componentInfo>
+    </bpmnActivity>
+</caseActivity>

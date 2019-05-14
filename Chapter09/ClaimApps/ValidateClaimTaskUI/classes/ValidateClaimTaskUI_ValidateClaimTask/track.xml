@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.64.93"
+          id="track" Package="ValidateClaimTaskUI_ValidateClaimTask"
+          BeanClass="ValidateClaimTaskUI_ValidateClaimTask.track"
+          isJavaBased="false">
+  <AccessorAttribute id="fastTrack" IsCollection="true"
+                     BeanClass="ValidateClaimTaskUI_ValidateClaimTask.fastTrack"
+                     CollectionBeanClass="ValidateClaimTaskUI_ValidateClaimTask.fastTrack_fastTrack_Operations">
+    <Properties>
+      <Property Name="nextSiblingNamespace"
+                Value="http://www.Claim4Insurance.org"/>
+      <Property Name="nextSibling" Value="reserve"/>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Fast Track"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="fastTrack"/>
+      <Property Name="targetNamespace" Value="http://www.Claim4Insurance.org"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="reserve" IsCollection="true"
+                     BeanClass="ValidateClaimTaskUI_ValidateClaimTask.reserve"
+                     CollectionBeanClass="ValidateClaimTaskUI_ValidateClaimTask.reserve_reserve_Operations">
+    <Properties>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Reserve"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="reserve"/>
+      <Property Name="targetNamespace" Value="http://www.Claim4Insurance.org"/>
+    </Properties>
+  </AccessorAttribute>
+</JavaBean>

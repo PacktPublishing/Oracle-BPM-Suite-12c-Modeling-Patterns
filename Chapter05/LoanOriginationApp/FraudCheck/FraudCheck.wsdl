@@ -1,0 +1,38 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<wsdl:definitions
+     name="FraudCheck"
+     targetNamespace="http://xmlns.oracle.com/LoanOriginationApp/FraudCheck/FraudCheck"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:client="http://xmlns.oracle.com/LoanOriginationApp/FraudCheck/FraudCheck"
+     xmlns:ns1="http://www.samplebank.org"
+     xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+     xmlns:cor="http://xmlns.oracle.com/LoanOriginationApp/FraudCheck/FraudCheck/correlationset"
+     xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+     xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop"
+    >
+    <plnk:partnerLinkType name="FraudCheck">
+        <plnk:role name="FraudCheckProvider" portType="client:FraudCheck"/>
+        <plnk:role name="FraudCheckRequester" portType="client:FraudCheckCallback"/>
+    </plnk:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://www.samplebank.org" schemaLocation="xsd/LoanOrig.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="FraudCheckRequestMessage">
+        <wsdl:part name="payload" element="ns1:LoanRequest"/>
+    </wsdl:message>
+    <wsdl:message name="FraudCheckResponseMessage">
+        <wsdl:part name="payload" element="ns1:LoanRequest"/>
+    </wsdl:message>
+    <wsdl:portType name="FraudCheck">
+        <wsdl:operation name="process">
+            <wsdl:input message="client:FraudCheckRequestMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="FraudCheckCallback">
+        <wsdl:operation name="processResponse">
+            <wsdl:input message="client:FraudCheckResponseMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

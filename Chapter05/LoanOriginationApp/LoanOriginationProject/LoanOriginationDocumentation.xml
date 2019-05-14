@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="12.1.3.0.0.00.00" fileRevision="20120601"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+   <component name="LoanOrigination">
+      <topicDocumentations>
+         <topicDocumentation name="LoanOrigination">
+            <descriptions>
+               <description locale="en">LoanOrigination</description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT8138497537695">
+            <labels>
+               <label locale="en">Pre-VertificationActivities</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT813849772856">
+            <labels>
+               <label locale="en">Start1</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="EVT8138497728652">
+            <labels>
+               <label locale="en">End1</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="sf21"/>
+         <topicDocumentation name="ACT8138639268163">
+            <labels>
+               <label locale="en">CallUtilityProcess</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT813866880967">
+            <labels>
+               <label locale="en">VerificationReminder</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT8138680839357">
+            <labels>
+               <label locale="en">SuspensionActivities</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT8138884520725">
+            <labels>
+               <label locale="en">CreditCheck</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT8138952391231">
+            <labels>
+               <label locale="en">BackGroundCheckSubProcess</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT8139016065433">
+            <labels>
+               <label locale="en">Subprocess1</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="ACT8139027745173">
+            <labels>
+               <label locale="en">SomeActivity</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT8139016065837">
+            <labels>
+               <label locale="en">Start2</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="EVT813901606590">
+            <labels>
+               <label locale="en">End2</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="sf48"/>
+         <topicDocumentation name="sf53"/>
+         <topicDocumentation name="EVT813895262769">
+            <labels>
+               <label locale="en">StartBGC</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="EVT8138952627670">
+            <labels>
+               <label locale="en">EndBGC</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="EVT8139012122955">
+            <labels>
+               <label locale="en">BGCRequest</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT8139030210376">
+            <labels>
+               <label locale="en">BGCResponse</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf44"/>
+         <topicDocumentation name="sf44"/>
+         <topicDocumentation name="sf52"/>
+         <topicDocumentation name="sf54"/>
+         <topicDocumentation name="ACT8139130449042">
+            <labels>
+               <label locale="en">FraudCheckSubProcess</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT813913060797">
+            <labels>
+               <label locale="en">StartFC</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="EVT8139130608062">
+            <labels>
+               <label locale="en">EndFC</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="EVT813913660309">
+            <labels>
+               <label locale="en">FraudCheckRequest</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT8139140720884">
+            <labels>
+               <label locale="en">FraudCheckResponse</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT8139148553970">
+            <labels>
+               <label locale="en">FraudIntruption</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW813914350616">
+            <labels>
+               <label locale="en">FraudCheck?</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf55"/>
+         <topicDocumentation name="sf60"/>
+         <topicDocumentation name="sf61"/>
+         <topicDocumentation name="sf62"/>
+         <topicDocumentation name="sf64">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf66"/>
+         <topicDocumentation name="ACT8140249116026">
+            <labels>
+               <label locale="en">PostCreditCheck</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT8140258552382">
+            <labels>
+               <label locale="en">Assign</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT8140264327482">
+            <labels>
+               <label locale="en">Assign</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ABSTRACT_ACTIVITY8156298170015">
+            <labels>
+               <label locale="en">ApplicationVerificationTask</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT8138427347430">
+            <labels>
+               <label locale="en">StartLO</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT8138427347543">
+            <labels>
+               <label locale="en">EndLO</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT813867486761">
+            <labels>
+               <label locale="en">EndReminderTask</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="BOUNDARY_EVENT8156306569614">
+            <labels>
+               <label locale="en">VerificationReminder</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="BOUNDARY_EVENT8156311183938">
+            <labels>
+               <label locale="en">LOSuspended</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW8138534616927">
+            <labels>
+               <label locale="en">ApplicationVerified?</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW8138788992296">
+            <labels>
+               <label locale="en">Split</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW8138792271260">
+            <labels>
+               <label locale="en">join</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="sf10"/>
+         <topicDocumentation name="sf22"/>
+         <topicDocumentation name="sf25">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf33">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf35"/>
+         <topicDocumentation name="sf40"/>
+         <topicDocumentation name="sf45"/>
+         <topicDocumentation name="sf46"/>
+         <topicDocumentation name="sf47"/>
+         <topicDocumentation name="sf49"/>
+         <topicDocumentation name="sf34"/>
+         <topicDocumentation name="sf50"/>
+         <topicDocumentation name="sf57"/>
+         <topicDocumentation name="sf59"/>
+         <topicDocumentation name="sf60"/>
+         <topicDocumentation name="sf62">
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf63"/>
+         <topicDocumentation name="sf85"/>
+         <topicDocumentation name="sf89"/>
+         <topicDocumentation name="sf91"/>
+      </topicDocumentations>
+   </component>
+</processDocumentation>

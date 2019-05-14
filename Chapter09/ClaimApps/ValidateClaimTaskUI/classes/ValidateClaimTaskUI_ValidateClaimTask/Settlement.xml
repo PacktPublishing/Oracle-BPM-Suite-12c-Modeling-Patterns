@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.64.93"
+          id="Settlement" Package="ValidateClaimTaskUI_ValidateClaimTask"
+          BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Settlement"
+          isJavaBased="false">
+  <Attribute Name="faultSubject" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="minOccurs" Value="1"/>
+        <Property Name="maxOccurs" Value="1"/>
+        <Property Name="LABEL" Value="Fault Subject"/>
+        <Property Name="LeafElement_hint" Value="LeafElement_no_attribute"/>
+        <Property Name="nillable" Value="false"/>
+        <Property Name="originalName" Value="faultSubject"/>
+        <Property Name="targetNamespace"
+                  Value="http://www.Claim4Insurance.org"/>
+        <Property Name="type" Value="java.lang.String"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <AccessorAttribute id="offers" IsCollection="true"
+                     BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Offers"
+                     CollectionBeanClass="ValidateClaimTaskUI_ValidateClaimTask.Offers_offers_Operations">
+    <Properties>
+      <Property Name="nextSiblingNamespace"
+                Value="http://www.Claim4Insurance.org"/>
+      <Property Name="nextSibling" Value="payments"/>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Offers"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="offers"/>
+      <Property Name="targetNamespace" Value="http://www.Claim4Insurance.org"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="payments" IsCollection="true"
+                     BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Payments"
+                     CollectionBeanClass="ValidateClaimTaskUI_ValidateClaimTask.Payments_payments_Operations">
+    <Properties>
+      <Property Name="nextSiblingNamespace"
+                Value="http://www.Claim4Insurance.org"/>
+      <Property Name="nextSibling" Value="faultSubject"/>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Payments"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="payments"/>
+      <Property Name="targetNamespace" Value="http://www.Claim4Insurance.org"/>
+    </Properties>
+  </AccessorAttribute>
+</JavaBean>

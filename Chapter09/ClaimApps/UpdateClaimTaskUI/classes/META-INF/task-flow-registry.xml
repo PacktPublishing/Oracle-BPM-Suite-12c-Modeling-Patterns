@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<task-flow-registry xmlns="http://xmlns.oracle.com/adf/controller/rc">
+   <task-flow-descriptor path="META-INF/adfc-config.xml" id="" type="" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="false"/>
+   <task-flow-descriptor path="WEB-INF/UpdateClaimTask_TaskFlow.xml" id="UpdateClaimTask_TaskFlow" type="task-flow-definition" uses-page-fragments="false" library-internal="false" remote-invocable="false" train="false">
+      <input-parameter name="dt"/>
+      <input-parameter name="bpmWorklistReassign"/>
+      <input-parameter name="bpmWorklistTaskId"/>
+      <input-parameter name="bpmClientType"/>
+      <input-parameter name="tf"/>
+      <input-parameter name="vr"/>
+      <input-parameter name="bpmWorklistRequestInfo"/>
+      <input-parameter name="bpmWorklistHome"/>
+      <input-parameter name="df"/>
+      <input-parameter name="parentURL"/>
+      <input-parameter name="bpmWorklistSecurity"/>
+      <input-parameter name="bpmWorklistLogout"/>
+      <input-parameter name="dateTimePattern"/>
+      <input-parameter name="bpmBrowserWindowStatus"/>
+      <input-parameter name="bpmWorklistBackPage"/>
+      <input-parameter name="bpmWorklistLogin"/>
+      <input-parameter name="datePattern"/>
+      <input-parameter name="timePattern"/>
+      <input-parameter name="cy"/>
+      <input-parameter name="bpmWorklistHttpURL"/>
+      <input-parameter name="bpmWorklistHistory"/>
+      <input-parameter name="tz"/>
+      <input-parameter name="bpmWorklistContext"/>
+      <input-parameter name="bpmWorklistGraphHistory"/>
+      <input-parameter name="bpmWorklistTaskVersion"/>
+      <input-parameter name="bpmWorklistRoute"/>
+      <input-parameter name="lg"/>
+   </task-flow-descriptor>
+</task-flow-registry>

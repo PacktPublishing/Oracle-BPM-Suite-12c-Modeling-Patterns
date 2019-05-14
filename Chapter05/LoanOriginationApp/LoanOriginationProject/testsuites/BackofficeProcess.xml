@@ -1,0 +1,70 @@
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    	<soap:Body>
+        		<ns1:startBO xmlns:ns1="http://xmlns.oracle.com/bpmn/bpmnProcess/BackOffice" xmlns:ns2="http://www.samplebank.org">
+            			<ns2:LoanRequest>
+                				<ns2:LoanDetails>
+                    					<ns2:ApplicantID>BO1234</ns2:ApplicantID>
+                    					<ns2:Product>ABC1234</ns2:Product>
+                    					<ns2:Amount>1234</ns2:Amount>
+                    					<ns2:ApplicationDate>2014-12-12T00:00:00</ns2:ApplicationDate>
+                    					<ns2:Channel>WEB</ns2:Channel>
+                    					<ns2:Source>WEB</ns2:Source>
+                    					<ns2:InterestRate>1</ns2:InterestRate>
+                    					<ns2:UpdateDate>2014-12-12T00:00:00</ns2:UpdateDate>
+                    					<ns2:LoanOfficer>salesrep</ns2:LoanOfficer>
+                    					<ns2:LoanSalesRep>salesrep</ns2:LoanSalesRep>
+                    					<ns2:LoanProcessor>salesrep</ns2:LoanProcessor>
+                    					<ns2:LoanStatus>NEW</ns2:LoanStatus>
+                    					<ns2:LoanPurpose>Home</ns2:LoanPurpose>
+                    					<ns2:Terms>24</ns2:Terms>
+                    					<ns2:PaymentFrequency>Yearly</ns2:PaymentFrequency>
+                </ns2:LoanDetails>
+                				<ns2:ApplicantDetails>
+                    					<ns2:ApplicantInformation>
+                        						<ns2:Salutation>Miss</ns2:Salutation>
+                        						<ns2:FName>Christine</ns2:FName>
+                        						<ns2:MName>R</ns2:MName>
+                        						<ns2:LName>R</ns2:LName>
+                        						<ns2:DateOfBirth>2014-12-12T00:00:00</ns2:DateOfBirth>
+                        						<ns2:SSN_Or_TAX>12</ns2:SSN_Or_TAX>
+                        						<ns2:ApplicantType>NEW</ns2:ApplicantType>
+                        						<ns2:Gender>Female</ns2:Gender>
+                        						<ns2:MaritialStatus>Single</ns2:MaritialStatus>
+                        						<ns2:Nationality>UK</ns2:Nationality>
+                        						<ns2:Attribute1>A1</ns2:Attribute1>
+                        						<ns2:Attribute2>A2</ns2:Attribute2>
+                    </ns2:ApplicantInformation>
+                    					<ns2:Address>
+                        						<ns2:Line1>Address Line 1</ns2:Line1>
+                        						<ns2:Line2>Line 2</ns2:Line2>
+                        						<ns2:City>Miami</ns2:City>
+                        						<ns2:County>UK</ns2:County>
+                        						<ns2:State>FL</ns2:State>
+                        						<ns2:Country>FL</ns2:Country>
+                        						<ns2:Zip>33333</ns2:Zip>
+                        						<ns2:LivingSince>2014-12-12T00:00:00</ns2:LivingSince>
+                    </ns2:Address>
+                    					<ns2:Contact>
+                        						<ns2:Email>a@b.com</ns2:Email>
+                        						<ns2:HomePhone>12345</ns2:HomePhone>
+                        						<ns2:WorkPhone>54321</ns2:WorkPhone>
+                        						<ns2:CellPhone>12345</ns2:CellPhone>
+                        						<ns2:Fax>54321</ns2:Fax>
+                    </ns2:Contact>
+                    					<ns2:IncomeEmployment>
+                        						<ns2:Occupation>Manager</ns2:Occupation>
+                        						<ns2:YGross>25638645289</ns2:YGross>
+                        						<ns2:TotalIncome>25628875252</ns2:TotalIncome>
+                        						<ns2:EmployeeName>Some Name</ns2:EmployeeName>
+                        						<ns2:JobTitle>IT</ns2:JobTitle>
+                        						<ns2:StartDate>2014-12-12T00:00:00</ns2:StartDate>
+                        						<ns2:EndDate>2014-12-12T00:00:00</ns2:EndDate>
+                        						<ns2:EmployeePhone>12345</ns2:EmployeePhone>
+                        						<ns2:EmployeeAddress>Some Addreess</ns2:EmployeeAddress>
+                    </ns2:IncomeEmployment>
+                </ns2:ApplicantDetails>
+                				<ns2:LoanStatus>NEW</ns2:LoanStatus>
+            </ns2:LoanRequest>
+        </ns1:startBO>
+    </soap:Body>
+</soap:Envelope>

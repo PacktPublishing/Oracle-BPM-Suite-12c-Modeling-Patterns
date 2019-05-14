@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<RuleDictionary id="G}eb12387:143bcac6fd1:-7c24" xmlns="http://xmlns.oracle.com/rules/dictionary">
+    <Name>ComplexTaskRules</Name>
+    <Alias>ComplexTaskRules</Alias>
+    <Version>11.1.1.0.0</Version>
+    <DataModel id="L}1">
+        <CreationUpdateNumber>2</CreationUpdateNumber>
+        <SupportsXPathEnabled>false</SupportsXPathEnabled>
+        <UpdateNumber>10</UpdateNumber>
+        <ValidationUpdateNumber>6</ValidationUpdateNumber>
+        <UpdateTime>-9223372036854775808</UpdateTime>
+    </DataModel>
+    <RuleSet id="G}eb12387:143bcac6fd1:-7c23">
+        <Name>LineItemParticipantDerivationRule</Name>
+        <Alias>LineItemParticipantDerivationRule</Alias>
+        <ValidationUpdateNumber>22</ValidationUpdateNumber>
+        <Customizable>true</Customizable>
+        <Active>true</Active>
+        <CalendarForm>DateTime</CalendarForm>
+        <Rule id="G}eb12387:143bcac6fd1:-7c12">
+            <Name>LineItemParticipantDerivation</Name>
+            <Alias>LineItemParticipantDerivation</Alias>
+            <ValidationUpdateNumber>22</ValidationUpdateNumber>
+            <Priority>medium</Priority>
+            <Customizable>true</Customizable>
+            <Active>true</Active>
+            <CalendarForm>DateTime</CalendarForm>
+            <Pattern id="L}10">
+                <Form>Fact Type</Form>
+                <FactType>Task</FactType>
+                <IDofFactType>J}oracle.bpel.services.workflow.task.model.ComplexTaskRules.Task</IDofFactType>
+                <Connective>&amp;&amp;</Connective>
+                <TestForm>Simple</TestForm>
+                <Expression id="L}11">
+                    <IsConstant>false</IsConstant>
+                    <ParameterID>B}nil</ParameterID>
+                    <Customizable>false</Customizable>
+                </Expression>
+                <Operator>(for each case where)</Operator>
+                <FactPath>Task</FactPath>
+                <FactPathIDs>L}10</FactPathIDs>
+            </Pattern>
+            <Pattern id="L}55">
+                <Form>Fact Type</Form>
+                <FactType>Lists</FactType>
+                <IDofFactType>J}oracle.bpel.services.workflow.metadata.routingslip.model.ComplexTaskRules.Lists</IDofFactType>
+                <Connective>&amp;&amp;</Connective>
+                <TestForm>Simple</TestForm>
+                <Expression id="L}56">
+                    <IsConstant>false</IsConstant>
+                    <ParameterID>B}nil</ParameterID>
+                    <Customizable>false</Customizable>
+                </Expression>
+                <Operator>(for each case where)</Operator>
+                <SimpleTest id="L}14">
+                    <Expression id="L}15">
+                        <Value>Task.payload.quoteRequest.summary.industry</Value>
+                        <ResolvedValue>`L}10`.`J}oracle.bpel.services.workflow.task.model.ComplexTaskRules.Task.{payload}`.`J}oracle.bpel.services.workflow.task.model.ComplexTaskRules.ComplexTaskPayloadType.{quoteRequest}`.`J}oracle.bpel.services.workflow.task.model.ComplexTaskRules.QuoteRequestType.{summary}`.`J}oracle.bpel.services.workflow.task.model.ComplexTaskRules.QuoteSummaryType.{industry}`</ResolvedValue>
+                        <IsConstant>false</IsConstant>
+                        <ParameterID>B}nil</ParameterID>
+                        <Customizable>false</Customizable>
+                    </Expression>
+                    <Expression id="L}16">
+                        <Value>&quot;IT&quot;</Value>
+                        <ResolvedValue>&quot;IT&quot;</ResolvedValue>
+                        <IsConstant>false</IsConstant>
+                        <ParameterID>B}nil</ParameterID>
+                        <Customizable>false</Customizable>
+                    </Expression>
+                    <IDofOperator>B}==</IDofOperator>
+                    <Connective>&amp;&amp;</Connective>
+                    <Form>FormNotNested</Form>
+                </SimpleTest>
+                <FactPath>Lists</FactPath>
+                <FactPathIDs>L}55</FactPathIDs>
+            </Pattern>
+            <ShowPatterns>false</ShowPatterns>
+            <TreeMode>false</TreeMode>
+            <Visible>true</Visible>
+            <Logical>false</Logical>
+            <Action id="L}30">
+                <Form>Call</Form>
+                <Target>CreateResourceList</Target>
+                <ResolvedTarget>`G}656bc3f8:143ab204d93:-77ac`</ResolvedTarget>
+                <Expression id="L}31">
+                    <Value>null</Value>
+                    <ResolvedValue>null</ResolvedValue>
+                    <IsConstant>false</IsConstant>
+                    <ParameterAlias>users</ParameterAlias>
+                    <ParameterID>G}656bc3f8:143ab204d93:-77ab</ParameterID>
+                    <Customizable>false</Customizable>
+                </Expression>
+                <Expression id="L}36">
+                    <Value>&quot;ITSalesRepAdmin&quot;</Value>
+                    <ResolvedValue>&quot;ITSalesRepAdmin&quot;</ResolvedValue>
+                    <IsConstant>false</IsConstant>
+                    <ParameterAlias>groups</ParameterAlias>
+                    <ParameterID>G}656bc3f8:143ab204d93:-77aa</ParameterID>
+                    <Customizable>false</Customizable>
+                </Expression>
+                <Expression id="L}37">
+                    <Value>null</Value>
+                    <ResolvedValue>null</ResolvedValue>
+                    <IsConstant>false</IsConstant>
+                    <ParameterAlias>approles</ParameterAlias>
+                    <ParameterID>G}656bc3f8:143ab204d93:-77a9</ParameterID>
+                    <Customizable>false</Customizable>
+                </Expression>
+                <Expression id="L}38">
+                    <Value>ResponseType.REQUIRED</Value>
+                    <ResolvedValue>`G}656bc3f8:143ab204d93:-7811`.`J}public static final oracle.bpel.services.workflow.metadata.routingslip.model.ComplexTaskRules.ResponseType oracle.bpel.services.workflow.metadata.routingslip.model.ComplexTaskRules.ResponseType.REQUIRED`</ResolvedValue>
+                    <IsConstant>false</IsConstant>
+                    <ParameterAlias>responseType</ParameterAlias>
+                    <ParameterID>G}656bc3f8:143ab204d93:-77a8</ParameterID>
+                    <Customizable>false</Customizable>
+                </Expression>
+                <Expression id="L}39">
+                    <Value>&quot;LineItemParticipantDerivation&quot;</Value>
+                    <ResolvedValue>&quot;LineItemParticipantDerivation&quot;</ResolvedValue>
+                    <IsConstant>false</IsConstant>
+                    <ParameterAlias>ruleName</ParameterAlias>
+                    <ParameterID>G}656bc3f8:143ab204d93:-77a7</ParameterID>
+                    <Customizable>false</Customizable>
+                </Expression>
+                <Expression id="L}40">
+                    <Value>Lists</Value>
+                    <ResolvedValue>`L}55`</ResolvedValue>
+                    <IsConstant>false</IsConstant>
+                    <ParameterAlias>lists</ParameterAlias>
+                    <ParameterID>G}656bc3f8:143ab204d93:-77a6</ParameterID>
+                    <Customizable>false</Customizable>
+                </Expression>
+            </Action>
+        </Rule>
+        <VisibilityFilterEnabled>false</VisibilityFilterEnabled>
+        <CreationUpdateNumber>2</CreationUpdateNumber>
+    </RuleSet>
+    <DictionaryLink id="L}5">
+        <Name>DecisionPointDictionary</Name>
+        <Alias>DecisionPointDictionary</Alias>
+        <Package>oracle.rules.sdk2.decisionpoint.impl</Package>
+        <UpdateNumber>323</UpdateNumber>
+        <PrefixLinkedNames>true</PrefixLinkedNames>
+    </DictionaryLink>
+    <DictionaryLink id="L}6">
+        <Name>ComplexTaskRulesBase</Name>
+        <Alias>ComplexTaskRulesBase</Alias>
+        <UpdateNumber>23</UpdateNumber>
+        <PrefixLinkedNames>false</PrefixLinkedNames>
+    </DictionaryLink>
+    <ValidationUpdateNumber>22</ValidationUpdateNumber>
+    <UpdateNumber>22</UpdateNumber>
+    <ResourceBundle>ComplexTaskRulesTranslations</ResourceBundle>
+</RuleDictionary>

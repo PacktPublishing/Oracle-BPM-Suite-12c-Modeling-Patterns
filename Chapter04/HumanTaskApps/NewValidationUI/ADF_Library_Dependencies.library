@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<JLibraryNode nselem="JLibraryNode" class="oracle.jdeveloper.library.JLibraryNode" xmlns="http://xmlns.oracle.com/jdeveloper/110000jlibrarynode">
+   <classPath/>
+   <docPath/>
+   <locked>false</locked>
+   <name>ADF Library Dependencies</name>
+   <sourcePath/>
+</JLibraryNode>

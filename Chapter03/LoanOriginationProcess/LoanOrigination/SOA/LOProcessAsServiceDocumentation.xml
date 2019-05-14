@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="12.1.3.0.0.00.00" fileRevision="20120601"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+   <component name="LOProcessAsService">
+      <topicDocumentations>
+         <topicDocumentation name="LOProcessAsService"/>
+         <topicDocumentation name="ACT10463370198665">
+            <labels>
+               <label locale="en">VerifyWebApplication</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10463371688543">
+            <labels>
+               <label locale="en">VerificationActivity</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10463370333797">
+            <labels>
+               <label locale="en">Start</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10463370333825">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="sf10463370333837"/>
+         <topicDocumentation name="sf10463372211681"/>
+         <topicDocumentation name="ACT10463376437238">
+            <labels>
+               <label locale="en">AllOtherActivities</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT1046337903597">
+            <labels>
+               <label locale="en">AllOtherActivity</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10463376619213">
+            <labels>
+               <label locale="en">Start</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10463376619318">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="sf10463376619315"/>
+         <topicDocumentation name="sf10463379892755"/>
+         <topicDocumentation name="ACT10463387736533">
+            <labels>
+               <label locale="en">ApplicationRejectionTasks</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10463389764654">
+            <labels>
+               <label locale="en">ApplicationRejectionActivity</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10463387915944">
+            <labels>
+               <label locale="en">Start</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10463387915956">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="sf10463387915957"/>
+         <topicDocumentation name="sf10463390413312"/>
+         <topicDocumentation name="EVT10463345141079">
+            <labels>
+               <label locale="en">StartLoanOrigination</label>
+            </labels>
+            <descriptions>
+               <description locale="en">Start Loan Origination</description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10463345141140">
+            <labels>
+               <label locale="en">EndLoanOrigination</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10463392523347">
+            <labels>
+               <label locale="en">EndLOProcess</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW1046337452976">
+            <labels>
+               <label locale="en">VerificationCheckPass?</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10463345141147"/>
+         <topicDocumentation name="sf10463370334193"/>
+         <topicDocumentation name="sf10463374872680">
+            <labels>
+               <label locale="en">No</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf1046338177843">
+            <labels>
+               <label locale="en">Yes</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf1046338605660"/>
+         <topicDocumentation name="sf10463393508771"/>
+      </topicDocumentations>
+   </component>
+</processDocumentation>

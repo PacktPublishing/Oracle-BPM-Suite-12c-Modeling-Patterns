@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.64.93"
+          id="declaration" Package="UpdateClaimTaskUI_UpdateClaimTask"
+          BeanClass="UpdateClaimTaskUI_UpdateClaimTask.declaration"
+          isJavaBased="false">
+  <Attribute Name="declarationDocumentUploaded" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="minOccurs" Value="0"/>
+        <Property Name="maxOccurs" Value="1"/>
+        <Property Name="LABEL" Value="Declaration Document Uploaded"/>
+        <Property Name="LeafElement_hint" Value="LeafElement_no_attribute"/>
+        <Property Name="nillable" Value="false"/>
+        <Property Name="originalName" Value="declarationDocumentUploaded"/>
+        <Property Name="targetNamespace"
+                  Value="http://www.Claim4Insurance.org"/>
+        <Property Name="type" Value="java.lang.String"/>
+        <Property Name="enumeration" Value="[Yes, No]"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+</JavaBean>

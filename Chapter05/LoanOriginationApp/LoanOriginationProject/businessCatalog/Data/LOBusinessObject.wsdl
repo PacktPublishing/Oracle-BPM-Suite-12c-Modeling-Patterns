@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?bpmo version="11.1.1.7.0.0.8" build="0.8" fullName="Data.LOBusinessObject" modifiers="268435456"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<definitions targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/Data/LOBusinessObject.Interface" name="LOBusinessObject" xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns="http://schemas.xmlsoap.org/wsdl/"  xmlns:tns="http://xmlns.oracle.com/bpm/bpmobject/Data/LOBusinessObject.Interface"  xmlns:oj="http://www.samplebank.org"  xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/" >
+    <types>
+        <xsd:schema>
+            <xsd:import namespace="http://www.samplebank.org" schemaLocation="../../xsd/LoanOrig.xsd"/>
+        </xsd:schema>
+    </types>
+    <portType name="LOBusinessObjectPortType"/>
+    <binding name="LOBusinessObjectPortTypeBinding" type="tns:LOBusinessObjectPortType">
+        <bpmo:binding element="oj:LoanRequest"/>
+    </binding>
+</definitions>

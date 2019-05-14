@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="12.1.3.0.0.00.00" fileRevision="20120601"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+   <component name="ArbitaryCycle">
+      <topicDocumentations>
+         <topicDocumentation name="ArbitaryCycle"/>
+         <topicDocumentation name="EVT10548170893855">
+            <labels>
+               <label locale="en">Start</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT1054817089395">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10548183624950">
+            <labels>
+               <label locale="en">EnterQuote</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW10548197136015">
+            <labels>
+               <label locale="en">CheckQuoteStatus</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10548214035238">
+            <labels>
+               <label locale="en">FurtherActivity</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10548228697683">
+            <labels>
+               <label locale="en">AcceptQuote</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10548248832583">
+            <labels>
+               <label locale="en">SomeActivity</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW1054825146768">
+            <labels>
+               <label locale="en">DiscountCheck</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10548273006729">
+            <labels>
+               <label locale="en">SalesManagerApproval</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10548292834891">
+            <labels>
+               <label locale="en">OtherActivity</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW1054829889848">
+            <labels>
+               <label locale="en">CheckApprovalStatus</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10548170893982"/>
+         <topicDocumentation name="sf10548192118880"/>
+         <topicDocumentation name="sf10548198397254"/>
+         <topicDocumentation name="sf10548215864164">
+            <labels>
+               <label locale="en">Reject</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10548216910369"/>
+         <topicDocumentation name="sf10548240697019"/>
+         <topicDocumentation name="sf10548249627194"/>
+         <topicDocumentation name="sf10548253232542">
+            <labels>
+               <label locale="en"></label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10548254382675">
+            <labels>
+               <label locale="en">Discount>50%</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10548285923875"/>
+         <topicDocumentation name="sf10548294038043"/>
+         <topicDocumentation name="sf10548295398746">
+            <labels>
+               <label locale="en">Discount&lt;10%</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10548300791598">
+            <labels>
+               <label locale="en"></label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10548305650226">
+            <labels>
+               <label locale="en">Reject</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+      </topicDocumentations>
+   </component>
+</processDocumentation>

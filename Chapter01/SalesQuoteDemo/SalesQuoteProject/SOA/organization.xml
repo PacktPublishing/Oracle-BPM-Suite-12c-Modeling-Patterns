@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:organization xmlns:ns2="http://xmlns.oracle.com/bpm/lpg/peopleQuery" xmlns:ns1="http://xmlns.oracle.com/bpm/identity" xmlns:ns4="http://xmlns.oracle.com/bpel/workflow/task" xmlns:ns3="http://xmlns.oracle.com/bpel/workflow/taskQuery" xmlns:ns0="http://xmlns.oracle.com/bpm/organization">
+   <ns0:updateExistingObjects>false</ns0:updateExistingObjects>
+   <ns0:organizationalUnits/>
+   <ns0:applicationRoles>
+      <ns0:applicationRole id="SalesQuoteProject.ProcessOwner" isProcessRole="true">
+         <ns1:name>SalesQuoteProject.Process Owner</ns1:name>
+         <ns0:processRole id="ProcessOwner" name="Process Owner"/>
+      </ns0:applicationRole>
+      <ns0:applicationRole id="SalesQuoteProject.ProcessReviewer" isProcessRole="true">
+         <ns1:name>SalesQuoteProject.Process Reviewer</ns1:name>
+         <ns0:processRole id="ProcessReviewer" name="Process Reviewer"/>
+      </ns0:applicationRole>
+      <ns0:applicationRole id="SalesQuoteProject.salesrep" isProcessRole="true">
+         <ns1:name>SalesQuoteProject.salesrep</ns1:name>
+         <ns0:member type="USER">
+            <ns0:name>salesrep</ns0:name>
+         </ns0:member>
+         <ns0:processRole id="salesrep" name="salesrep"/>
+      </ns0:applicationRole>
+      <ns0:applicationRole id="SalesQuoteProject.businesspractise" isProcessRole="true">
+         <ns1:name>SalesQuoteProject.businesspractise</ns1:name>
+         <ns0:member type="USER">
+            <ns0:name>fkafka</ns0:name>
+         </ns0:member>
+         <ns0:processRole id="businesspractise" name="businesspractise"/>
+      </ns0:applicationRole>
+      <ns0:applicationRole id="SalesQuoteProject.approvers" isProcessRole="true">
+         <ns1:name>SalesQuoteProject.approvers</ns1:name>
+         <ns0:member type="USER">
+            <ns0:name>jcooper</ns0:name>
+         </ns0:member>
+         <ns0:processRole id="approvers" name="approvers"/>
+      </ns0:applicationRole>
+      <ns0:applicationRole id="SalesQuoteProject.contracts" isProcessRole="true">
+         <ns1:name>SalesQuoteProject.contracts</ns1:name>
+         <ns0:member type="USER">
+            <ns0:name>jstein</ns0:name>
+         </ns0:member>
+         <ns0:processRole id="contracts" name="contracts"/>
+      </ns0:applicationRole>
+   </ns0:applicationRoles>
+   <ns0:applicationRoleOrgUnitCalendarAssociations/>
+   <ns0:participantPropertiesList/>
+   <ns0:holidayRules/>
+   <ns0:calendarRules/>
+   <ns0:businessParameters/>
+</ns0:organization>

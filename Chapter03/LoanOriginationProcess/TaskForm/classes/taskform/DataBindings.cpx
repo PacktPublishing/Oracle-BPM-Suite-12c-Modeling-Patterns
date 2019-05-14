@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.1.3.10.8" id="DataBindings"
+             SeparateXMLFiles="false" Package="taskform" ClientType="Generic">
+  <pageMap>
+    <page path="/taskDetails1.jspx" usageId="taskform_taskDetails1PageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="taskform_taskDetails1PageDef" path="taskform.pageDefs.taskDetails1PageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="TaskForm_LOProcessHumanInitiationTask" path="taskform.TaskForm_LOProcessHumanInitiationTask"/>
+  </dataControlUsages>
+</Application>

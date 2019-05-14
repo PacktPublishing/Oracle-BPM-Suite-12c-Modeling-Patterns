@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process name="SendLoanOriginationRequest" targetNamespace="http://xmlns.oracle.com/LoanOriginationProcess/PushToEmail/SendLoanOriginationRequest" xmlns="http://schemas.xmlsoap.org/ws/2003/03/business-process/" xmlns:client="http://xmlns.oracle.com/LoanOriginationProcess/PushToEmail/SendLoanOriginationRequest" xmlns:ora="http://schemas.oracle.com/xpath/extension" xmlns:bpelx="http://schemas.oracle.com/bpel/extension" xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/" xmlns:ns1="http://xmlns.oracle.com/pcbpel/adapter/ums/LoanOriginationProcess/PushToEmail/SendToEmail" xmlns:bpel2="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:xp20="http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.Xpath20" xmlns:xdk="http://schemas.oracle.com/bpel/extension/xpath/function/xdk" xmlns:xref="http://www.oracle.com/XSL/Transform/java/oracle.tip.xref.xpath.XRefXPathFunctions" xmlns:oraext="http://www.oracle.com/XSL/Transform/java/oracle.tip.pc.services.functions.ExtFunc" xmlns:dvm="http://www.oracle.com/XSL/Transform/java/oracle.tip.dvm.LookupValue" xmlns:hwf="http://xmlns.oracle.com/bpel/workflow/xpath" xmlns:ids="http://xmlns.oracle.com/bpel/services/IdentityService/xpath" xmlns:bpm="http://xmlns.oracle.com/bpmn20/extensions" xmlns:ldap="http://schemas.oracle.com/xpath/extension/ldap" xmlns:ns4="http://www.myloanoriginationsystem.org" xmlns:ns2="http://platform.integration.oracle/blocks/adapter/fw/metadata/SendToEmail" xmlns:ns3="http://platform.integration.oracle/blocks/adapter/fw/metadata/ReceiveEmailEvent" xmlns:ess="http://xmlns.oracle.com/scheduler" id="BpPrc0">
+  <!-- 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        PARTNERLINKS                                                      
+        List of services participating in this BPEL process               
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+  <bpelx:annotation>
+    <bpelx:analysis>
+      <bpelx:property name="wsdlFile">
+        <![CDATA[SendLoanOriginationRequest.wsdl]]>
+      </bpelx:property>
+    </bpelx:analysis>
+  </bpelx:annotation>
+  <partnerLinks>
+    <!-- 
+      The 'client' role represents the requester of this service. It is 
+      used for callback. The location and correlation information associated
+      with the client role are automatically set using WS-Addressing.
+    -->
+    <partnerLink name="sendloanoriginationrequest_client" partnerLinkType="client:SendLoanOriginationRequest" myRole="SendLoanOriginationRequestProvider" partnerRole="SendLoanOriginationRequestRequester"/>
+    <partnerLink name="SendToEmail" partnerLinkType="ns1:SendNotification_plt" partnerRole="SendNotification_role"/>
+  </partnerLinks>
+  <!-- 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        VARIABLES                                                        
+        List of messages and XML documents used within this BPEL process 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+  <variables>
+    <!-- Reference to the message passed as input during initiation -->
+    <variable name="inputVariable" messageType="client:SendLoanOriginationRequestRequestMessage"/>
+    <!-- Reference to the message that will be sent back to the requester during callback -->
+    <variable name="outputVariable" messageType="client:SendLoanOriginationRequestResponseMessage"/>
+    <variable name="Invoke1_SendNotification_InputVariable" messageType="ns1:SendNotification_msg"/>
+  </variables>
+  <!-- 
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+       ORCHESTRATION LOGIC                                               
+       Set of activities coordinating the flow of messages across the    
+       services integrated within this business process                  
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    -->
+  <sequence name="main" id="BpSeq0">
+    <!-- Receive input from requestor. (Note: This maps to operation defined in SendLoanOriginationRequest.wsdl) -->
+    <receive name="receiveInput" partnerLink="sendloanoriginationrequest_client" portType="client:SendLoanOriginationRequest" operation="process" variable="inputVariable" createInstance="yes" id="BpRcv0"/>
+    <assign name="AssignSendToEmail" id="BpAss0">
+      <copy>
+        <from expression="&quot;1010&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:LoanDetails/ns4:ApplicantID"/>
+      </copy>
+      <copy>
+        <from expression="&quot;HomeLoan&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:LoanDetails/ns4:Product"/>
+      </copy>
+      <copy>
+        <from expression="1100"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:LoanDetails/ns4:Amount"/>
+      </copy>
+      <copy>
+        <from expression="xp20:current-date()"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:LoanDetails/ns4:ApplicationDate"/>
+      </copy>
+      <copy>
+        <from expression="&quot;Web&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:LoanDetails/ns4:Channel"/>
+      </copy>
+      <copy>
+        <from expression="&quot;Web&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:LoanDetails/ns4:Source"/>
+      </copy>
+      <copy>
+        <from expression="9"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:LoanDetails/ns4:InterestRate"/>
+      </copy>
+      <copy>
+        <from expression="xp20:current-date()"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:LoanDetails/ns4:UpdateDate"/>
+      </copy>
+      <copy>
+        <from expression="&quot;LoanOfficer&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:LoanDetails/ns4:LoanOfficer"/>
+      </copy>
+      <copy>
+        <from expression="&quot;LoanSalesRep&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:LoanDetails/ns4:LoanSalesRep"/>
+      </copy>
+      <copy>
+        <from expression="&quot;LP&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:LoanDetails/ns4:LoanProcessor"/>
+      </copy>
+      <copy>
+        <from expression="&quot;LS&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:LoanDetails/ns4:LoanStatus"/>
+      </copy>
+      <copy>
+        <from expression="&quot;Home&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:LoanDetails/ns4:LoanPurpose"/>
+      </copy>
+      <copy>
+        <from expression="&quot;Two&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:LoanDetails/ns4:Terms"/>
+      </copy>
+      <copy>
+        <from expression="&quot;Monthly&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:LoanDetails/ns4:PaymentFrequency"/>
+      </copy>
+      <copy>
+        <from expression="&quot;Mr&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:ApplicantInformation/ns4:Salutation"/>
+      </copy>
+      <copy>
+        <from expression="&quot;LoanSeeker&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:ApplicantInformation/ns4:FName"/>
+      </copy>
+      <copy>
+        <from expression="&quot;L&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:ApplicantInformation/ns4:MName"/>
+      </copy>
+      <copy>
+        <from expression="&quot;S&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:ApplicantInformation/ns4:LName"/>
+      </copy>
+      <copy>
+        <from expression="xp20:current-date()"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:ApplicantInformation/ns4:DateOfBirth"/>
+      </copy>
+      <copy>
+        <from expression="1"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:ApplicantInformation/ns4:SSN_Or_TAX"/>
+      </copy>
+      <copy>
+        <from expression="&quot;A&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:ApplicantInformation/ns4:ApplicantType"/>
+      </copy>
+      <copy>
+        <from expression="&quot;Male&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:ApplicantInformation/ns4:Gender"/>
+      </copy>
+      <copy>
+        <from expression="&quot;Single&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:ApplicantInformation/ns4:MaritialStatus"/>
+      </copy>
+      <copy>
+        <from expression="&quot;India&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:ApplicantInformation/ns4:Nationality"/>
+      </copy>
+      <copy>
+        <from expression="&quot;R&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:ApplicantInformation/ns4:Attribute1"/>
+      </copy>
+      <copy>
+        <from expression="&quot;R&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:ApplicantInformation/ns4:Attribute2"/>
+      </copy>
+      <copy>
+        <from expression="&quot;Address1&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:Address/ns4:Line1"/>
+      </copy>
+      <copy>
+        <from expression="&quot;Address2&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:Address/ns4:Line2"/>
+      </copy>
+      <copy>
+        <from expression="&quot;City&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:Address/ns4:City"/>
+      </copy>
+      <copy>
+        <from expression="&quot;County&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:Address/ns4:County"/>
+      </copy>
+      <copy>
+        <from expression="&quot;FL&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:Address/ns4:State"/>
+      </copy>
+      <copy>
+        <from expression="&quot;UK&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:Address/ns4:Country"/>
+      </copy>
+      <copy>
+        <from expression="&quot;12345&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:Address/ns4:Zip"/>
+      </copy>
+      <copy>
+        <from expression="xp20:current-date()"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:Address/ns4:LivingSince"/>
+      </copy>
+      <copy>
+        <from expression="&quot;weblogic0009@gmail.com&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:Contact/ns4:Email"/>
+      </copy>
+      <copy>
+        <from expression="12345"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:Contact/ns4:HomePhone"/>
+      </copy>
+      <copy>
+        <from expression="12345"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:Contact/ns4:WorkPhone"/>
+      </copy>
+      <copy>
+        <from expression="1234567890"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:Contact/ns4:CellPhone"/>
+      </copy>
+      <copy>
+        <from expression="12345656"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:Contact/ns4:Fax"/>
+      </copy>
+      <copy>
+        <from expression="&quot;Job&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:IncomeEmployment/ns4:Occupation"/>
+      </copy>
+      <copy>
+        <from expression="1"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:IncomeEmployment/ns4:YGross"/>
+      </copy>
+      <copy>
+        <from expression="2"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:IncomeEmployment/ns4:TotalIncome"/>
+      </copy>
+      <copy>
+        <from expression="&quot;Self&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:IncomeEmployment/ns4:EmployeeName"/>
+      </copy>
+      <copy>
+        <from expression="&quot;Archi&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:IncomeEmployment/ns4:JobTitle"/>
+      </copy>
+      <copy>
+        <from expression="xp20:current-date()"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:IncomeEmployment/ns4:StartDate"/>
+      </copy>
+      <copy>
+        <from expression="xp20:current-date()"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:IncomeEmployment/ns4:EndDate"/>
+      </copy>
+      <copy>
+        <from expression="12345"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:IncomeEmployment/ns4:EmployeePhone"/>
+      </copy>
+      <copy>
+        <from expression="&quot;EAddress&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:ApplicantDetails/ns4:IncomeEmployment/ns4:EmployeeAddress"/>
+      </copy>
+      <copy>
+        <from expression="&quot;Pass&quot;"/>
+        <to variable="Invoke1_SendNotification_InputVariable" part="body" query="/ns2:message/ns3:message/ns4:LoanRequest/ns4:LoanStatus"/>
+      </copy>
+    </assign>
+    <invoke name="InvokeSendToEmail" inputVariable="Invoke1_SendNotification_InputVariable" partnerLink="SendToEmail" portType="ns1:SendNotification_ptt" operation="SendNotification" bpelx:invokeAsDetail="no" id="BpInv0"/>
+    <!-- 
+          Asynchronous callback to the requester. (Note: the callback location and correlation id is transparently handled using WS-addressing.)
+        -->
+    <invoke name="callbackClient" partnerLink="sendloanoriginationrequest_client" portType="client:SendLoanOriginationRequestCallback" operation="processResponse" inputVariable="outputVariable" id="BpInv1"/>
+  </sequence>
+</process><!--
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  Oracle JDeveloper BPEL Designer 
+  
+  Created: Mon Oct 21 12:13:55 EDT 2013
+  Author:  viachary
+  Type: BPEL 1.1 Process
+  Purpose: Asynchronous BPEL Process
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-->

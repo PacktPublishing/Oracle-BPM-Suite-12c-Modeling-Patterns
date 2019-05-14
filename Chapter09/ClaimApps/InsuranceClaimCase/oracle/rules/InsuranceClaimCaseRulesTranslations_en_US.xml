@@ -1,0 +1,9 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<properties>
+   <entry key="AG}56ce47f8:1469f8b9962:-7c00">CustomerAccepted</entry>
+   <entry key="AG}56ce47f8:1469f8b9962:-7c01">CustomerAcceptance</entry>
+   <entry key="AG}56ce47f8:1469f8b9962:-7c1b">Verified</entry>
+   <entry key="AG}-7fd0184f:146a70d9169:-7c2b">CustomerRejected</entry>
+   <entry key="AG}56ce47f8:1469f8b9962:-7c17">Validated</entry>
+   <entry key="AG}56ce47f8:1469f8b9962:-7c1c">AgentAssigned</entry>
+</properties>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns4:caseActivity targetNamespace="http://xmlns.oracle.com/InsuranceClaimCase/CustomerAcceptanceActivity" xmlns:ns2="http://xmlns.oracle.com/bpm/case/metadata" xmlns="http://xmlns.oracle.com/bpm/case/metadata/extension" xmlns:ns4="http://xmlns.oracle.com/bpm/case/activity" xmlns:ns3="http://xmlns.oracle.com/bpm/case/metadata/common">
+    <ns4:name>CustomerAcceptanceActivity</ns4:name>
+    <ns4:activityDefinitionId>${domain_id}_${process_id}_${process_revision}_CustomerAcceptanceActivity</ns4:activityDefinitionId>
+    <ns4:activityType>BPMN</ns4:activityType>
+    <ns4:repeatable>false</ns4:repeatable>
+    <ns4:required>true</ns4:required>
+    <ns4:manual>false</ns4:manual>
+    <ns4:isGlobal>false</ns4:isGlobal>
+    <ns4:isConditional>true</ns4:isConditional>
+    <ns4:bpmnActivity>
+        <ns4:parameters>
+            <ns4:inputs>
+                <ns4:parameter>
+                    <ns4:caseDataInput>
+                        <ns4:activityParamName>CustomerAcceptanceProcessIN</ns4:activityParamName>
+                        <ns4:elementName>Claim</ns4:elementName>
+                        <ns4:caseDataName>FNOLProcessIN</ns4:caseDataName>
+                    </ns4:caseDataInput>
+                </ns4:parameter>
+            </ns4:inputs>
+            <ns4:outputs>
+                <ns4:output>
+                    <ns4:parameters>
+                        <ns4:parameter>
+                            <ns4:nmOutput>
+                                <ns4:activityParamName>CustomerAcceptanceProcessOUT</ns4:activityParamName>
+                                <ns4:elementName>Claim</ns4:elementName>
+                            </ns4:nmOutput>
+                        </ns4:parameter>
+                    </ns4:parameters>
+                    <ns4:endpoint>EVT10326054294258</ns4:endpoint>
+                    <ns4:operationName>end</ns4:operationName>
+                </ns4:output>
+            </ns4:outputs>
+        </ns4:parameters>
+        <ns4:componentInfo>
+            <ns4:referenceName>CustomerAcceptanceProcess.service.reference</ns4:referenceName>
+            <ns4:namespace>http://xmlns.oracle.com/bpmn/bpmnProcess/CustomerAcceptanceProcess</ns4:namespace>
+            <ns4:operationName>start</ns4:operationName>
+            <ns4:isSynchronous>false</ns4:isSynchronous>
+        </ns4:componentInfo>
+    </ns4:bpmnActivity>
+</ns4:caseActivity>

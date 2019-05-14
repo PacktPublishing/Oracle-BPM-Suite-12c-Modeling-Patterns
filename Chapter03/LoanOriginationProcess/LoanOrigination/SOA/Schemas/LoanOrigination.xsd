@@ -1,0 +1,117 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:qt="http://www.myloanoriginationsystem.org" targetNamespace="http://www.myloanoriginationsystem.org"
+        elementFormDefault="qualified">
+  <element name="LoanRequest" type="qt:LoanRequestType"/>
+  <complexType name="ApplicantDetailsType">
+    <sequence>
+      <element name="ApplicantInformation" type="qt:ApplicantInformationType"/>
+      <element name="Address" type="qt:AddressType"/>
+      <element name="Contact" type="qt:ContactType"/>
+      <element name="IncomeEmployment" type="qt:IncomeAndEmploymentType"/>
+    </sequence>
+  </complexType>
+  <complexType name="LoanDetailsType">
+    <sequence>
+      <element name="ApplicantID" type="string"/>
+      <element name="Product" type="qt:ProductEnum"/>
+      <element name="Amount" type="decimal"/>
+      <element name="ApplicationDate" type="date"/>
+      <element name="Channel" type="qt:ChannelEnum"/>
+      <element name="Source" type="string"/>
+      <element name="InterestRate" type="decimal"/>
+      <element name="UpdateDate" type="date"/>
+      <element name="LoanOfficer" type="string"/>
+      <element name="LoanSalesRep" type="string"/>
+      <element name="LoanProcessor" type="string"/>
+      <element name="LoanStatus" type="string"/>
+      <element name="LoanPurpose" type="string"/>
+      <element name="Terms" type="string"/>
+      <element name="PaymentFrequency" type="string"/>
+    </sequence>
+  </complexType>
+  <complexType name="LoanRequestType">
+    <sequence>
+      <element name="LoanDetails" type="qt:LoanDetailsType"/>
+      <element name="ApplicantDetails" type="qt:ApplicantDetailsType"/>
+      <element name="LoanStatus" type="string"/>
+    </sequence>
+  </complexType>
+  <complexType name="ApplicantInformationType">
+    <sequence>
+      <element name="Salutation" type="string"/>
+      <element name="FName" type="string"/>
+      <element name="MName" type="string"/>
+      <element name="LName" type="string"/>
+      <element name="DateOfBirth" type="date"/>
+      <element name="SSN_Or_TAX" type="int"/>
+      <element name="ApplicantType" type="string"/>
+      <element name="Gender" type="string"/>
+      <element name="MaritialStatus" type="string"/>
+      <element name="Nationality" type="string"/>
+      <element name="Attribute1" type="string"/>
+      <element name="Attribute2" type="string"/>
+    </sequence>
+  </complexType>
+  <complexType name="AddressType">
+    <sequence>
+      <element name="Line1" type="string"/>
+      <element name="Line2" type="string"/>
+      <element name="City" type="string"/>
+      <element name="County" type="string"/>
+      <element name="State" type="string"/>
+      <element name="Country" type="string"/>
+      <element name="Zip" type="int"/>
+      <element name="LivingSince" type="date"/>
+    </sequence>
+  </complexType>
+  <complexType name="ContactType">
+    <sequence>
+      <element name="Email" type="string"/>
+      <element name="HomePhone" type="int"/>
+      <element name="WorkPhone" type="int"/>
+      <element name="CellPhone" type="int"/>
+      <element name="Fax" type="int"/>
+    </sequence>
+  </complexType>
+  <complexType name="IncomeAndEmploymentType">
+    <sequence>
+      <element name="Occupation" type="string"/>
+      <element name="YGross" type="decimal"/>
+      <element name="TotalIncome" type="decimal"/>
+      <element name="EmployeeName" type="string"/>
+      <element name="JobTitle" type="string"/>
+      <element name="StartDate" type="date"/>
+      <element name="EndDate" type="date"/>
+      <element name="EmployeePhone" type="int"/>
+      <element name="EmployeeAddress" type="string"/>
+    </sequence>
+  </complexType>
+  <simpleType name="ProductEnum">
+    <restriction base="string">
+      <enumeration value="PersonalLoan"/>
+      <enumeration value="HomeLoan"/>
+      <enumeration value="AutoLoan"/>
+      <enumeration value="EducationLoan"/>
+      <enumeration value="Others"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="ChannelEnum">
+    <restriction base="string">
+      <enumeration value="Branch"/>
+      <enumeration value="Web"/>
+      <enumeration value="CallCenter"/>
+      <enumeration value="Mobile"/>
+      <enumeration value="Others"/>
+    </restriction>
+  </simpleType>
+  <simpleType name="PaymentFrequencyEnum">
+    <restriction base="string">
+      <enumeration value="Monthly"/>
+      <enumeration value="Quaterly"/>
+      <enumeration value="HalfYearly"/>
+      <enumeration value="Yearly"/>
+      <enumeration value="Others"/>
+    </restriction>
+  </simpleType>
+</schema>

@@ -1,0 +1,30 @@
+2014-07-25 15:58:25.602/1.620 Oracle Coherence 12.1.3.0.0 <Info> (thread=main, member=n/a): Loaded operational configuration from "jar:file:/C:/Oracle/Middleware12c/Oracle_Home/coherence/lib/coherence.jar!/tangosol-coherence.xml"
+2014-07-25 15:58:25.661/1.679 Oracle Coherence 12.1.3.0.0 <Info> (thread=main, member=n/a): Loaded operational overrides from "jar:file:/C:/Oracle/Middleware12c/Oracle_Home/coherence/lib/coherence.jar!/tangosol-coherence-override-dev.xml"
+2014-07-25 15:58:25.662/1.680 Oracle Coherence 12.1.3.0.0 <D5> (thread=main, member=n/a): Optional configuration override "/tangosol-coherence-override.xml" is not specified
+2014-07-25 15:58:25.665/1.683 Oracle Coherence 12.1.3.0.0 <D5> (thread=main, member=n/a): Optional configuration override "cache-factory-config.xml" is not specified
+2014-07-25 15:58:25.666/1.684 Oracle Coherence 12.1.3.0.0 <D5> (thread=main, member=n/a): Optional configuration override "cache-factory-builder-config.xml" is not specified
+2014-07-25 15:58:25.667/1.685 Oracle Coherence 12.1.3.0.0 <D5> (thread=main, member=n/a): Optional configuration override "/custom-mbeans.xml" is not specified
+
+Oracle Coherence Version 12.1.3.0.0 Build 52031
+ Grid Edition: Development mode
+Copyright (c) 2000, 2014, Oracle and/or its affiliates. All rights reserved.
+
+2014-07-25 15:58:25.770/1.788 Oracle Coherence GE 12.1.3.0.0 <Info> (thread=main, member=n/a): Created cache factory com.tangosol.net.DefaultConfigurableCacheFactory
+Jul 25, 2014 3:58:26 PM oracle.fabric.common.wsdl.SchemaManager isIncrementalBuildSupported
+INFO: XMLSchema incremental build enabled.
+Jul 25, 2014 3:58:26 PM com.collaxa.cube.CubeLogger info
+INFO: validating "LoanPublishingProcess.bpel" ...
+Jul 25, 2014 3:58:26 PM oracle.integration.platform.blocks.PlatformConfigurationProvider getPlatformConfigurationProvider
+WARNING: JRF is unable to determine the current application server platform.
+Jul 25, 2014 3:58:26 PM com.collaxa.cube.CubeLogger info
+INFO: Composed "LoanPublishingProcess" in 39.8 milliseconds [nodes 7=0+7, 175.9 nodes/sec]
+Jul 25, 2014 3:58:27 PM CubeProcessGenerator compile
+INFO: RegularFileObject[C:\Users\vacharya\Desktop\AQAbel\PERSONAL\Chapter3\Chapter3\LoanOriginationProcess\PublishLoanPrj\SCA-INF\bpel\LoanPu~0\src\orabpel\loanpublishingprocess\L0.java] C:\Users\vacharya\Desktop\AQAbel\PERSONAL\Chapter3\Chapter3\LoanOriginationProcess\PublishLoanPrj\SCA-INF\bpel\LoanPu~0\src\orabpel\loanpublishingprocess\L0.java uses unchecked or unsafe operations.
+Jul 25, 2014 3:58:27 PM CubeProcessGenerator compile
+INFO: RegularFileObject[C:\Users\vacharya\Desktop\AQAbel\PERSONAL\Chapter3\Chapter3\LoanOriginationProcess\PublishLoanPrj\SCA-INF\bpel\LoanPu~0\src\orabpel\loanpublishingprocess\L0.java] Recompile with -Xlint:unchecked for details.
+Jul 25, 2014 3:58:27 PM com.collaxa.cube.CubeLogger info
+INFO: Compiled "LoanPublishingProcess" in 737.5 milliseconds
+Jul 25, 2014 3:58:27 PM com.collaxa.cube.CubeLogger info
+INFO: Gathered 4 files in 0.7 milliseconds
+Jul 25, 2014 3:58:27 PM com.collaxa.cube.CubeLogger info
+INFO: Packaged "LoanPublishingProcess" in 5.4 milliseconds

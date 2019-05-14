@@ -1,0 +1,1342 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.64.93" id="taskDetails1PageDef"
+                Package="validateclaimtaskui.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <methodIterator Binds="getTaskDetails.result"
+                    DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                    RangeSize="25"
+                    BeanClass="ValidateClaimTaskUI_ValidateClaimTask.getTaskDetails"
+                    id="getTaskDetailsIterator"/>
+    <accessorIterator MasterBinding="getTaskDetailsIterator" Binds="task"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.task"
+                      id="taskIterator" StateValidation="false"/>
+    <accessorIterator MasterBinding="taskIterator" Binds="systemAttributes"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.systemAttributesType"
+                      id="systemAttributesIterator"/>
+    <accessorIterator MasterBinding="systemAttributesIterator"
+                      Binds="systemActions" RangeSize="50"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.actionType"
+                      id="systemActionsIterator" StateValidation="false"/>
+    <accessorIterator MasterBinding="systemAttributesIterator"
+                      Binds="customActions" RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.actionType"
+                      id="customActionsIterator"/>
+    <accessorIterator MasterBinding="systemAttributesIterator" Binds="fromUser"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.identityType"
+                      id="fromUserIterator"/>
+    <accessorIterator MasterBinding="systemAttributesIterator" Binds="assignees"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.identityType"
+                      id="assigneesIterator" StateValidation="false"/>
+    <accessorIterator MasterBinding="taskIterator" Binds="payload"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.ValidateClaimTaskPayloadType"
+                      id="payloadIterator"/>
+    <accessorIterator MasterBinding="payloadIterator" Binds="Claim"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Claim"
+                      id="ClaimIterator"/>
+    <accessorIterator MasterBinding="ClaimIterator" Binds="DeclainClaim"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.DeclineClaim"
+                      id="DeclainClaimIterator"/>
+    <accessorIterator MasterBinding="ClaimIterator" Binds="Settlement"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Settlement"
+                      id="SettlementIterator"/>
+    <accessorIterator MasterBinding="SettlementIterator" Binds="offers"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Offers"
+                      id="offersIterator"/>
+    <accessorIterator MasterBinding="SettlementIterator" Binds="payments"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Payments"
+                      id="paymentsIterator"/>
+    <accessorIterator MasterBinding="paymentsIterator" Binds="payeeAddress"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Address"
+                      id="payeeAddressIterator"/>
+    <accessorIterator MasterBinding="ClaimIterator" Binds="FNOL" RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.FNOL"
+                      id="FNOLIterator"/>
+    <accessorIterator MasterBinding="FNOLIterator" Binds="lossAddress"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Address"
+                      id="lossAddressIterator"/>
+    <accessorIterator MasterBinding="FNOLIterator" Binds="lossDetails"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.LossDetails"
+                      id="lossDetailsIterator"/>
+    <accessorIterator MasterBinding="FNOLIterator" Binds="involvedParties"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.InvolvementDetails"
+                      id="involvedPartiesIterator"/>
+    <accessorIterator MasterBinding="involvedPartiesIterator"
+                      Binds="partyDetails" RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.PartyDetails"
+                      id="partyDetailsIterator"/>
+    <accessorIterator MasterBinding="partyDetailsIterator" Binds="contact"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.ContactDetails"
+                      id="contactIterator"/>
+    <accessorIterator MasterBinding="partyDetailsIterator" Binds="address"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Address"
+                      id="addressIterator"/>
+    <accessorIterator MasterBinding="FNOLIterator" Binds="serviceProvider"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.serviceProvider"
+                      id="serviceProviderIterator"/>
+    <accessorIterator MasterBinding="FNOLIterator" Binds="policyDetails"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.PolicyDetails"
+                      id="policyDetailsIterator"/>
+    <accessorIterator MasterBinding="ClaimIterator" Binds="CloseClaimCase"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.CloseClaim"
+                      id="CloseClaimCaseIterator"/>
+    <accessorIterator MasterBinding="ClaimIterator" Binds="Appraisal"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Appraisal"
+                      id="AppraisalIterator"/>
+    <accessorIterator MasterBinding="AppraisalIterator" Binds="examineDamage"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.ExamineDamage"
+                      id="examineDamageIterator"/>
+    <accessorIterator MasterBinding="examineDamageIterator" Binds="address"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Address"
+                      id="addressIterator1"/>
+    <accessorIterator MasterBinding="AppraisalIterator" Binds="vehicalDetails"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.vehicalDetails"
+                      id="vehicalDetailsIterator"/>
+    <accessorIterator MasterBinding="vehicalDetailsIterator"
+                      Binds="vehicalBuild" RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.VehicalBuild"
+                      id="vehicalBuildIterator"/>
+    <accessorIterator MasterBinding="vehicalDetailsIterator"
+                      Binds="vehicalDamage" RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.VehicalDamage"
+                      id="vehicalDamageIterator"/>
+    <accessorIterator MasterBinding="AppraisalIterator" Binds="estimatedCost"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.estimatedCost"
+                      id="estimatedCostIterator"/>
+    <accessorIterator MasterBinding="AppraisalIterator" Binds="declaration"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.declaration"
+                      id="declarationIterator"/>
+    <accessorIterator MasterBinding="ClaimIterator" Binds="Evaluation"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Evaluation"
+                      id="EvaluationIterator"/>
+    <accessorIterator MasterBinding="EvaluationIterator" Binds="track"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.track"
+                      id="trackIterator"/>
+    <accessorIterator MasterBinding="trackIterator" Binds="fastTrack"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.fastTrack"
+                      id="fastTrackIterator"/>
+    <accessorIterator MasterBinding="trackIterator" Binds="reserve"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.reserve"
+                      id="reserveIterator"/>
+    <accessorIterator MasterBinding="taskIterator" Binds="userComment"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.commentType"
+                      id="userCommentIterator" StateValidation="false"/>
+    <accessorIterator MasterBinding="userCommentIterator" Binds="updatedBy"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.identityType"
+                      id="updatedByIterator" StateValidation="false"/>
+    <accessorIterator MasterBinding="taskIterator" Binds="attachment"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.attachmentType"
+                      id="attachmentIterator" StateValidation="false"/>
+    <accessorIterator MasterBinding="attachmentIterator" Binds="ucmMetadataItem"
+                      RangeSize="25"
+                      DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                      BeanClass="ValidateClaimTaskUI_ValidateClaimTask.ucmMetadataItemType"
+                      id="ucmMetadataItemIterator" StateValidation="false"/>
+  </executables>
+  <bindings>
+    <methodAction id="getTaskDetails" RequiresUpdateModel="true"
+                  Action="invokeMethod" MethodName="getTaskDetails"
+                  IsViewObjectMethod="false"
+                  DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                  InstanceName="ValidateClaimTaskUI_ValidateClaimTask"
+                  ReturnName="data.ValidateClaimTaskUI_ValidateClaimTask.methodResults.getTaskDetails_ValidateClaimTaskUI_ValidateClaimTask_getTaskDetails_result">
+      <NamedData NDName="bpmWorklistContext" NDType="java.lang.String"
+                 NDValue=""/>
+      <NamedData NDName="bpmWorklistTaskId" NDType="java.lang.String"
+                 NDValue=""/>
+      <NamedData NDName="bpmWorklistTaskVersion" NDType="java.lang.String"
+                 NDValue=""/>
+    </methodAction>
+    <methodAction IterBinding="taskIterator" id="UpdateAction"
+                  RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="UpdateAction" IsViewObjectMethod="false"
+                  DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                  InstanceName="bindings.taskIterator.currentRow.dataProvider"
+                  IsLocalObjectReference="true">
+      <NamedData NDName="action" NDType="java.lang.String" NDValue=""/>
+    </methodAction>
+    <attributeValues IterBinding="taskIterator" id="title">
+      <AttrNames>
+        <Item Value="title"/>
+      </AttrNames>
+    </attributeValues>
+    <methodAction IterBinding="taskIterator" id="update"
+                  RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="update" IsViewObjectMethod="false"
+                  DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                  InstanceName="bindings.taskIterator.currentRow.dataProvider"
+                  IsLocalObjectReference="true"/>
+    <navigationlist IterBinding="systemActionsIterator"
+                    ListOperMode="navigation" ListIter="systemActionsIterator"
+                    id="systemActions">
+      <AttrNames>
+        <Item Value="action"/>
+        <Item Value="displayName"/>
+      </AttrNames>
+    </navigationlist>
+    <attributeValues IterBinding="systemAttributesIterator"
+                     id="digitalSignatureRequired">
+      <AttrNames>
+        <Item Value="digitalSignatureRequired"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="systemAttributesIterator"
+                     id="passwordRequiredOnUpdate">
+      <AttrNames>
+        <Item Value="passwordRequiredOnUpdate"/>
+      </AttrNames>
+    </attributeValues>
+    <navigationlist IterBinding="customActionsIterator"
+                    ListOperMode="navigation" ListIter="customActionsIterator"
+                    id="customActions">
+      <AttrNames>
+        <Item Value="action"/>
+        <Item Value="displayName"/>
+      </AttrNames>
+    </navigationlist>
+    <methodAction IterBinding="taskIterator" id="Claim"
+                  RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="Claim" IsViewObjectMethod="false"
+                  DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                  InstanceName="bindings.taskIterator.currentRow.dataProvider"
+                  IsLocalObjectReference="true"/>
+    <methodAction IterBinding="taskIterator" id="Acknowledge"
+                  RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="Acknowledge" IsViewObjectMethod="false"
+                  DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                  InstanceName="bindings.taskIterator.currentRow.dataProvider"
+                  IsLocalObjectReference="true"/>
+    <methodAction IterBinding="taskIterator" id="Resume"
+                  RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="Resume" IsViewObjectMethod="false"
+                  DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                  InstanceName="bindings.taskIterator.currentRow.dataProvider"
+                  IsLocalObjectReference="true"/>
+    <methodAction IterBinding="taskIterator" id="Withdraw"
+                  RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="Withdraw" IsViewObjectMethod="false"
+                  DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                  InstanceName="bindings.taskIterator.currentRow.dataProvider"
+                  IsLocalObjectReference="true"/>
+    <methodAction IterBinding="taskIterator" id="APPROVE"
+                  RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="APPROVE" IsViewObjectMethod="false"
+                  DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                  InstanceName="bindings.taskIterator.currentRow.dataProvider"
+                  IsLocalObjectReference="true"/>
+    <methodAction IterBinding="taskIterator" id="REJECT"
+                  RequiresUpdateModel="true" Action="invokeMethod"
+                  MethodName="REJECT" IsViewObjectMethod="false"
+                  DataControl="ValidateClaimTaskUI_ValidateClaimTask"
+                  InstanceName="bindings.taskIterator.currentRow.dataProvider"
+                  IsLocalObjectReference="true"/>
+    <attributeValues IterBinding="taskIterator" id="creator">
+      <AttrNames>
+        <Item Value="creator"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="taskIterator" id="ownerUser">
+      <AttrNames>
+        <Item Value="ownerUser"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="taskIterator" id="priority">
+      <AttrNames>
+        <Item Value="priority"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="taskIterator" id="dueDate">
+      <AttrNames>
+        <Item Value="dueDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="taskIterator" id="creatorDisplayName">
+      <AttrNames>
+        <Item Value="creatorDisplayName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="taskIterator" id="ownerUserDisplayName">
+      <AttrNames>
+        <Item Value="ownerUserDisplayName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="systemAttributesIterator" id="acquiredBy">
+      <AttrNames>
+        <Item Value="acquiredBy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="systemAttributesIterator" id="assignedDate">
+      <AttrNames>
+        <Item Value="assignedDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="systemAttributesIterator" id="createdDate">
+      <AttrNames>
+        <Item Value="createdDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="systemAttributesIterator" id="expirationDate">
+      <AttrNames>
+        <Item Value="expirationDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="systemAttributesIterator" id="outcome">
+      <AttrNames>
+        <Item Value="outcome"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="systemAttributesIterator" id="state">
+      <AttrNames>
+        <Item Value="state"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="systemAttributesIterator" id="taskNumber">
+      <AttrNames>
+        <Item Value="taskNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="systemAttributesIterator" id="updatedDate">
+      <AttrNames>
+        <Item Value="updatedDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="systemAttributesIterator"
+                     id="taskViewContext">
+      <AttrNames>
+        <Item Value="taskViewContext"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="systemAttributesIterator"
+                     id="actionDisplayName">
+      <AttrNames>
+        <Item Value="actionDisplayName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="systemAttributesIterator" id="componentType">
+      <AttrNames>
+        <Item Value="componentType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="systemAttributesIterator" id="activityId">
+      <AttrNames>
+        <Item Value="activityId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="fromUserIterator" id="id">
+      <AttrNames>
+        <Item Value="id"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="fromUserIterator" id="displayName">
+      <AttrNames>
+        <Item Value="displayName"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="assigneesIterator" id="assignees">
+      <nodeDefinition DefName="ValidateClaimTaskUI_ValidateClaimTask.identityType"
+                      Name="assignees0">
+        <AttrNames>
+          <Item Value="id"/>
+          <Item Value="displayName"/>
+          <Item Value="type"/>
+          <Item Value="systemVersionFlag"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="DeclainClaimIterator" id="caseDeclineDate">
+      <AttrNames>
+        <Item Value="caseDeclineDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DeclainClaimIterator" id="reason">
+      <AttrNames>
+        <Item Value="reason"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="DeclainClaimIterator" id="comments">
+      <AttrNames>
+        <Item Value="comments"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="SettlementIterator" id="faultSubject">
+      <AttrNames>
+        <Item Value="faultSubject"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="offersIterator" id="version">
+      <AttrNames>
+        <Item Value="version"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="offersIterator" id="uploadOffer">
+      <AttrNames>
+        <Item Value="uploadOffer"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="offersIterator" id="uploadDate">
+      <AttrNames>
+        <Item Value="uploadDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="offersIterator" id="sentDate">
+      <AttrNames>
+        <Item Value="sentDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="offersIterator" id="comment">
+      <AttrNames>
+        <Item Value="comment"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="paymentsIterator" id="paymentMethod">
+      <AttrNames>
+        <Item Value="paymentMethod"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="paymentsIterator" id="payeeName">
+      <AttrNames>
+        <Item Value="payeeName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="paymentsIterator" id="paymentAmount">
+      <AttrNames>
+        <Item Value="paymentAmount"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="paymentsIterator" id="invoiceNumber">
+      <AttrNames>
+        <Item Value="invoiceNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="paymentsIterator" id="invoiceDate">
+      <AttrNames>
+        <Item Value="invoiceDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="paymentsIterator" id="memo">
+      <AttrNames>
+        <Item Value="memo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="payeeAddressIterator" id="locationType">
+      <AttrNames>
+        <Item Value="locationType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="payeeAddressIterator" id="addressLine1">
+      <AttrNames>
+        <Item Value="addressLine1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="payeeAddressIterator" id="addressLine2">
+      <AttrNames>
+        <Item Value="addressLine2"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="payeeAddressIterator" id="addressLine3">
+      <AttrNames>
+        <Item Value="addressLine3"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="payeeAddressIterator" id="city">
+      <AttrNames>
+        <Item Value="city"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="payeeAddressIterator" id="country">
+      <AttrNames>
+        <Item Value="country"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="payeeAddressIterator" id="state1">
+      <AttrNames>
+        <Item Value="state"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="payeeAddressIterator" id="zipCode">
+      <AttrNames>
+        <Item Value="zipCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="FNOLIterator" id="lossType">
+      <AttrNames>
+        <Item Value="lossType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="FNOLIterator" id="lossDate">
+      <AttrNames>
+        <Item Value="lossDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="FNOLIterator" id="reportedChannel">
+      <AttrNames>
+        <Item Value="reportedChannel"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="FNOLIterator" id="description">
+      <AttrNames>
+        <Item Value="description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="FNOLIterator" id="sensitivity">
+      <AttrNames>
+        <Item Value="sensitivity"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="FNOLIterator" id="fastTrackFlag">
+      <AttrNames>
+        <Item Value="fastTrackFlag"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="FNOLIterator" id="claimValidated">
+      <AttrNames>
+        <Item Value="claimValidated"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="lossAddressIterator" id="locationType1">
+      <AttrNames>
+        <Item Value="locationType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="lossAddressIterator" id="addressLine11">
+      <AttrNames>
+        <Item Value="addressLine1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="lossAddressIterator" id="addressLine21">
+      <AttrNames>
+        <Item Value="addressLine2"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="lossAddressIterator" id="addressLine31">
+      <AttrNames>
+        <Item Value="addressLine3"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="lossAddressIterator" id="city1">
+      <AttrNames>
+        <Item Value="city"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="lossAddressIterator" id="country1">
+      <AttrNames>
+        <Item Value="country"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="lossAddressIterator" id="state2">
+      <AttrNames>
+        <Item Value="state"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="lossAddressIterator" id="zipCode1">
+      <AttrNames>
+        <Item Value="zipCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="lossDetailsIterator"
+                     id="noOfVehiclesInvolved">
+      <AttrNames>
+        <Item Value="noOfVehiclesInvolved"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="lossDetailsIterator" id="noOfWitness">
+      <AttrNames>
+        <Item Value="noOfWitness"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="lossDetailsIterator" id="whoWasDriving">
+      <AttrNames>
+        <Item Value="whoWasDriving"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="lossDetailsIterator" id="vehicleTowed">
+      <AttrNames>
+        <Item Value="vehicleTowed"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="lossDetailsIterator" id="towingRequest">
+      <AttrNames>
+        <Item Value="towingRequest"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="lossDetailsIterator" id="damageDescription">
+      <AttrNames>
+        <Item Value="damageDescription"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="lossDetailsIterator" id="injuryDescription">
+      <AttrNames>
+        <Item Value="injuryDescription"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="lossDetailsIterator" id="policeReportFiled">
+      <AttrNames>
+        <Item Value="policeReportFiled"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="lossDetailsIterator"
+                     id="policeReportFiledDate">
+      <AttrNames>
+        <Item Value="policeReportFiledDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="lossDetailsIterator" id="policereportNumber">
+      <AttrNames>
+        <Item Value="policereportNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="lossDetailsIterator" id="policeDepartment">
+      <AttrNames>
+        <Item Value="policeDepartment"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="involvedPartiesIterator" id="involvementType">
+      <AttrNames>
+        <Item Value="involvementType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="partyDetailsIterator" id="salutation">
+      <AttrNames>
+        <Item Value="salutation"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="partyDetailsIterator" id="fName">
+      <AttrNames>
+        <Item Value="fName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="partyDetailsIterator" id="mName">
+      <AttrNames>
+        <Item Value="mName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="partyDetailsIterator" id="lName">
+      <AttrNames>
+        <Item Value="lName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="partyDetailsIterator" id="maritialStatus">
+      <AttrNames>
+        <Item Value="maritialStatus"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="partyDetailsIterator" id="gender">
+      <AttrNames>
+        <Item Value="gender"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="partyDetailsIterator" id="DOB">
+      <AttrNames>
+        <Item Value="DOB"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="partyDetailsIterator" id="SSN">
+      <AttrNames>
+        <Item Value="SSN"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="partyDetailsIterator" id="nationality">
+      <AttrNames>
+        <Item Value="nationality"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="contactIterator" id="CreateInsert"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="contactIterator" id="Delete"
+            RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <tree IterBinding="contactIterator" id="contact">
+      <nodeDefinition DefName="ValidateClaimTaskUI_ValidateClaimTask.ContactDetails"
+                      Name="contact0">
+        <AttrNames>
+          <Item Value="email"/>
+          <Item Value="workPhone"/>
+          <Item Value="fax"/>
+          <Item Value="cell"/>
+          <Item Value="homePhone"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="addressIterator" id="CreateInsert1"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="addressIterator" id="Delete1"
+            RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <tree IterBinding="addressIterator" id="address">
+      <nodeDefinition DefName="ValidateClaimTaskUI_ValidateClaimTask.Address"
+                      Name="address0">
+        <AttrNames>
+          <Item Value="locationType"/>
+          <Item Value="addressLine1"/>
+          <Item Value="addressLine2"/>
+          <Item Value="addressLine3"/>
+          <Item Value="city"/>
+          <Item Value="country"/>
+          <Item Value="state"/>
+          <Item Value="zipCode"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="serviceProviderIterator" id="providerName">
+      <AttrNames>
+        <Item Value="providerName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="serviceProviderIterator" id="messageSubject">
+      <AttrNames>
+        <Item Value="messageSubject"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="serviceProviderIterator" id="messageDetails">
+      <AttrNames>
+        <Item Value="messageDetails"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="policyDetailsIterator" id="policyName">
+      <AttrNames>
+        <Item Value="policyName"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="policyDetailsIterator" id="policyNumber">
+      <AttrNames>
+        <Item Value="policyNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="policyDetailsIterator" id="primaryInsured">
+      <AttrNames>
+        <Item Value="primaryInsured"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="policyDetailsIterator" id="insuredItem">
+      <AttrNames>
+        <Item Value="insuredItem"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CloseClaimCaseIterator" id="caseCloseDate">
+      <AttrNames>
+        <Item Value="caseCloseDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CloseClaimCaseIterator" id="reason1">
+      <AttrNames>
+        <Item Value="reason"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="CloseClaimCaseIterator" id="comments1">
+      <AttrNames>
+        <Item Value="comments"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="examineDamageIterator" id="examineDateTime">
+      <AttrNames>
+        <Item Value="examineDateTime"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="examineDamageIterator" id="claimantPresent">
+      <AttrNames>
+        <Item Value="claimantPresent"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="examineDamageIterator" id="photosUploaded">
+      <AttrNames>
+        <Item Value="photosUploaded"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="addressIterator1" id="locationType2">
+      <AttrNames>
+        <Item Value="locationType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="addressIterator1" id="addressLine12">
+      <AttrNames>
+        <Item Value="addressLine1"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="addressIterator1" id="addressLine22">
+      <AttrNames>
+        <Item Value="addressLine2"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="addressIterator1" id="addressLine32">
+      <AttrNames>
+        <Item Value="addressLine3"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="addressIterator1" id="city2">
+      <AttrNames>
+        <Item Value="city"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="addressIterator1" id="country2">
+      <AttrNames>
+        <Item Value="country"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="addressIterator1" id="state3">
+      <AttrNames>
+        <Item Value="state"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="addressIterator1" id="zipCode2">
+      <AttrNames>
+        <Item Value="zipCode"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalBuildIterator" id="make">
+      <AttrNames>
+        <Item Value="make"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalBuildIterator" id="model">
+      <AttrNames>
+        <Item Value="model"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalBuildIterator" id="year">
+      <AttrNames>
+        <Item Value="year"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalBuildIterator" id="color">
+      <AttrNames>
+        <Item Value="color"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalBuildIterator" id="lisenceNumber">
+      <AttrNames>
+        <Item Value="lisenceNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalBuildIterator" id="VINNumber">
+      <AttrNames>
+        <Item Value="VINNumber"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalBuildIterator"
+                     id="registrationVerified">
+      <AttrNames>
+        <Item Value="registrationVerified"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalDamageIterator" id="driverFront">
+      <AttrNames>
+        <Item Value="driverFront"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalDamageIterator" id="passangerFront">
+      <AttrNames>
+        <Item Value="passangerFront"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalDamageIterator" id="driverSide">
+      <AttrNames>
+        <Item Value="driverSide"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalDamageIterator" id="passangerSide">
+      <AttrNames>
+        <Item Value="passangerSide"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalDamageIterator" id="driverRear">
+      <AttrNames>
+        <Item Value="driverRear"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalDamageIterator" id="passangerRear">
+      <AttrNames>
+        <Item Value="passangerRear"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalDamageIterator" id="frontEnd">
+      <AttrNames>
+        <Item Value="frontEnd"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalDamageIterator" id="rearEnd">
+      <AttrNames>
+        <Item Value="rearEnd"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalDamageIterator" id="roof">
+      <AttrNames>
+        <Item Value="roof"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalDamageIterator" id="damage">
+      <AttrNames>
+        <Item Value="damage"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalDamageIterator" id="fireDamage">
+      <AttrNames>
+        <Item Value="fireDamage"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalDamageIterator" id="interior">
+      <AttrNames>
+        <Item Value="interior"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalDamageIterator" id="allPanels">
+      <AttrNames>
+        <Item Value="allPanels"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalDamageIterator" id="engine">
+      <AttrNames>
+        <Item Value="engine"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalDamageIterator" id="totalLoss">
+      <AttrNames>
+        <Item Value="totalLoss"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalDamageIterator" id="window">
+      <AttrNames>
+        <Item Value="window"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalDamageIterator" id="windsheild">
+      <AttrNames>
+        <Item Value="windsheild"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalDamageIterator" id="underCarriage">
+      <AttrNames>
+        <Item Value="underCarriage"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="vehicalDamageIterator" id="description1">
+      <AttrNames>
+        <Item Value="description"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="estimatedCostIterator"
+                     id="estimationCompleted">
+      <AttrNames>
+        <Item Value="estimationCompleted"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="estimatedCostIterator" id="estimatedCost">
+      <AttrNames>
+        <Item Value="estimatedCost"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="estimatedCostIterator" id="comment1">
+      <AttrNames>
+        <Item Value="comment"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="estimatedCostIterator"
+                     id="estimationDescription">
+      <AttrNames>
+        <Item Value="estimationDescription"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="declarationIterator"
+                     id="declarationDocumentUploaded">
+      <AttrNames>
+        <Item Value="declarationDocumentUploaded"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="fastTrackIterator" id="lossDescription">
+      <AttrNames>
+        <Item Value="lossDescription"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="fastTrackIterator"
+                     id="proofDocumentsReviewed">
+      <AttrNames>
+        <Item Value="proofDocumentsReviewed"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="fastTrackIterator" id="repairEstimate">
+      <AttrNames>
+        <Item Value="repairEstimate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="reserveIterator" id="reserveAmount">
+      <AttrNames>
+        <Item Value="reserveAmount"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="reserveIterator" id="payments">
+      <AttrNames>
+        <Item Value="payments"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="reserveIterator" id="outstandingReserve">
+      <AttrNames>
+        <Item Value="outstandingReserve"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="reserveIterator" id="lastUpdated">
+      <AttrNames>
+        <Item Value="lastUpdated"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="reserveIterator" id="comments2">
+      <AttrNames>
+        <Item Value="comments"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="userCommentIterator" id="userComment">
+      <nodeDefinition DefName="ValidateClaimTaskUI_ValidateClaimTask.commentType"
+                      Name="userComment0">
+        <AttrNames>
+          <Item Value="comment"/>
+          <Item Value="updatedDate"/>
+          <Item Value="displayNameLanguage"/>
+          <Item Value="action"/>
+          <Item Value="systemVersionFlag"/>
+          <Item Value="acl"/>
+          <Item Value="doesBelongToParent"/>
+          <Item Value="isSystemComment"/>
+          <Item Value="taskId"/>
+          <Item Value="commentScope"/>
+          <Item Value="id"/>
+          <Item Value="operation"/>
+        </AttrNames>
+        <Accessors>
+          <Item Value="updatedBy"/>
+        </Accessors>
+      </nodeDefinition>
+      <nodeDefinition DefName="ValidateClaimTaskUI_ValidateClaimTask.identityType"
+                      Name="userComment1">
+        <AttrNames>
+          <Item Value="id"/>
+          <Item Value="displayName"/>
+          <Item Value="type"/>
+          <Item Value="systemVersionFlag"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="userCommentIterator" id="CreateInsert2"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="userCommentIterator" id="Delete2"
+            RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <attributeValues IterBinding="userCommentIterator" id="comment2">
+      <AttrNames>
+        <Item Value="comment"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="userCommentIterator" id="commentScope">
+      <AttrNames>
+        <Item Value="commentScope"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="updatedByIterator" id="updatedBy">
+      <nodeDefinition DefName="ValidateClaimTaskUI_ValidateClaimTask.identityType"
+                      Name="updatedBy0">
+        <AttrNames>
+          <Item Value="id"/>
+          <Item Value="displayName"/>
+          <Item Value="type"/>
+          <Item Value="systemVersionFlag"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="attachmentIterator" id="attachment">
+      <nodeDefinition DefName="ValidateClaimTaskUI_ValidateClaimTask.attachmentType"
+                      Name="attachment0">
+        <AttrNames>
+          <Item Value="content"/>
+          <Item Value="mimeType"/>
+          <Item Value="name"/>
+          <Item Value="updatedBy"/>
+          <Item Value="URI"/>
+          <Item Value="systemVersionFlag"/>
+          <Item Value="taskId"/>
+          <Item Value="version"/>
+          <Item Value="acl"/>
+          <Item Value="doesBelongToParent"/>
+          <Item Value="updatedDate"/>
+          <Item Value="correlationId"/>
+          <Item Value="size"/>
+          <Item Value="description"/>
+          <Item Value="storageType"/>
+          <Item Value="ucmDocType"/>
+          <Item Value="securityGroup"/>
+          <Item Value="account"/>
+          <Item Value="revision"/>
+          <Item Value="releaseDate"/>
+          <Item Value="expirationDate"/>
+          <Item Value="title"/>
+          <Item Value="attachmentScope"/>
+          <Item Value="isContentEncoded"/>
+          <Item Value="updatedByDisplayName"/>
+          <Item Value="id"/>
+          <Item Value="operation"/>
+        </AttrNames>
+      </nodeDefinition>
+      <nodeDefinition DefName="ValidateClaimTaskUI_ValidateClaimTask.ucmMetadataItemType"
+                      Name="attachment1">
+        <AttrNames>
+          <Item Value="name"/>
+          <Item Value="value"/>
+          <Item Value="type"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action IterBinding="attachmentIterator" id="CreateInsert3"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="attachmentIterator" id="Delete3"
+            RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <attributeValues IterBinding="attachmentIterator" id="content">
+      <AttrNames>
+        <Item Value="content"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="attachmentIterator" id="mimeType">
+      <AttrNames>
+        <Item Value="mimeType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="attachmentIterator" id="name">
+      <AttrNames>
+        <Item Value="name"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="attachmentIterator" id="updatedBy1">
+      <AttrNames>
+        <Item Value="updatedBy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="attachmentIterator" id="URI">
+      <AttrNames>
+        <Item Value="URI"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="attachmentIterator" id="updatedDate1">
+      <AttrNames>
+        <Item Value="updatedDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="attachmentIterator" id="ucmDocType">
+      <AttrNames>
+        <Item Value="ucmDocType"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="attachmentIterator" id="securityGroup">
+      <AttrNames>
+        <Item Value="securityGroup"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="attachmentIterator" id="account">
+      <AttrNames>
+        <Item Value="account"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="attachmentIterator" id="revision">
+      <AttrNames>
+        <Item Value="revision"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="attachmentIterator" id="releaseDate">
+      <AttrNames>
+        <Item Value="releaseDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="attachmentIterator" id="expirationDate1">
+      <AttrNames>
+        <Item Value="expirationDate"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="attachmentIterator" id="attachmentScope">
+      <AttrNames>
+        <Item Value="attachmentScope"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="ucmMetadataItemIterator" id="CreateInsert4"
+            RequiresUpdateModel="true" Action="createInsertRow"/>
+    <action IterBinding="ucmMetadataItemIterator" id="Delete4"
+            RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <tree IterBinding="ucmMetadataItemIterator" id="ucmMetadataItem">
+      <nodeDefinition DefName="ValidateClaimTaskUI_ValidateClaimTask.ucmMetadataItemType"
+                      Name="ucmMetadataItem0">
+        <AttrNames>
+          <Item Value="name"/>
+          <Item Value="value"/>
+          <Item Value="type"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="systemAttributesIterator"
+                     id="numberOfTimesModified">
+      <AttrNames>
+        <Item Value="numberOfTimesModified"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="systemAttributesIterator" id="version1">
+      <AttrNames>
+        <Item Value="version"/>
+      </AttrNames>
+    </attributeValues>
+    <tree IterBinding="userCommentIterator" id="userComment1">
+      <nodeDefinition DefName="ValidateClaimTaskUI_ValidateClaimTask.commentType"
+                      Name="userComment10">
+        <AttrNames>
+          <Item Value="comment"/>
+          <Item Value="updatedDate"/>
+          <Item Value="displayNameLanguage"/>
+          <Item Value="action"/>
+          <Item Value="systemVersionFlag"/>
+          <Item Value="acl"/>
+          <Item Value="doesBelongToParent"/>
+          <Item Value="isSystemComment"/>
+          <Item Value="taskId"/>
+          <Item Value="commentScope"/>
+          <Item Value="id"/>
+          <Item Value="operation"/>
+        </AttrNames>
+        <Accessors>
+          <Item Value="updatedBy"/>
+        </Accessors>
+      </nodeDefinition>
+      <nodeDefinition DefName="ValidateClaimTaskUI_ValidateClaimTask.identityType"
+                      Name="userComment11">
+        <AttrNames>
+          <Item Value="id"/>
+          <Item Value="displayName"/>
+          <Item Value="type"/>
+          <Item Value="systemVersionFlag"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="updatedByIterator" id="updatedBy2">
+      <nodeDefinition DefName="ValidateClaimTaskUI_ValidateClaimTask.identityType"
+                      Name="updatedBy20">
+        <AttrNames>
+          <Item Value="id"/>
+          <Item Value="displayName"/>
+          <Item Value="type"/>
+          <Item Value="systemVersionFlag"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="attachmentIterator" id="attachment1">
+      <nodeDefinition DefName="ValidateClaimTaskUI_ValidateClaimTask.attachmentType"
+                      Name="attachment10">
+        <AttrNames>
+          <Item Value="content"/>
+          <Item Value="mimeType"/>
+          <Item Value="name"/>
+          <Item Value="updatedBy"/>
+          <Item Value="URI"/>
+          <Item Value="systemVersionFlag"/>
+          <Item Value="taskId"/>
+          <Item Value="version"/>
+          <Item Value="acl"/>
+          <Item Value="doesBelongToParent"/>
+          <Item Value="updatedDate"/>
+          <Item Value="correlationId"/>
+          <Item Value="size"/>
+          <Item Value="description"/>
+          <Item Value="storageType"/>
+          <Item Value="ucmDocType"/>
+          <Item Value="securityGroup"/>
+          <Item Value="account"/>
+          <Item Value="revision"/>
+          <Item Value="releaseDate"/>
+          <Item Value="expirationDate"/>
+          <Item Value="title"/>
+          <Item Value="attachmentScope"/>
+          <Item Value="isContentEncoded"/>
+          <Item Value="updatedByDisplayName"/>
+          <Item Value="id"/>
+          <Item Value="operation"/>
+        </AttrNames>
+      </nodeDefinition>
+      <nodeDefinition DefName="ValidateClaimTaskUI_ValidateClaimTask.ucmMetadataItemType"
+                      Name="attachment11">
+        <AttrNames>
+          <Item Value="name"/>
+          <Item Value="value"/>
+          <Item Value="type"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="ucmMetadataItemIterator" id="ucmMetadataItem1">
+      <nodeDefinition DefName="ValidateClaimTaskUI_ValidateClaimTask.ucmMetadataItemType"
+                      Name="ucmMetadataItem10">
+        <AttrNames>
+          <Item Value="name"/>
+          <Item Value="value"/>
+          <Item Value="type"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

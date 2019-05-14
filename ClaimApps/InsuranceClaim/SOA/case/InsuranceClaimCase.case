@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:caseMetadata targetNamespace="http://xmlns.oracle.com/InsuranceClaimCase" xmlns:ns2="http://xmlns.oracle.com/bpm/case/metadata/common" xmlns="http://xmlns.oracle.com/bpm/case/metadata/extension" xmlns:ns4="http://xmlns.oracle.com/bpm/case/activity" xmlns:ns3="http://xmlns.oracle.com/bpm/case/metadata">
+    <ns3:id>${domain_id}_${process_id}_${process_revision}_InsuranceClaimCase</ns3:id>
+    <ns3:name>InsuranceClaimCase</ns3:name>
+    <ns3:title translationType="STATIC">
+        <ns2:translationValue>InsuranceClaim</ns2:translationValue>
+    </ns3:title>
+    <ns3:longSummary translationType="STATIC">
+        <ns2:translationValue>InsuranceClaim Case Solution</ns2:translationValue>
+    </ns3:longSummary>
+    <ns3:priority>3</ns3:priority>
+    <ns3:category>
+        <ns3:name translationType="STATIC">
+            <ns2:translationValue>Case</ns2:translationValue>
+        </ns3:name>
+    </ns3:category>
+    <ns3:ecmFolder>
+        <ns3:parentFolder type="STATIC"></ns3:parentFolder>
+        <ns3:caseInstanceFolder type="STATIC"></ns3:caseInstanceFolder>
+        <ns3:createSubFolderOnCaseInstanceCreation>true</ns3:createSubFolderOnCaseInstanceCreation>
+    </ns3:ecmFolder>
+    <ns3:caseData>
+        <ns3:data updatable="true" external="false">
+            <ns3:name>FNOLProcessIN</ns3:name>
+            <ns3:type>{http://www.Claim4Insurance.org}Claim</ns3:type>
+            <ns3:dataType>ELEMENT</ns3:dataType>
+            <ns3:schema>Schemas/InsuranceClaim.xsd</ns3:schema>
+        </ns3:data>
+    </ns3:caseData>
+    <ns3:events>
+        <ns3:userDefinedEvent>DispatchServiceEvent</ns3:userDefinedEvent>
+    </ns3:events>
+    <ns3:publishCaseEventsToEDN>true</ns3:publishCaseEventsToEDN>
+    <ns3:stakeHolders>
+        <ns3:stakeHolder>
+            <ns3:name>CSR</ns3:name>
+            <ns3:resource identityType="group" type="STATIC">CSRGroup</ns3:resource>
+        </ns3:stakeHolder>
+        <ns3:stakeHolder>
+            <ns3:name>ExpertAgent</ns3:name>
+            <ns3:resource identityType="group" type="STATIC">ExpertAgent</ns3:resource>
+        </ns3:stakeHolder>
+        <ns3:stakeHolder>
+            <ns3:name>RegularAgent</ns3:name>
+            <ns3:resource identityType="group" type="STATIC">RegularAgent</ns3:resource>
+        </ns3:stakeHolder>
+        <ns3:stakeHolder>
+            <ns3:name>CaseManager</ns3:name>
+            <ns3:resource identityType="group" type="STATIC">CaseManagerGroup</ns3:resource>
+        </ns3:stakeHolder>
+        <ns3:stakeHolder>
+            <ns3:name>Customer</ns3:name>
+            <ns3:resource identityType="group" type="STATIC">Customer</ns3:resource>
+        </ns3:stakeHolder>
+    </ns3:stakeHolders>
+    <ns3:milestones>
+        <ns3:milestone>
+            <ns3:name>Started</ns3:name>
+            <ns3:isSoft>false</ns3:isSoft>
+            <ns3:deadline>
+                <ns3:duration type="STATIC"></ns3:duration>
+            </ns3:deadline>
+        </ns3:milestone>
+        <ns3:milestone>
+            <ns3:name>FNOL</ns3:name>
+            <ns3:isSoft>false</ns3:isSoft>
+            <ns3:deadline>
+                <ns3:duration type="STATIC"></ns3:duration>
+            </ns3:deadline>
+        </ns3:milestone>
+        <ns3:milestone>
+            <ns3:name>Verified</ns3:name>
+            <ns3:isSoft>false</ns3:isSoft>
+            <ns3:deadline>
+                <ns3:duration type="STATIC"></ns3:duration>
+            </ns3:deadline>
+        </ns3:milestone>
+        <ns3:milestone>
+            <ns3:name>Validated</ns3:name>
+            <ns3:isSoft>false</ns3:isSoft>
+            <ns3:deadline>
+                <ns3:duration type="STATIC"></ns3:duration>
+            </ns3:deadline>
+        </ns3:milestone>
+        <ns3:milestone>
+            <ns3:name>CustomerAccepted</ns3:name>
+            <ns3:isSoft>false</ns3:isSoft>
+            <ns3:deadline>
+                <ns3:duration type="STATIC"></ns3:duration>
+            </ns3:deadline>
+        </ns3:milestone>
+        <ns3:milestone>
+            <ns3:name>CustomerRejected</ns3:name>
+            <ns3:isSoft>false</ns3:isSoft>
+            <ns3:deadline>
+                <ns3:duration type="STATIC"></ns3:duration>
+            </ns3:deadline>
+        </ns3:milestone>
+        <ns3:milestone>
+            <ns3:name>Dispatched</ns3:name>
+            <ns3:isSoft>false</ns3:isSoft>
+            <ns3:deadline>
+                <ns3:duration type="STATIC"></ns3:duration>
+            </ns3:deadline>
+        </ns3:milestone>
+    </ns3:milestones>
+    <ns3:outcomes>
+        <ns3:outcome>
+            <ns3:name>Closed</ns3:name>
+        </ns3:outcome>
+        <ns3:outcome>
+            <ns3:name>Started</ns3:name>
+        </ns3:outcome>
+        <ns3:outcome>
+            <ns3:name>Accepted</ns3:name>
+        </ns3:outcome>
+        <ns3:outcome>
+            <ns3:name>Rejected</ns3:name>
+        </ns3:outcome>
+        <ns3:outcome>
+            <ns3:name>Dispatched</ns3:name>
+        </ns3:outcome>
+    </ns3:outcomes>
+    <ns3:permissionTags>
+        <ns3:permissionTag>
+            <ns3:customTagName>PUBLIC</ns3:customTagName>
+        </ns3:permissionTag>
+        <ns3:permissionTag>
+            <ns3:customTagName>RESTRICTED</ns3:customTagName>
+        </ns3:permissionTag>
+    </ns3:permissionTags>
+    <ns3:resourceBundle>
+        <ns3:name>InsuranceClaimCaseResourceBundle</ns3:name>
+    </ns3:resourceBundle>
+    <ns3:namespacePrefixes>
+        <ns3:namespacePrefix>
+            <ns3:prefix>bpm</ns3:prefix>
+            <ns3:namespace>http://xmlns.oracle.com/bpmn20/extensions</ns3:namespace>
+        </ns3:namespacePrefix>
+    </ns3:namespacePrefixes>
+    <ns3:organizationalUnitName type="STATIC">MySocialInsuranceOrg</ns3:organizationalUnitName>
+    <ns3:dueDate>
+        <ns3:duration type="STATIC"></ns3:duration>
+    </ns3:dueDate>
+    <ns3:useBusinessCalendar>false</ns3:useBusinessCalendar>
+</ns3:caseMetadata>

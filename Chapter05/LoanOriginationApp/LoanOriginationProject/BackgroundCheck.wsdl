@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<wsdl:definitions targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/BackgroundCheck" xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnProcess/BackgroundCheck"  xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"  xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"  xmlns:tns6="http://www.samplebank.org" >
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/BackgroundCheck">
+            <xsd:import namespace="http://www.samplebank.org" schemaLocation="xsd/BackOffice.xsd"/>
+            <xsd:element name="receiveBackgroungCheckReq">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="tns6:LoanRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="sendBackgroungCheckRespResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="tns6:LoanRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="receiveBackgroungCheckReq">
+        <wsdl:part name="parameters" element="tns:receiveBackgroungCheckReq"/>
+    </wsdl:message>
+    <wsdl:message name="sendBackgroungCheckRespResponse">
+        <wsdl:part name="parameters" element="tns:sendBackgroungCheckRespResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="BackgroundCheckPortType">
+        <wsdl:operation name="receiveBackgroungCheckReq">
+            <wsdl:input message="tns:receiveBackgroungCheckReq"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="BackgroundCheckPortTypeCallBack">
+        <wsdl:operation name="sendBackgroungCheckResp">
+            <wsdl:input message="tns:sendBackgroungCheckRespResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <plnk:partnerLinkType name="BackgroundCheckPortTypePartnerLinkType">
+        <plnk:role name="BackgroundCheckPortTypeProvider">
+            <plnk:portType name="tns:BackgroundCheckPortType"/>
+        </plnk:role>
+    </plnk:partnerLinkType>
+</wsdl:definitions>

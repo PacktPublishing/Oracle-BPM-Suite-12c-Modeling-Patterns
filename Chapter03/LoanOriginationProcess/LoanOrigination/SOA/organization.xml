@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:organization xmlns:ns2="http://xmlns.oracle.com/bpm/identity" xmlns:ns1="http://xmlns.oracle.com/bpm/organization" xmlns:ns4="http://xmlns.oracle.com/bpel/workflow/task" xmlns:ns3="http://xmlns.oracle.com/bpel/workflow/taskQuery" xmlns:ns0="http://xmlns.oracle.com/bpm/lpg/peopleQuery">
+   <ns1:updateExistingObjects>false</ns1:updateExistingObjects>
+   <ns1:organizationalUnits/>
+   <ns1:applicationRoles>
+      <ns1:applicationRole id="LoanOrigination.ProcessOwner" isProcessRole="true">
+         <ns2:name>LoanOrigination.Process Owner</ns2:name>
+         <ns1:processRole id="ProcessOwner" name="Process Owner"/>
+      </ns1:applicationRole>
+      <ns1:applicationRole id="LoanOrigination.ProcessReviewer" isProcessRole="true">
+         <ns2:name>LoanOrigination.Process Reviewer</ns2:name>
+         <ns1:processRole id="ProcessReviewer" name="Process Reviewer"/>
+      </ns1:applicationRole>
+      <ns1:applicationRole id="LoanOrigination.LoanOfficer" isProcessRole="true">
+         <ns2:name>LoanOrigination.LoanOfficer</ns2:name>
+         <ns1:member type="USER">
+            <ns1:name>salesrep</ns1:name>
+         </ns1:member>
+         <ns1:processRole id="LoanOfficer" name="LoanOfficer"/>
+      </ns1:applicationRole>
+   </ns1:applicationRoles>
+   <ns1:applicationRoleOrgUnitCalendarAssociations>
+      <ns1:applicationRoleOrgUnitCalendarAssociation>
+         <ns1:applicationRole>
+            <ns2:name>LoanOrigination.LoanOfficer</ns2:name>
+         </ns1:applicationRole>
+         <ns1:organizationalUnitId>e92bdfa3-541e-4314-aab5-d578168686df</ns1:organizationalUnitId>
+         <ns1:organizationalUnitName>MySalesOrg</ns1:organizationalUnitName>
+         <ns1:calendarRuleId>b84c2f44-7978-4538-936e-fdd31204e51b</ns1:calendarRuleId>
+         <ns1:calendarRuleName>Calendar</ns1:calendarRuleName>
+      </ns1:applicationRoleOrgUnitCalendarAssociation>
+   </ns1:applicationRoleOrgUnitCalendarAssociations>
+   <ns1:participantPropertiesList/>
+   <ns1:holidayRules/>
+   <ns1:calendarRules>
+      <ns1:calendarRule>
+         <ns1:name>Calendar</ns1:name>
+         <ns1:id>b84c2f44-7978-4538-936e-fdd31204e51b</ns1:id>
+         <ns1:timeZone>America/New_York</ns1:timeZone>
+         <ns1:workdayList>
+            <ns1:workday>
+               <ns1:weekDay>Sunday</ns1:weekDay>
+               <ns1:workPeriod>
+                  <ns1:startTime>08:00:26.456-04:00</ns1:startTime>
+                  <ns1:endTime>12:00:26.456-04:00</ns1:endTime>
+               </ns1:workPeriod>
+               <ns1:workPeriod>
+                  <ns1:startTime>13:00:26.456-04:00</ns1:startTime>
+                  <ns1:endTime>17:00:26.456-04:00</ns1:endTime>
+               </ns1:workPeriod>
+            </ns1:workday>
+            <ns1:workday>
+               <ns1:weekDay>Monday</ns1:weekDay>
+               <ns1:workPeriod>
+                  <ns1:startTime>08:00:26.456-04:00</ns1:startTime>
+                  <ns1:endTime>12:00:26.456-04:00</ns1:endTime>
+               </ns1:workPeriod>
+               <ns1:workPeriod>
+                  <ns1:startTime>13:00:26.456-04:00</ns1:startTime>
+                  <ns1:endTime>17:00:26.456-04:00</ns1:endTime>
+               </ns1:workPeriod>
+            </ns1:workday>
+            <ns1:workday>
+               <ns1:weekDay>Tuesday</ns1:weekDay>
+               <ns1:workPeriod>
+                  <ns1:startTime>08:00:26.456-04:00</ns1:startTime>
+                  <ns1:endTime>12:00:26.456-04:00</ns1:endTime>
+               </ns1:workPeriod>
+               <ns1:workPeriod>
+                  <ns1:startTime>13:00:26.456-04:00</ns1:startTime>
+                  <ns1:endTime>17:00:26.456-04:00</ns1:endTime>
+               </ns1:workPeriod>
+            </ns1:workday>
+            <ns1:workday>
+               <ns1:weekDay>Wednesday</ns1:weekDay>
+               <ns1:workPeriod>
+                  <ns1:startTime>08:00:26.456-04:00</ns1:startTime>
+                  <ns1:endTime>12:00:26.456-04:00</ns1:endTime>
+               </ns1:workPeriod>
+               <ns1:workPeriod>
+                  <ns1:startTime>13:00:26.456-04:00</ns1:startTime>
+                  <ns1:endTime>17:00:26.456-04:00</ns1:endTime>
+               </ns1:workPeriod>
+            </ns1:workday>
+            <ns1:workday>
+               <ns1:weekDay>Thursday</ns1:weekDay>
+               <ns1:workPeriod>
+                  <ns1:startTime>08:00:26.456-04:00</ns1:startTime>
+                  <ns1:endTime>12:00:26.456-04:00</ns1:endTime>
+               </ns1:workPeriod>
+               <ns1:workPeriod>
+                  <ns1:startTime>13:00:26.456-04:00</ns1:startTime>
+                  <ns1:endTime>17:00:26.456-04:00</ns1:endTime>
+               </ns1:workPeriod>
+            </ns1:workday>
+            <ns1:workday>
+               <ns1:weekDay>Friday</ns1:weekDay>
+               <ns1:workPeriod>
+                  <ns1:startTime>08:00:26.456-04:00</ns1:startTime>
+                  <ns1:endTime>12:00:26.456-04:00</ns1:endTime>
+               </ns1:workPeriod>
+               <ns1:workPeriod>
+                  <ns1:startTime>13:00:26.456-04:00</ns1:startTime>
+                  <ns1:endTime>17:00:26.456-04:00</ns1:endTime>
+               </ns1:workPeriod>
+            </ns1:workday>
+            <ns1:workday>
+               <ns1:weekDay>Saturday</ns1:weekDay>
+               <ns1:workPeriod>
+                  <ns1:startTime>08:00:26.456-04:00</ns1:startTime>
+                  <ns1:endTime>12:00:26.456-04:00</ns1:endTime>
+               </ns1:workPeriod>
+               <ns1:workPeriod>
+                  <ns1:startTime>13:00:26.456-04:00</ns1:startTime>
+                  <ns1:endTime>17:00:26.456-04:00</ns1:endTime>
+               </ns1:workPeriod>
+            </ns1:workday>
+         </ns1:workdayList>
+      </ns1:calendarRule>
+   </ns1:calendarRules>
+   <ns1:businessParameters/>
+</ns1:organization>

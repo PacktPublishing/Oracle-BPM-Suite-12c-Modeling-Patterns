@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<wsdl:definitions targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/LoanOrigination" xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnProcess/LoanOrigination"  xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"  xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"  xmlns:tns6="http://www.samplebank.org" >
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/LoanOrigination">
+            <xsd:import namespace="http://www.samplebank.org" schemaLocation="xsd/BackOffice.xsd"/>
+            <xsd:element name="startLO">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="tns6:LoanRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="endLOResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="tns6:LoanRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="startLO">
+        <wsdl:part name="parameters" element="tns:startLO"/>
+    </wsdl:message>
+    <wsdl:message name="endLOResponse">
+        <wsdl:part name="parameters" element="tns:endLOResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="LoanOriginationPortTypeCallBack">
+        <wsdl:operation name="endLO">
+            <wsdl:input message="tns:endLOResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="LoanOriginationPortType">
+        <wsdl:operation name="startLO">
+            <wsdl:input message="tns:startLO"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <plnk:partnerLinkType name="LoanOriginationPortTypePartnerLinkType">
+        <plnk:role name="LoanOriginationPortTypeProvider">
+            <plnk:portType name="tns:LoanOriginationPortType"/>
+        </plnk:role>
+    </plnk:partnerLinkType>
+</wsdl:definitions>

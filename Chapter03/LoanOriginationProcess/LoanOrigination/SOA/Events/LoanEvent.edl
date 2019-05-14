@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<definitions xmlns="http://schemas.oracle.com/events/edl" targetNamespace="http://xmlns.oracle.com/LoanOriginationProcess/LoanOrigination/LoanEvent">
+   <schema-import location="../Schemas/LoanOrigination.xsd" namespace="http://www.myloanoriginationsystem.org"/>
+   <event-definition name="LoanOriginationEvent">
+      <content xmlns:ns1="http://www.myloanoriginationsystem.org" element="ns1:LoanRequest"/>
+   </event-definition>
+</definitions>

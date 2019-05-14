@@ -1,0 +1,325 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:insuranceClaim="http://www.Claim4Insurance.org"
+            targetNamespace="http://www.Claim4Insurance.org" elementFormDefault="qualified">
+  <!--xsd:element name="DeclineClaim"-->
+  <xsd:complexType name="DeclineClaim">
+    <xsd:sequence>
+      <xsd:element name="caseDeclineDate" minOccurs="0" maxOccurs="1" type="xsd:dateTime"/>
+      <xsd:element name="reason" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+      <xsd:element name="comments" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--/xsd:element-->
+  <xsd:element name="Claim">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="DeclainClaim" type="insuranceClaim:DeclineClaim"/>
+        <xsd:element name="Settlement" type="insuranceClaim:Settlement"/>
+        <xsd:element name="FNOL" type="insuranceClaim:FNOL"/>
+        <xsd:element name="CloseClaimCase" type="insuranceClaim:CloseClaim"/>
+        <xsd:element name="Appraisal" type="insuranceClaim:Appraisal"/>
+        <xsd:element name="Evaluation" type="insuranceClaim:Evaluation"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <!--xsd:element name="CloseClaim"-->
+  <xsd:complexType name="CloseClaim">
+    <xsd:sequence>
+      <xsd:element name="caseCloseDate" type="xsd:dateTime"/>
+      <xsd:element name="reason" type="xsd:string"/>
+      <xsd:element name="comments" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--/xsd:element-->
+  <!--xsd:element name="Settlement"-->
+  <xsd:complexType name="Settlement">
+    <xsd:sequence>
+      <xsd:element name="offers" type="insuranceClaim:Offers"/>
+      <xsd:element name="payments" type="insuranceClaim:Payments"/>
+      <xsd:element name="faultSubject" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--/xsd:element-->
+  <!--xsd:element name="Appraisal"-->
+  <xsd:complexType name="Appraisal">
+    <xsd:sequence>
+      <xsd:element name="examineDamage" type="insuranceClaim:ExamineDamage" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="vehicalDetails" minOccurs="0" maxOccurs="1">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="vehicalBuild" type="insuranceClaim:VehicalBuild"/>
+            <xsd:element name="vehicalDamage" type="insuranceClaim:VehicalDamage"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="estimatedCost" minOccurs="0" maxOccurs="1">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="estimationCompleted" type="insuranceClaim:YesNo"/>
+            <xsd:element name="estimatedCost" type="xsd:integer" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="comment" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+            <xsd:element name="estimationDescription" minOccurs="0" maxOccurs="1" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="declaration" minOccurs="0" maxOccurs="1">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="declarationDocumentUploaded" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--/xsd:element-->
+  <!--xsd:element name="Evaluation"-->
+  <xsd:complexType name="Evaluation">
+    <xsd:sequence>
+      <xsd:element name="track">
+        <xsd:complexType>
+          <xsd:choice minOccurs="1" maxOccurs="1">
+            <xsd:element name="fastTrack">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="lossDescription" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                  <xsd:element name="proofDocumentsReviewed" type="insuranceClaim:YesNo"/>
+                  <xsd:element name="repairEstimate" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="reserve">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="reserveAmount" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                  <xsd:element name="payments" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                  <xsd:element name="outstandingReserve" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                  <xsd:element name="lastUpdated" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                  <xsd:element name="comments" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--/xsd:element-->
+  <!--xsd:element name="FNOL"-->
+  <xsd:complexType name="FNOL">
+    <xsd:sequence>
+      <xsd:element name="lossType" type="insuranceClaim:LossType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="lossDate" type="xsd:dateTime" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="reportedChannel" type="insuranceClaim:ReportedChannel" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="description" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="lossAddress" type="insuranceClaim:Address" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="lossDetails" type="insuranceClaim:LossDetails"/>
+      <xsd:element name="involvedParties" type="insuranceClaim:InvolvementDetails"/>
+      <xsd:element name="serviceProvider">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="providerName" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="messageSubject" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="messageDetails" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="sensitivity" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="fastTrackFlag" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="claimValidated" type="insuranceClaim:YesNo"/>
+      <xsd:element name="policyDetails" type="insuranceClaim:PolicyDetails"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <!--/xsd:element-->
+  <xsd:complexType name="Offers">
+    <xsd:sequence>
+      <xsd:element name="version" type="xsd:integer" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="uploadOffer" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="uploadDate" type="xsd:dateTime" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="sentDate" type="xsd:dateTime" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="comment" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Payments">
+    <xsd:sequence>
+      <xsd:element name="paymentMethod" type="insuranceClaim:PaymentMethod" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="payeeName" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="payeeAddress" type="insuranceClaim:Address" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="paymentAmount" type="xsd:long" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="invoiceNumber" type="xsd:integer" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="invoiceDate" type="xsd:dateTime" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="memo" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="VehicalDamage">
+    <xsd:sequence>
+      <xsd:element name="driverFront" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="passangerFront" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="driverSide" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="passangerSide" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="driverRear" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="passangerRear" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="frontEnd" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="rearEnd" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="roof" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="damage" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="fireDamage" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="interior" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="allPanels" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="engine" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="totalLoss" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="window" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="windsheild" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="underCarriage" type="insuranceClaim:YesNo" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="description" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="VehicalBuild">
+    <xsd:sequence>
+      <xsd:element name="make" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="model" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="year" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="color" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="lisenceNumber" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="VINNumber" type="xsd:integer" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="registrationVerified" type="insuranceClaim:YesNo"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ExamineDamage">
+    <xsd:sequence>
+      <xsd:element name="examineDateTime" type="xsd:dateTime"/>
+      <xsd:element name="address" type="insuranceClaim:Address"/>
+      <xsd:element name="claimantPresent" type="insuranceClaim:YesNo"/>
+      <xsd:element name="photosUploaded" type="insuranceClaim:YesNo"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ContactDetails">
+    <xsd:sequence>
+      <xsd:element name="email" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="workPhone" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="fax" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="cell" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="homePhone" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PartyDetails">
+    <xsd:sequence>
+      <xsd:element name="salutation" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="fName" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="mName" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="lName" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="maritialStatus" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="gender" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="DOB" type="xsd:dateTime" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="SSN" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="nationality" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="contact" type="insuranceClaim:ContactDetails" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="address" type="insuranceClaim:Address" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InvolvementDetails">
+    <xsd:sequence>
+      <xsd:element name="involvementType" type="insuranceClaim:InvolvementType"/>
+      <xsd:element name="partyDetails" type="insuranceClaim:PartyDetails"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="LossDetails">
+    <xsd:sequence>
+      <xsd:element name="noOfVehiclesInvolved" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="noOfWitness" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="whoWasDriving" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="vehicleTowed" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="towingRequest" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="damageDescription" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="injuryDescription" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="policeReportFiled" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="policeReportFiledDate" type="xsd:dateTime" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="policereportNumber" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="policeDepartment" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="Address">
+    <xsd:sequence>
+      <xsd:element name="locationType" type="insuranceClaim:LocationType" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="addressLine1" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="addressLine2" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="addressLine3" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="city" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="country" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="state" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="zipCode" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PolicyDetails">
+    <xsd:sequence>
+      <xsd:element name="policyName" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="policyNumber" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="primaryInsured" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="insuredItem" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="LocationType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Street"/>
+      <xsd:enumeration value="Parking"/>
+      <xsd:enumeration value="Home"/>
+      <xsd:enumeration value="Highway"/>
+      <xsd:enumeration value="Business"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="ReportedChannel">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Agent"/>
+      <xsd:enumeration value="Web"/>
+      <xsd:enumeration value="CSR"/>
+      <xsd:enumeration value="EMAIL"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="InvolvementType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Claimant"/>
+      <xsd:enumeration value="AdverseParty"/>
+      <xsd:enumeration value="Injured"/>
+      <xsd:enumeration value="Decreased"/>
+      <xsd:enumeration value="Reportee"/>
+      <xsd:enumeration value="Lawyer"/>
+      <xsd:enumeration value="Witness"/>
+      <xsd:enumeration value="InsuranceAgent"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="YesNo">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Yes"/>
+      <xsd:enumeration value="No"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Track">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="FastTrack"/>
+      <xsd:enumeration value="Reserve"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="PaymentMethod">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Credit"/>
+      <xsd:enumeration value="Debit"/>
+      <xsd:enumeration value="Paypal"/>
+      <xsd:enumeration value="Wire"/>
+      <xsd:enumeration value="Check"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="LossType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="AccidentWithInjury"/>
+      <xsd:enumeration value="AccidentWithNoInjury"/>
+      <xsd:enumeration value="FireDamage"/>
+      <xsd:enumeration value="GlassDamage"/>
+      <xsd:enumeration value="Theft"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="SensitivityType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Regular"/>
+      <xsd:enumeration value="Expert"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

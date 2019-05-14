@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.64.93"
+          id="InvolvementDetails" Package="UpdateClaimTaskUI_UpdateClaimTask"
+          BeanClass="UpdateClaimTaskUI_UpdateClaimTask.InvolvementDetails"
+          isJavaBased="false">
+  <Attribute Name="involvementType" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="nextSiblingNamespace"
+                  Value="http://www.Claim4Insurance.org"/>
+        <Property Name="nextSibling" Value="partyDetails"/>
+        <Property Name="minOccurs" Value="1"/>
+        <Property Name="maxOccurs" Value="1"/>
+        <Property Name="LABEL" Value="Involvement Type"/>
+        <Property Name="LeafElement_hint" Value="LeafElement_no_attribute"/>
+        <Property Name="nillable" Value="false"/>
+        <Property Name="originalName" Value="involvementType"/>
+        <Property Name="targetNamespace"
+                  Value="http://www.Claim4Insurance.org"/>
+        <Property Name="type" Value="java.lang.String"/>
+        <Property Name="enumeration"
+                  Value="[Claimant, AdverseParty, Injured, Decreased, Reportee, Lawyer, Witness, InsuranceAgent]"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <AccessorAttribute id="partyDetails" IsCollection="true"
+                     BeanClass="UpdateClaimTaskUI_UpdateClaimTask.PartyDetails"
+                     CollectionBeanClass="UpdateClaimTaskUI_UpdateClaimTask.PartyDetails_partyDetails_Operations">
+    <Properties>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Party Details"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="partyDetails"/>
+      <Property Name="targetNamespace" Value="http://www.Claim4Insurance.org"/>
+    </Properties>
+  </AccessorAttribute>
+</JavaBean>

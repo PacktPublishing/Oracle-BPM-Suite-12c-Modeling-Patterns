@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.64.93"
+          id="Evaluation" Package="UpdateClaimTaskUI_UpdateClaimTask"
+          BeanClass="UpdateClaimTaskUI_UpdateClaimTask.Evaluation"
+          isJavaBased="false">
+  <AccessorAttribute id="track" IsCollection="true"
+                     BeanClass="UpdateClaimTaskUI_UpdateClaimTask.track"
+                     CollectionBeanClass="UpdateClaimTaskUI_UpdateClaimTask.track_track_Operations">
+    <Properties>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Track"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="track"/>
+      <Property Name="targetNamespace" Value="http://www.Claim4Insurance.org"/>
+    </Properties>
+  </AccessorAttribute>
+</JavaBean>

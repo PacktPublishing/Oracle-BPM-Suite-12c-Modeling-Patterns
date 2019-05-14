@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="12.1.3.10.8" id="LoanRequestType"
+          Package="TaskForm_LOProcessHumanInitiationTask"
+          BeanClass="TaskForm_LOProcessHumanInitiationTask.LoanRequestType" isJavaBased="false">
+  <Attribute Name="LoanStatus" Type="java.lang.String">
+    <Properties>
+      <CustomProperties>
+        <Property Name="minOccurs" Value="1"/>
+        <Property Name="maxOccurs" Value="1"/>
+        <Property Name="LABEL" Value="Loan Status"/>
+        <Property Name="LeafElement_hint" Value="LeafElement_no_attribute"/>
+        <Property Name="nillable" Value="false"/>
+        <Property Name="originalName" Value="LoanStatus"/>
+        <Property Name="targetNamespace" Value="http://www.myloanoriginationsystem.org"/>
+        <Property Name="type" Value="java.lang.String"/>
+      </CustomProperties>
+    </Properties>
+  </Attribute>
+  <AccessorAttribute id="LoanDetails" IsCollection="true"
+                     BeanClass="TaskForm_LOProcessHumanInitiationTask.LoanDetailsType"
+                     CollectionBeanClass="TaskForm_LOProcessHumanInitiationTask.LoanDetailsType_LoanDetails_Operations">
+    <Properties>
+      <Property Name="nextSiblingNamespace" Value="http://www.myloanoriginationsystem.org"/>
+      <Property Name="nextSibling" Value="ApplicantDetails"/>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Loan Details"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="LoanDetails"/>
+      <Property Name="targetNamespace" Value="http://www.myloanoriginationsystem.org"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="ApplicantDetails" IsCollection="true"
+                     BeanClass="TaskForm_LOProcessHumanInitiationTask.ApplicantDetailsType"
+                     CollectionBeanClass="TaskForm_LOProcessHumanInitiationTask.ApplicantDetailsType_ApplicantDetails_Operations">
+    <Properties>
+      <Property Name="nextSiblingNamespace" Value="http://www.myloanoriginationsystem.org"/>
+      <Property Name="nextSibling" Value="LoanStatus"/>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Applicant Details"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="ApplicantDetails"/>
+      <Property Name="targetNamespace" Value="http://www.myloanoriginationsystem.org"/>
+    </Properties>
+  </AccessorAttribute>
+</JavaBean>

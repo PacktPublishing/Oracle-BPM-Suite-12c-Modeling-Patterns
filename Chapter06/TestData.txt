@@ -1,0 +1,233 @@
+Backoffice Process --------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    	<soap:Body>
+        		<ns1:startBO xmlns:ns1="http://xmlns.oracle.com/bpmn/bpmnProcess/BackOffice" xmlns:ns2="http://www.samplebank.org">
+            			<ns2:LoanRequest>
+                				<ns2:LoanDetails>
+                    					<ns2:ApplicantID>1111</ns2:ApplicantID>
+                    					<ns2:Product>PRD1111</ns2:Product>
+                    					<ns2:Amount>1000</ns2:Amount>
+                    					<ns2:ApplicationDate>2013-01-01</ns2:ApplicationDate>
+                    					<ns2:Channel>Backoffice</ns2:Channel>
+                    					<ns2:Source>Backoffice</ns2:Source>
+                    					<ns2:InterestRate>2</ns2:InterestRate>
+                    					<ns2:UpdateDate>2013-01-01</ns2:UpdateDate>
+                    					<ns2:LoanOfficer>salesrep</ns2:LoanOfficer>
+                    					<ns2:LoanSalesRep>jstein</ns2:LoanSalesRep>
+                    					<ns2:LoanProcessor>christine</ns2:LoanProcessor>
+                    					<ns2:LoanStatus>New</ns2:LoanStatus>
+                    					<ns2:LoanPurpose>Home</ns2:LoanPurpose>
+                    					<ns2:Terms>Two</ns2:Terms>
+                    					<ns2:PaymentFrequency>Monthly</ns2:PaymentFrequency>
+                </ns2:LoanDetails>
+                				<ns2:ApplicantDetails>
+                    					<ns2:ApplicantInformation>
+                        						<ns2:Salutation>Mr</ns2:Salutation>
+                        						<ns2:FName>Jstein</ns2:FName>
+                        						<ns2:MName>B</ns2:MName>
+                        						<ns2:LName>Biber</ns2:LName>
+                        						<ns2:DateOfBirth>1983-01-01</ns2:DateOfBirth>
+                        						<ns2:SSN_Or_TAX>100100</ns2:SSN_Or_TAX>
+                        						<ns2:ApplicantType>New</ns2:ApplicantType>
+                        						<ns2:Gender>Male</ns2:Gender>
+                        						<ns2:MaritialStatus>Single</ns2:MaritialStatus>
+                        						<ns2:Nationality>UK</ns2:Nationality>
+                        						<ns2:Attribute1>A1</ns2:Attribute1>
+                        						<ns2:Attribute2>A1</ns2:Attribute2>
+                    </ns2:ApplicantInformation>
+                    					<ns2:Address>
+                        						<ns2:Line1>23rd Street</ns2:Line1>
+                        						<ns2:Line2>Queens Rd</ns2:Line2>
+                        						<ns2:City>London</ns2:City>
+                        						<ns2:County>UK</ns2:County>
+                        						<ns2:State>UK</ns2:State>
+                        						<ns2:Country>UK</ns2:Country>
+                        						<ns2:Zip>33133</ns2:Zip>
+                        						<ns2:LivingSince>2013-01-01</ns2:LivingSince>
+                    </ns2:Address>
+                    					<ns2:Contact>
+                        						<ns2:Email>a@b.com</ns2:Email>
+                        						<ns2:HomePhone>2233</ns2:HomePhone>
+                        						<ns2:WorkPhone>3322</ns2:WorkPhone>
+                        						<ns2:CellPhone>2332</ns2:CellPhone>
+                        						<ns2:Fax>3223</ns2:Fax>
+                    </ns2:Contact>
+                    					<ns2:IncomeEmployment>
+                        						<ns2:Occupation>IT</ns2:Occupation>
+                        						<ns2:YGross>22</ns2:YGross>
+                        						<ns2:TotalIncome>22</ns2:TotalIncome>
+                        						<ns2:EmployeeName>FusionNX</ns2:EmployeeName>
+                        						<ns2:JobTitle>Consultant</ns2:JobTitle>
+                        						<ns2:StartDate>2013-01-01</ns2:StartDate>
+                        						<ns2:EndDate>2013-01-01</ns2:EndDate>
+                        						<ns2:EmployeePhone>33222233</ns2:EmployeePhone>
+                        						<ns2:EmployeeAddress>Address123</ns2:EmployeeAddress>
+                    </ns2:IncomeEmployment>
+                </ns2:ApplicantDetails>
+                				<ns2:LoanStatus>New</ns2:LoanStatus>
+            </ns2:LoanRequest>
+        </ns1:startBO>
+    </soap:Body>
+</soap:Envelope>
+
+
+
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+
+
+
+Web Process ---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    	<soap:Body>
+        		<ns1:start xmlns:ns1="http://xmlns.oracle.com/bpmn/bpmnProcess/Web" xmlns:ns2="http://www.samplebank.org">
+            			<ns2:LoanRequest>
+                				<ns2:LoanDetails>
+                    					<ns2:ApplicantID>3333</ns2:ApplicantID>
+                    					<ns2:Product>PRD3333</ns2:Product>
+                    					<ns2:Amount>2000</ns2:Amount>
+                    					<ns2:ApplicationDate>2013-01-01</ns2:ApplicationDate>
+                    					<ns2:Channel>Web</ns2:Channel>
+                    					<ns2:Source>Web</ns2:Source>
+                    					<ns2:InterestRate>2</ns2:InterestRate>
+                    					<ns2:UpdateDate>2013-01-01</ns2:UpdateDate>
+                    					<ns2:LoanOfficer>salesrep</ns2:LoanOfficer>
+                    					<ns2:LoanSalesRep>jestin</ns2:LoanSalesRep>
+                    					<ns2:LoanProcessor>christine</ns2:LoanProcessor>
+                    					<ns2:LoanStatus>New</ns2:LoanStatus>
+                    					<ns2:LoanPurpose>Home</ns2:LoanPurpose>
+                    					<ns2:Terms>Two</ns2:Terms>
+                    					<ns2:PaymentFrequency>Monthly</ns2:PaymentFrequency>
+                </ns2:LoanDetails>
+                				<ns2:ApplicantDetails>
+                    					<ns2:ApplicantInformation>
+                        						<ns2:Salutation>Mr</ns2:Salutation>
+                        						<ns2:FName>Christine</ns2:FName>
+                        						<ns2:MName>R</ns2:MName>
+                        						<ns2:LName>Rom</ns2:LName>
+                        						<ns2:DateOfBirth>1985-01-01</ns2:DateOfBirth>
+                        						<ns2:SSN_Or_TAX>20002</ns2:SSN_Or_TAX>
+                        						<ns2:ApplicantType>New</ns2:ApplicantType>
+                        						<ns2:Gender>Female</ns2:Gender>
+                        						<ns2:MaritialStatus>Single</ns2:MaritialStatus>
+                        						<ns2:Nationality>US</ns2:Nationality>
+                        						<ns2:Attribute1>A1</ns2:Attribute1>
+                        						<ns2:Attribute2>A1</ns2:Attribute2>
+                    </ns2:ApplicantInformation>
+                    					<ns2:Address>
+                        						<ns2:Line1>18 Street</ns2:Line1>
+                        						<ns2:Line2>Lejuene Rd</ns2:Line2>
+                        						<ns2:City>Miami</ns2:City>
+                        						<ns2:County>Miami</ns2:County>
+                        						<ns2:State>FL</ns2:State>
+                        						<ns2:Country>Miami</ns2:Country>
+                        						<ns2:Zip>33133</ns2:Zip>
+                        						<ns2:LivingSince>2013-01-01</ns2:LivingSince>
+                    </ns2:Address>
+                    					<ns2:Contact>
+                        						<ns2:Email>b@c.com</ns2:Email>
+                        						<ns2:HomePhone>22</ns2:HomePhone>
+                        						<ns2:WorkPhone>22</ns2:WorkPhone>
+                        						<ns2:CellPhone>22</ns2:CellPhone>
+                        						<ns2:Fax>22</ns2:Fax>
+                    </ns2:Contact>
+                    					<ns2:IncomeEmployment>
+                        						<ns2:Occupation>IT</ns2:Occupation>
+                        						<ns2:YGross>33</ns2:YGross>
+                        						<ns2:TotalIncome>33</ns2:TotalIncome>
+                        						<ns2:EmployeeName>FusionNX</ns2:EmployeeName>
+                        						<ns2:JobTitle>Consultant</ns2:JobTitle>
+                        						<ns2:StartDate>2013-01-01</ns2:StartDate>
+                        						<ns2:EndDate>2013-01-01</ns2:EndDate>
+                        						<ns2:EmployeePhone>22</ns2:EmployeePhone>
+                        						<ns2:EmployeeAddress>Address33333</ns2:EmployeeAddress>
+                    </ns2:IncomeEmployment>
+                </ns2:ApplicantDetails>
+                				<ns2:LoanStatus>New</ns2:LoanStatus>
+            </ns2:LoanRequest>
+        </ns1:start>
+    </soap:Body>
+</soap:Envelope>
+
+---------------------------------------------------------------------------------------------
+Cancel Loan
+---------------------------------------------------------------------------------------------
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    	<soap:Body>
+        		<ns1:cancelLoan xmlns:ns1="http://xmlns.oracle.com/bpmn/bpmnProcess/LoanOrigination" xmlns:ns2="http://www.samplebank.org">
+            			<ns2:LoanRequest>
+                				<ns2:LoanDetails>
+                    					<ns2:ApplicantID>1111</ns2:ApplicantID>
+                    					<ns2:Product>PRD1111</ns2:Product>
+                    					<ns2:Amount>1000</ns2:Amount>
+                    					<ns2:ApplicationDate>2013-01-01</ns2:ApplicationDate>
+                    					<ns2:Channel>Backoffice</ns2:Channel>
+                    					<ns2:Source>Backoffice</ns2:Source>
+                    					<ns2:InterestRate>2</ns2:InterestRate>
+                    					<ns2:UpdateDate>2013-01-01</ns2:UpdateDate>
+                    					<ns2:LoanOfficer>salesrep</ns2:LoanOfficer>
+                    					<ns2:LoanSalesRep>jstein</ns2:LoanSalesRep>
+                    					<ns2:LoanProcessor>christine</ns2:LoanProcessor>
+                    					<ns2:LoanStatus>New</ns2:LoanStatus>
+                    					<ns2:LoanPurpose>Home</ns2:LoanPurpose>
+                    					<ns2:Terms>Two</ns2:Terms>
+                    					<ns2:PaymentFrequency>Monthly</ns2:PaymentFrequency>
+                </ns2:LoanDetails>
+                				<ns2:ApplicantDetails>
+                    					<ns2:ApplicantInformation>
+                        						<ns2:Salutation>Mr</ns2:Salutation>
+                        						<ns2:FName>Jstein</ns2:FName>
+                        						<ns2:MName>B</ns2:MName>
+                        						<ns2:LName>Biber</ns2:LName>
+                        						<ns2:DateOfBirth>1983-01-01</ns2:DateOfBirth>
+                        						<ns2:SSN_Or_TAX>100100</ns2:SSN_Or_TAX>
+                        						<ns2:ApplicantType>New</ns2:ApplicantType>
+                        						<ns2:Gender>Male</ns2:Gender>
+                        						<ns2:MaritialStatus>Single</ns2:MaritialStatus>
+                        						<ns2:Nationality>UK</ns2:Nationality>
+                        						<ns2:Attribute1>A1</ns2:Attribute1>
+                        						<ns2:Attribute2>A1</ns2:Attribute2>
+                    </ns2:ApplicantInformation>
+                    					<ns2:Address>
+                        						<ns2:Line1>23rd Street</ns2:Line1>
+                        						<ns2:Line2>Queens Rd</ns2:Line2>
+                        						<ns2:City>London</ns2:City>
+                        						<ns2:County>UK</ns2:County>
+                        						<ns2:State>UK</ns2:State>
+                        						<ns2:Country>UK</ns2:Country>
+                        						<ns2:Zip>33133</ns2:Zip>
+                        						<ns2:LivingSince>2013-01-01</ns2:LivingSince>
+                    </ns2:Address>
+                    					<ns2:Contact>
+                        						<ns2:Email>a@b.com</ns2:Email>
+                        						<ns2:HomePhone>2233</ns2:HomePhone>
+                        						<ns2:WorkPhone>3322</ns2:WorkPhone>
+                        						<ns2:CellPhone>2332</ns2:CellPhone>
+                        						<ns2:Fax>3223</ns2:Fax>
+                    </ns2:Contact>
+                    					<ns2:IncomeEmployment>
+                        						<ns2:Occupation>IT</ns2:Occupation>
+                        						<ns2:YGross>22</ns2:YGross>
+                        						<ns2:TotalIncome>22</ns2:TotalIncome>
+                        						<ns2:EmployeeName>FusionNX</ns2:EmployeeName>
+                        						<ns2:JobTitle>Consultant</ns2:JobTitle>
+                        						<ns2:StartDate>2013-01-01</ns2:StartDate>
+                        						<ns2:EndDate>2013-01-01</ns2:EndDate>
+                        						<ns2:EmployeePhone>33222233</ns2:EmployeePhone>
+                        						<ns2:EmployeeAddress>Address123</ns2:EmployeeAddress>
+                    </ns2:IncomeEmployment>
+                </ns2:ApplicantDetails>
+                				<ns2:LoanStatus>New</ns2:LoanStatus>
+            </ns2:LoanRequest>
+        </ns1:cancelLoan>
+    </soap:Body>
+</soap:Envelope>
+
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.97" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="Recovery">
+        <topicDocumentations>
+            <topicDocumentation name="Recovery">
+                <descriptions>
+                    <description locale="en">Recovery</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT10133983034920">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT10133983035178">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf29"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

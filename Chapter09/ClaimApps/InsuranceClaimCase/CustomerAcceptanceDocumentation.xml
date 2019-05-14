@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.97" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="CustomerAcceptance">
+        <topicDocumentations>
+            <topicDocumentation name="CustomerAcceptance">
+                <descriptions>
+                    <description locale="en">CustomerAcceptance</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT10129660752822">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT10129660752981">
+                <labels>
+                    <label locale="en">EndCustomerAccept</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT10129678297561">
+                <labels>
+                    <label locale="en">CustomerAcceptanceTask</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="GTW10129774110239">
+                <labels>
+                    <label locale="en">CheckOutcome?</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT10130178277111">
+                <labels>
+                    <label locale="en">EndCustomerReject</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf49"/>
+            <topicDocumentation name="sf51"/>
+            <topicDocumentation name="sf52">
+                <labels>
+                    <label locale="en">Accept</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf60"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

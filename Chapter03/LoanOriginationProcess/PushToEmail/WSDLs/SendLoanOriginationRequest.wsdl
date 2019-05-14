@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="SendLoanOriginationRequest"
+                  targetNamespace="http://xmlns.oracle.com/LoanOriginationProcess/PushToEmail/SendLoanOriginationRequest"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:client="http://xmlns.oracle.com/LoanOriginationProcess/PushToEmail/SendLoanOriginationRequest"
+                  xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/">
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	TYPE DEFINITION - List of services participating in this BPEL process
+	The default output of the BPEL designer uses strings as input and 
+	output to the BPEL Process. But you can define or import any XML 
+	Schema type and use them as part of the message types.
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://xmlns.oracle.com/LoanOriginationProcess/PushToEmail/SendLoanOriginationRequest"
+              schemaLocation="../Schemas/SendLoanOriginationRequest.xsd"/>
+    </schema>
+  </wsdl:types>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	MESSAGE TYPE DEFINITION - Definition of the message types used as 
+	part of the port type defintions
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <wsdl:message name="SendLoanOriginationRequestRequestMessage">
+    <wsdl:part name="payload" element="client:process"/>
+  </wsdl:message>
+  <wsdl:message name="SendLoanOriginationRequestResponseMessage">
+    <wsdl:part name="payload" element="client:processResponse"/>
+  </wsdl:message>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	PORT TYPE DEFINITION - A port type groups a set of operations into
+	a logical service unit.
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <!-- portType implemented by the SendLoanOriginationRequest BPEL process -->
+  <wsdl:portType name="SendLoanOriginationRequest">
+    <wsdl:operation name="process">
+      <wsdl:input message="client:SendLoanOriginationRequestRequestMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <!-- portType implemented by the requester of SendLoanOriginationRequest BPEL process
+	for asynchronous callback purposes
+	-->
+  <wsdl:portType name="SendLoanOriginationRequestCallback">
+    <wsdl:operation name="processResponse">
+      <wsdl:input message="client:SendLoanOriginationRequestResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	PARTNER LINK TYPE DEFINITION
+	the SendLoanOriginationRequest partnerLinkType binds the provider and
+	requester portType into an asynchronous conversation.
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <plnk:partnerLinkType name="SendLoanOriginationRequest">
+    <plnk:role name="SendLoanOriginationRequestProvider">
+      <plnk:portType name="client:SendLoanOriginationRequest"/>
+    </plnk:role>
+    <plnk:role name="SendLoanOriginationRequestRequester">
+      <plnk:portType name="client:SendLoanOriginationRequestCallback"/>
+    </plnk:role>
+  </plnk:partnerLinkType>
+</wsdl:definitions>

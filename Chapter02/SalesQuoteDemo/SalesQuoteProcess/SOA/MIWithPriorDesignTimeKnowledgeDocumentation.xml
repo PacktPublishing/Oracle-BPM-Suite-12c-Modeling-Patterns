@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="12.1.3.0.0.00.00" fileRevision="20120601"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+   <component name="MIWithPriorDesignTimeKnowledge">
+      <topicDocumentations>
+         <topicDocumentation name="MIWithPriorDesignTimeKnowledge">
+            <descriptions>
+               <description locale="en">MI With Prior Design Time Knowledge Process</description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10539847152587">
+            <labels>
+               <label locale="en">AcceptQuoteTask</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT1053985371540">
+            <labels>
+               <label locale="en">Determine Cardinality</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10539856702837">
+            <labels>
+               <label locale="en">Subprocess</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10539967452862">
+            <labels>
+               <label locale="en">CheckInventory</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT1053985695330">
+            <labels>
+               <label locale="en">Start</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10539856953320">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="sf10539856953445"/>
+         <topicDocumentation name="sf10539973894638"/>
+         <topicDocumentation name="ACT10539927594940">
+            <labels>
+               <label locale="en">SomeOtherActivity</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10539816423343">
+            <labels>
+               <label locale="en">Start</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10539816423315">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10539816423413"/>
+         <topicDocumentation name="sf10539852007557"/>
+         <topicDocumentation name="sf10539854706379"/>
+         <topicDocumentation name="sf10539856953438"/>
+         <topicDocumentation name="sf10539928510687"/>
+      </topicDocumentations>
+   </component>
+</processDocumentation>

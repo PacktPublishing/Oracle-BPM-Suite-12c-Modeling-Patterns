@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<hwTaskFlows xmlns="http://xmlns.oracle.com/bpel/workflow/hwTaskFlowProperties">
+   <ApplicationName>worklist</ApplicationName>
+   <LookupType>LOCAL</LookupType>
+   <TaskFlowDeploy>false</TaskFlowDeploy>
+   <TaskFlowServer>
+      <hostName/>
+      <httpPort/>
+      <httpsPort/>
+   </TaskFlowServer>
+<hwTaskFlow><WorkflowName>ValidationTask</WorkflowName><TaskDefinitionNamespace>http://xmlns.oracle.com/HumanTaskApps/DynamicTaskAssignmentPrj/ValidationTask</TaskDefinitionNamespace><TaskFlowId>ValidationTask_TaskFlow</TaskFlowId><TaskFlowFileName>WEB-INF/ValidationTask_TaskFlow.xml</TaskFlowFileName></hwTaskFlow></hwTaskFlows>

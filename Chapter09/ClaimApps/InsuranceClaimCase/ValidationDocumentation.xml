@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.97" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="Validation">
+        <topicDocumentations>
+            <topicDocumentation name="Validation">
+                <descriptions>
+                    <description locale="en">Validation</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT10124534470412">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT10124534470532">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT10124546361327">
+                <labels>
+                    <label locale="en">ValidateClaimTask</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf40"/>
+            <topicDocumentation name="sf42"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

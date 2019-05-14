@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="12.1.3.0.0.00.00" fileRevision="20120601"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+   <component name="LOProcessActivationFromEvent">
+      <topicDocumentations>
+         <topicDocumentation name="LOProcessActivationFromEvent">
+            <descriptions>
+               <description locale="en">LO Process Activation From Event</description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10470938424728">
+            <labels>
+               <label locale="en">SubscribeToLoanOrigination</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10470938424830">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT1047100809359">
+            <labels>
+               <label locale="en">SomeActivity</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10470938424840"/>
+         <topicDocumentation name="sf10471008720289"/>
+      </topicDocumentations>
+   </component>
+</processDocumentation>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:caseMetadata targetNamespace="http://xmlns.oracle.com/InsuranceClaimCase" xmlns:ns2="http://xmlns.oracle.com/bpm/case/metadata" xmlns="http://xmlns.oracle.com/bpm/case/metadata/extension" xmlns:ns3="http://xmlns.oracle.com/bpm/case/metadata/common">
+    <ns2:name>InsuranceClaimCase</ns2:name>
+    <ns2:title translationType="STATIC">
+        <ns3:translationValue>InsuranceClaim</ns3:translationValue>
+    </ns2:title>
+    <ns2:priority>3</ns2:priority>
+    <ns2:category>
+        <ns2:name translationType="STATIC">
+            <ns3:translationValue>InsuranceClaim</ns3:translationValue>
+        </ns2:name>
+    </ns2:category>
+    <ns2:ecmFolder>
+        <ns2:parentFolder type="STATIC"></ns2:parentFolder>
+        <ns2:caseInstanceFolder type="STATIC"></ns2:caseInstanceFolder>
+        <ns2:createSubFolderOnCaseInstanceCreation>true</ns2:createSubFolderOnCaseInstanceCreation>
+    </ns2:ecmFolder>
+    <ns2:caseData>
+        <ns2:data updatable="true">
+            <ns2:name>ClaimCaseInput</ns2:name>
+            <ns2:type>{http://www.Claim4Insurance.org}Claim</ns2:type>
+            <ns2:dataType>ELEMENT</ns2:dataType>
+            <ns2:schema>xsd/InsuranceClaim.xsd</ns2:schema>
+        </ns2:data>
+    </ns2:caseData>
+    <ns2:stakeHolders>
+        <ns2:stakeHolder>
+            <ns2:name>CSR</ns2:name>
+            <ns2:resource identityType="user" type="STATIC">jcooper</ns2:resource>
+        </ns2:stakeHolder>
+        <ns2:stakeHolder>
+            <ns2:name>CaseManager</ns2:name>
+            <ns2:resource identityType="user" type="STATIC">weblogic</ns2:resource>
+        </ns2:stakeHolder>
+        <ns2:stakeHolder>
+            <ns2:name>RegularAgent</ns2:name>
+            <ns2:resource identityType="user" type="STATIC">fkafka</ns2:resource>
+        </ns2:stakeHolder>
+        <ns2:stakeHolder>
+            <ns2:name>ExpertAgent</ns2:name>
+            <ns2:resource identityType="user" type="STATIC">jstein</ns2:resource>
+        </ns2:stakeHolder>
+        <ns2:stakeHolder>
+            <ns2:name>Customer</ns2:name>
+            <ns2:resource identityType="user" type="STATIC">achrist</ns2:resource>
+        </ns2:stakeHolder>
+    </ns2:stakeHolders>
+    <ns2:milestones>
+        <ns2:milestone>
+            <ns2:name>Started</ns2:name>
+            <ns2:isSoft>false</ns2:isSoft>
+        </ns2:milestone>
+        <ns2:milestone>
+            <ns2:name>FNOL</ns2:name>
+            <ns2:isSoft>false</ns2:isSoft>
+        </ns2:milestone>
+        <ns2:milestone>
+            <ns2:name>AgentAssigned</ns2:name>
+            <ns2:isSoft>false</ns2:isSoft>
+        </ns2:milestone>
+        <ns2:milestone>
+            <ns2:name>Verified</ns2:name>
+            <ns2:isSoft>false</ns2:isSoft>
+        </ns2:milestone>
+        <ns2:milestone>
+            <ns2:name>Validated</ns2:name>
+            <ns2:isSoft>false</ns2:isSoft>
+        </ns2:milestone>
+        <ns2:milestone>
+            <ns2:name>CustomerAcceptance</ns2:name>
+            <ns2:isSoft>false</ns2:isSoft>
+        </ns2:milestone>
+        <ns2:milestone>
+            <ns2:name>CustomerAccepted</ns2:name>
+            <ns2:isSoft>false</ns2:isSoft>
+        </ns2:milestone>
+        <ns2:milestone>
+            <ns2:name>CustomerRejected</ns2:name>
+            <ns2:isSoft>false</ns2:isSoft>
+        </ns2:milestone>
+        <ns2:milestone>
+            <ns2:name>Evaluated</ns2:name>
+            <ns2:isSoft>false</ns2:isSoft>
+        </ns2:milestone>
+        <ns2:milestone>
+            <ns2:name>PaymentCompleted</ns2:name>
+            <ns2:isSoft>false</ns2:isSoft>
+        </ns2:milestone>
+        <ns2:milestone>
+            <ns2:name>RecoveryCompleted</ns2:name>
+            <ns2:isSoft>false</ns2:isSoft>
+        </ns2:milestone>
+    </ns2:milestones>
+    <ns2:permissionTags>
+        <ns2:permissionTag>
+            <ns2:customTagName>PUBLIC</ns2:customTagName>
+        </ns2:permissionTag>
+        <ns2:permissionTag>
+            <ns2:customTagName>RESTRICTED</ns2:customTagName>
+        </ns2:permissionTag>
+    </ns2:permissionTags>
+    <ns2:resourceBundle>
+        <ns2:name>InsuranceClaimCaseResourceBundle</ns2:name>
+    </ns2:resourceBundle>
+</ns2:caseMetadata>

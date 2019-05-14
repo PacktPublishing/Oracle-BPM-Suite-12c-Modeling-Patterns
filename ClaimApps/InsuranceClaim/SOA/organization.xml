@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:organization xmlns:ns2="http://xmlns.oracle.com/bpel/workflow/taskQuery" xmlns:ns1="http://xmlns.oracle.com/bpm/organization" xmlns:ns4="http://xmlns.oracle.com/bpel/workflow/task" xmlns:ns3="http://xmlns.oracle.com/bpm/identity" xmlns:ns0="http://xmlns.oracle.com/bpm/lpg/peopleQuery">
+   <ns1:updateExistingObjects>false</ns1:updateExistingObjects>
+   <ns1:organizationalUnits>
+      <ns1:organizationalUnit>
+         <ns1:organizationalUnitId>f04388b6-97da-47e1-9b2f-5098d9a6d6d3</ns1:organizationalUnitId>
+         <ns1:organizationalUnitName>OrganizationalUnit</ns1:organizationalUnitName>
+         <ns1:description>OrganizationalUnit</ns1:description>
+         <ns1:calendarRuleId>51377619-c713-42a8-9e18-d2816e17508d</ns1:calendarRuleId>
+         <ns1:calendarRuleName>Calendar</ns1:calendarRuleName>
+         <ns1:member type="GROUP">
+            <ns1:name>CSRGroup</ns1:name>
+            <ns1:memberId>76e9b6ab-1b47-46f1-8302-cd82de4a94e3</ns1:memberId>
+         </ns1:member>
+         <ns1:member type="GROUP">
+            <ns1:name>CaseManagerGroup</ns1:name>
+            <ns1:memberId>e4c0473e-2633-439f-8003-25f1e1f0d080</ns1:memberId>
+         </ns1:member>
+         <ns1:member type="GROUP">
+            <ns1:name>ExpertAgent</ns1:name>
+            <ns1:memberId>b7e57ac6-8fee-4a5e-b313-9d3b39be8c16</ns1:memberId>
+         </ns1:member>
+         <ns1:member type="GROUP">
+            <ns1:name>RegularAgent</ns1:name>
+            <ns1:memberId>90a8e3e0-a41c-4b4c-a712-6160e7ab56a9</ns1:memberId>
+         </ns1:member>
+      </ns1:organizationalUnit>
+   </ns1:organizationalUnits>
+   <ns1:applicationRoles>
+      <ns1:applicationRole id="InsuranceClaim.ProcessOwner" isProcessRole="true">
+         <ns3:name>InsuranceClaim.Process Owner</ns3:name>
+         <ns1:processRole id="ProcessOwner" name="Process Owner"/>
+      </ns1:applicationRole>
+      <ns1:applicationRole id="InsuranceClaim.ProcessReviewer" isProcessRole="true">
+         <ns3:name>InsuranceClaim.Process Reviewer</ns3:name>
+         <ns1:processRole id="ProcessReviewer" name="Process Reviewer"/>
+      </ns1:applicationRole>
+      <ns1:applicationRole id="InsuranceClaim.CSR" isProcessRole="true">
+         <ns3:name>InsuranceClaim.CSR</ns3:name>
+         <ns1:member type="GROUP">
+            <ns1:name>CSRGroup</ns1:name>
+         </ns1:member>
+         <ns1:processRole id="CSR" name="CSR"/>
+      </ns1:applicationRole>
+      <ns1:applicationRole id="InsuranceClaim.ExpertAgent" isProcessRole="true">
+         <ns3:name>InsuranceClaim.ExpertAgent</ns3:name>
+         <ns1:member type="GROUP">
+            <ns1:name>ExpertAgent</ns1:name>
+         </ns1:member>
+         <ns1:processRole id="ExpertAgent" name="ExpertAgent"/>
+      </ns1:applicationRole>
+      <ns1:applicationRole id="InsuranceClaim.RegularAgent" isProcessRole="true">
+         <ns3:name>InsuranceClaim.RegularAgent</ns3:name>
+         <ns1:member type="GROUP">
+            <ns1:name>RegularAgent</ns1:name>
+         </ns1:member>
+         <ns1:processRole id="RegularAgent" name="RegularAgent"/>
+      </ns1:applicationRole>
+      <ns1:applicationRole id="InsuranceClaim.CaseManager" isProcessRole="true">
+         <ns3:name>InsuranceClaim.CaseManager</ns3:name>
+         <ns1:member type="GROUP">
+            <ns1:name>CaseManagerGroup</ns1:name>
+         </ns1:member>
+         <ns1:processRole id="CaseManager" name="CaseManager"/>
+      </ns1:applicationRole>
+      <ns1:applicationRole id="InsuranceClaim.Customer" isProcessRole="true">
+         <ns3:name>InsuranceClaim.Customer</ns3:name>
+         <ns1:member type="GROUP">
+            <ns1:name>Customer</ns1:name>
+         </ns1:member>
+         <ns1:processRole id="Customer" name="Customer"/>
+      </ns1:applicationRole>
+   </ns1:applicationRoles>
+   <ns1:applicationRoleOrgUnitCalendarAssociations>
+      <ns1:applicationRoleOrgUnitCalendarAssociation>
+         <ns1:applicationRole>
+            <ns3:name>InsuranceClaim.CSR</ns3:name>
+         </ns1:applicationRole>
+         <ns1:organizationalUnitId>f04388b6-97da-47e1-9b2f-5098d9a6d6d3</ns1:organizationalUnitId>
+         <ns1:organizationalUnitName>OrganizationalUnit</ns1:organizationalUnitName>
+         <ns1:calendarRuleId>51377619-c713-42a8-9e18-d2816e17508d</ns1:calendarRuleId>
+         <ns1:calendarRuleName>Calendar</ns1:calendarRuleName>
+      </ns1:applicationRoleOrgUnitCalendarAssociation>
+      <ns1:applicationRoleOrgUnitCalendarAssociation>
+         <ns1:applicationRole>
+            <ns3:name>InsuranceClaim.ExpertAgent</ns3:name>
+         </ns1:applicationRole>
+         <ns1:organizationalUnitId>f04388b6-97da-47e1-9b2f-5098d9a6d6d3</ns1:organizationalUnitId>
+         <ns1:organizationalUnitName>OrganizationalUnit</ns1:organizationalUnitName>
+         <ns1:calendarRuleId>51377619-c713-42a8-9e18-d2816e17508d</ns1:calendarRuleId>
+         <ns1:calendarRuleName>Calendar</ns1:calendarRuleName>
+      </ns1:applicationRoleOrgUnitCalendarAssociation>
+      <ns1:applicationRoleOrgUnitCalendarAssociation>
+         <ns1:applicationRole>
+            <ns3:name>InsuranceClaim.RegularAgent</ns3:name>
+         </ns1:applicationRole>
+         <ns1:organizationalUnitId>f04388b6-97da-47e1-9b2f-5098d9a6d6d3</ns1:organizationalUnitId>
+         <ns1:organizationalUnitName>OrganizationalUnit</ns1:organizationalUnitName>
+         <ns1:calendarRuleId>51377619-c713-42a8-9e18-d2816e17508d</ns1:calendarRuleId>
+         <ns1:calendarRuleName>Calendar</ns1:calendarRuleName>
+      </ns1:applicationRoleOrgUnitCalendarAssociation>
+      <ns1:applicationRoleOrgUnitCalendarAssociation>
+         <ns1:applicationRole>
+            <ns3:name>InsuranceClaim.CaseManager</ns3:name>
+         </ns1:applicationRole>
+         <ns1:organizationalUnitId>f04388b6-97da-47e1-9b2f-5098d9a6d6d3</ns1:organizationalUnitId>
+         <ns1:organizationalUnitName>OrganizationalUnit</ns1:organizationalUnitName>
+         <ns1:calendarRuleId>51377619-c713-42a8-9e18-d2816e17508d</ns1:calendarRuleId>
+         <ns1:calendarRuleName>Calendar</ns1:calendarRuleName>
+      </ns1:applicationRoleOrgUnitCalendarAssociation>
+      <ns1:applicationRoleOrgUnitCalendarAssociation>
+         <ns1:applicationRole>
+            <ns3:name>InsuranceClaim.Customer</ns3:name>
+         </ns1:applicationRole>
+         <ns1:organizationalUnitId>f04388b6-97da-47e1-9b2f-5098d9a6d6d3</ns1:organizationalUnitId>
+         <ns1:organizationalUnitName>OrganizationalUnit</ns1:organizationalUnitName>
+         <ns1:calendarRuleId>51377619-c713-42a8-9e18-d2816e17508d</ns1:calendarRuleId>
+         <ns1:calendarRuleName>Calendar</ns1:calendarRuleName>
+      </ns1:applicationRoleOrgUnitCalendarAssociation>
+   </ns1:applicationRoleOrgUnitCalendarAssociations>
+   <ns1:participantPropertiesList/>
+   <ns1:holidayRules/>
+   <ns1:calendarRules>
+      <ns1:calendarRule>
+         <ns1:name>Calendar</ns1:name>
+         <ns1:id>51377619-c713-42a8-9e18-d2816e17508d</ns1:id>
+         <ns1:timeZone>America/New_York</ns1:timeZone>
+         <ns1:workdayList>
+            <ns1:workday>
+               <ns1:weekDay>Sunday</ns1:weekDay>
+               <ns1:workPeriod>
+                  <ns1:startTime>08:00:30.496-04:00</ns1:startTime>
+                  <ns1:endTime>12:00:30.496-04:00</ns1:endTime>
+               </ns1:workPeriod>
+               <ns1:workPeriod>
+                  <ns1:startTime>13:00:30.496-04:00</ns1:startTime>
+                  <ns1:endTime>17:00:30.496-04:00</ns1:endTime>
+               </ns1:workPeriod>
+            </ns1:workday>
+            <ns1:workday>
+               <ns1:weekDay>Monday</ns1:weekDay>
+               <ns1:workPeriod>
+                  <ns1:startTime>08:00:30.496-04:00</ns1:startTime>
+                  <ns1:endTime>12:00:30.496-04:00</ns1:endTime>
+               </ns1:workPeriod>
+               <ns1:workPeriod>
+                  <ns1:startTime>13:00:30.496-04:00</ns1:startTime>
+                  <ns1:endTime>17:00:30.496-04:00</ns1:endTime>
+               </ns1:workPeriod>
+            </ns1:workday>
+            <ns1:workday>
+               <ns1:weekDay>Tuesday</ns1:weekDay>
+               <ns1:workPeriod>
+                  <ns1:startTime>08:00:30.496-04:00</ns1:startTime>
+                  <ns1:endTime>12:00:30.496-04:00</ns1:endTime>
+               </ns1:workPeriod>
+               <ns1:workPeriod>
+                  <ns1:startTime>13:00:30.496-04:00</ns1:startTime>
+                  <ns1:endTime>17:00:30.496-04:00</ns1:endTime>
+               </ns1:workPeriod>
+            </ns1:workday>
+            <ns1:workday>
+               <ns1:weekDay>Wednesday</ns1:weekDay>
+               <ns1:workPeriod>
+                  <ns1:startTime>08:00:30.496-04:00</ns1:startTime>
+                  <ns1:endTime>12:00:30.496-04:00</ns1:endTime>
+               </ns1:workPeriod>
+               <ns1:workPeriod>
+                  <ns1:startTime>13:00:30.496-04:00</ns1:startTime>
+                  <ns1:endTime>17:00:30.496-04:00</ns1:endTime>
+               </ns1:workPeriod>
+            </ns1:workday>
+            <ns1:workday>
+               <ns1:weekDay>Thursday</ns1:weekDay>
+               <ns1:workPeriod>
+                  <ns1:startTime>08:00:30.497-04:00</ns1:startTime>
+                  <ns1:endTime>12:00:30.497-04:00</ns1:endTime>
+               </ns1:workPeriod>
+               <ns1:workPeriod>
+                  <ns1:startTime>13:00:30.497-04:00</ns1:startTime>
+                  <ns1:endTime>17:00:30.497-04:00</ns1:endTime>
+               </ns1:workPeriod>
+            </ns1:workday>
+            <ns1:workday>
+               <ns1:weekDay>Friday</ns1:weekDay>
+               <ns1:workPeriod>
+                  <ns1:startTime>08:00:30.497-04:00</ns1:startTime>
+                  <ns1:endTime>12:00:30.497-04:00</ns1:endTime>
+               </ns1:workPeriod>
+               <ns1:workPeriod>
+                  <ns1:startTime>13:00:30.497-04:00</ns1:startTime>
+                  <ns1:endTime>17:00:30.497-04:00</ns1:endTime>
+               </ns1:workPeriod>
+            </ns1:workday>
+            <ns1:workday>
+               <ns1:weekDay>Saturday</ns1:weekDay>
+               <ns1:workPeriod>
+                  <ns1:startTime>08:00:30.497-04:00</ns1:startTime>
+                  <ns1:endTime>12:00:30.497-04:00</ns1:endTime>
+               </ns1:workPeriod>
+               <ns1:workPeriod>
+                  <ns1:startTime>13:00:30.497-04:00</ns1:startTime>
+                  <ns1:endTime>17:00:30.497-04:00</ns1:endTime>
+               </ns1:workPeriod>
+            </ns1:workday>
+         </ns1:workdayList>
+      </ns1:calendarRule>
+   </ns1:calendarRules>
+   <ns1:businessParameters/>
+</ns1:organization>

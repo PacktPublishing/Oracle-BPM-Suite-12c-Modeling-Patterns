@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="12.1.3.0.0.00.00" fileRevision="20120601"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+   <component name="ExclusiveChoiceSimpleMerge">
+      <topicDocumentations>
+         <topicDocumentation name="ExclusiveChoiceSimpleMerge">
+            <labels>
+               <label locale="en">ExclusiveChoice&amp;SimpleMerge</label>
+            </labels>
+            <descriptions>
+               <description locale="en">Process to demonstrate Exclusive Choice &amp; Simple Merge Pattern</description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10514357785593">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10514366774630">
+            <labels>
+               <label locale="en">NewQuoteApplication</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10514366774776">
+            <labels>
+               <label locale="en">ReQuoteApplication</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW10514365706695">
+            <labels>
+               <label locale="en">QuoteProcessing</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10514399429180">
+            <labels>
+               <label locale="en">ReProcessQuoteApplication</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10514411959238">
+            <labels>
+               <label locale="en">SalesRepApprovalTask</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW10514421478173">
+            <labels>
+               <label locale="en">QuoteApproval</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10514431253031">
+            <labels>
+               <label locale="en">QuoteDocsReceived</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW10514430721319">
+            <labels>
+               <label locale="en">ReceivingQuoteSignedDocs</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10514431253255">
+            <labels>
+               <label locale="en">DocsNotReceived</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10514446198416">
+            <labels>
+               <label locale="en">OtherActivity</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10514366774840"/>
+         <topicDocumentation name="sf10514366774842"/>
+         <topicDocumentation name="sf10514400428877"/>
+         <topicDocumentation name="sf10514400780527"/>
+         <topicDocumentation name="sf10514417929729"/>
+         <topicDocumentation name="sf1051442228898"/>
+         <topicDocumentation name="sf10514431253377"/>
+         <topicDocumentation name="sf10514431253339"/>
+         <topicDocumentation name="sf10514431675467">
+            <labels>
+               <label locale="en"></label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10514436834055"/>
+         <topicDocumentation name="sf10514448334649"/>
+         <topicDocumentation name="sf10514456281780"/>
+         <topicDocumentation name="sf1051445828172"/>
+      </topicDocumentations>
+   </component>
+</processDocumentation>

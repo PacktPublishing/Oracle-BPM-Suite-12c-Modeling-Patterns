@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<RuleDictionary id="G}-5bf839a2:14744acea0b:-77ab" xmlns="http://xmlns.oracle.com/rules/dictionary">
+  <Name>ParallelRoutingTaskRules</Name>
+  <Alias>ParallelRoutingTaskRules</Alias>
+  <Version>12.1.1.0.0</Version>
+  <DataModel id="L}1">
+    <CreationUpdateNumber>2</CreationUpdateNumber>
+    <QualifierPattern>{member} of {fact}</QualifierPattern>
+    <SupportsXPathEnabled>false</SupportsXPathEnabled>
+    <UpdateNumber>5</UpdateNumber>
+    <ValidationUpdateNumber>3</ValidationUpdateNumber>
+    <UpdateTime>0</UpdateTime>
+  </DataModel>
+  <RuleSet id="G}-5bf839a2:14744acea0b:-77a9">
+    <Name>JobLevelRule</Name>
+    <Alias>JobLevelRule</Alias>
+    <ValidationUpdateNumber>2</ValidationUpdateNumber>
+    <Active>true</Active>
+    <CalendarForm>DateTime</CalendarForm>
+    <VisibilityFilterEnabled>false</VisibilityFilterEnabled>
+    <CreationUpdateNumber>2</CreationUpdateNumber>
+  </RuleSet>
+  <RuleSet id="G}-5bf839a2:14744acea0b:-778d">
+    <Name>ModificationRules</Name>
+    <Alias>ModificationRules</Alias>
+    <ValidationUpdateNumber>3</ValidationUpdateNumber>
+    <Active>true</Active>
+    <CalendarForm>DateTime</CalendarForm>
+    <VisibilityFilterEnabled>false</VisibilityFilterEnabled>
+    <CreationUpdateNumber>3</CreationUpdateNumber>
+  </RuleSet>
+  <RuleSet id="G}-5bf839a2:14744acea0b:-778c">
+    <Name>SubstitutionRules</Name>
+    <Alias>SubstitutionRules</Alias>
+    <ValidationUpdateNumber>3</ValidationUpdateNumber>
+    <Active>true</Active>
+    <CalendarForm>DateTime</CalendarForm>
+    <VisibilityFilterEnabled>false</VisibilityFilterEnabled>
+    <CreationUpdateNumber>3</CreationUpdateNumber>
+  </RuleSet>
+  <DictionaryLink id="L}7">
+    <Name>DecisionPointDictionary</Name>
+    <Alias>DecisionPointDictionary</Alias>
+    <Package>oracle.rules.sdk2.decisionpoint.impl</Package>
+    <UpdateNumber>323</UpdateNumber>
+    <PrefixLinkedNames>true</PrefixLinkedNames>
+  </DictionaryLink>
+  <DictionaryLink id="L}8">
+    <Name>ParallelRoutingTaskRulesBase</Name>
+    <Alias>ParallelRoutingTaskRulesBase</Alias>
+    <UpdateNumber>9</UpdateNumber>
+    <PrefixLinkedNames>false</PrefixLinkedNames>
+  </DictionaryLink>
+  <ValidationUpdateNumber>3</ValidationUpdateNumber>
+  <UpdateNumber>3</UpdateNumber>
+  <TestModel id="L}3">
+    <ValidationUpdateNumber>1</ValidationUpdateNumber>
+    <UpdateNumber>1</UpdateNumber>
+    <Validation>true</Validation>
+    <AutoSync>true</AutoSync>
+  </TestModel>
+  <Preferences id="G}-5bf839a2:14744acea0b:-77aa">
+    <RulesExecutionAlgorithm>RETE</RulesExecutionAlgorithm>
+    <DisallowErrorSuppression>false</DisallowErrorSuppression>
+    <PhraseSuggestions>All</PhraseSuggestions>
+    <RestrictAutoSuggestions>true</RestrictAutoSuggestions>
+    <IncludeChainedExpressions>true</IncludeChainedExpressions>
+  </Preferences>
+</RuleDictionary>

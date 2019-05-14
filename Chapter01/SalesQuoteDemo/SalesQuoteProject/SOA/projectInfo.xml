@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns5:projectInfo projectVersion="20120601" fileVersion="20120601" xmlns:ns2="http://www.omg.org/spec/DD/20100524/DI" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:ns4="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ns3="http://www.omg.org/spec/DD/20100524/DC" xmlns:ns5="http://xmlns.oracle.com/ProjectInfoDefinition" xmlns:ns6="http://xmlns.oracle.com/bpm/OracleExtensions">
+    <ns5:localizedProjectNames>
+        <ns5:localizedProjectName name="SOA" locale="en_US"/>
+    </ns5:localizedProjectNames>
+    <ns5:preferences isTemplate="false">
+        <ns5:languages default="en" availables="en"/>
+        <ns5:tags>
+            <ns5:tag id="default" color="#000000" type="USER"/>
+        </ns5:tags>
+    </ns5:preferences>
+</ns5:projectInfo>

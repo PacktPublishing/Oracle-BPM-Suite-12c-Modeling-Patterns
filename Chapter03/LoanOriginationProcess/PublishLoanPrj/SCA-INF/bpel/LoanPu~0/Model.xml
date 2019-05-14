@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process name="LoanPublishingProcess" targetNamespace="http://xmlns.oracle.com/LoanOriginationProcess/PublishLoanPrj/LoanPublishingProcess" xmlns="http://schemas.xmlsoap.org/ws/2003/03/business-process/" xmlns:client="http://xmlns.oracle.com/LoanOriginationProcess/PublishLoanPrj/LoanPublishingProcess" xmlns:ora="http://schemas.oracle.com/xpath/extension" xmlns:bpws="http://schemas.xmlsoap.org/ws/2003/03/business-process/" xmlns:ns1="http://xmlns.oracle.com/pcbpel/adapter/jms/LoanOriginationProcess/PublishLoanPrj/PublishLoanDetails" xmlns:bpelx="http://schemas.oracle.com/bpel/extension" xmlns:bpel2="http://docs.oasis-open.org/wsbpel/2.0/process/executable" xmlns:ns2="http://www.myloanoriginationsystem.org" id="BpPrc0">
+    <!-- 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      PARTNERLINKS                                                      
+      List of services participating in this BPEL process               
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  -->
+    <bpelx:annotation>
+        <bpelx:analysis>
+            <bpelx:property name="wsdlFile">
+                <![CDATA[LoanPublishingProcess.wsdl]]>
+            </bpelx:property>
+        </bpelx:analysis>
+    </bpelx:annotation>
+    <partnerLinks>
+        <!-- 
+      The 'client' role represents the requester of this service. It is 
+      used for callback. The location and correlation information associated
+      with the client role are automatically set using WS-Addressing.
+    -->
+        <partnerLink name="loanpublishingprocess_client" partnerLinkType="client:LoanPublishingProcess" myRole="LoanPublishingProcessProvider"/>
+        <partnerLink name="PublishLoanDetails" partnerLinkType="ns1:Produce_Message_plt" partnerRole="Produce_Message_role"/>
+    </partnerLinks>
+    <!-- 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      VARIABLES                                                        
+      List of messages and XML documents used within this BPEL process 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  -->
+    <variables>
+        <!-- Reference to the message passed as input during initiation -->
+        <variable name="inputVariable" messageType="client:LoanPublishingProcessRequestMessage"/>
+        <variable name="InvokePublishLoanDetail_Produce_Message_InputVariable" messageType="ns1:Produce_Message_msg"/>
+    </variables>
+    <!-- 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     ORCHESTRATION LOGIC                                               
+     Set of activities coordinating the flow of messages across the    
+     services integrated within this business process                  
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  -->
+    <sequence name="main" id="BpSeq0">
+        <!-- Receive input from requestor. (Note: This maps to operation defined in LoanPublishingProcess.wsdl) -->
+        <receive name="receiveInput" partnerLink="loanpublishingprocess_client" portType="client:LoanPublishingProcess" operation="process" variable="inputVariable" createInstance="yes" id="BpRcv0"/>
+        <assign name="AssignLoanDetails" id="BpAss0">
+            <copy>
+                <from variable="inputVariable" part="payload" query="/ns2:LoanRequest"/>
+                <to variable="InvokePublishLoanDetail_Produce_Message_InputVariable" part="body" query="/ns2:LoanRequest"/>
+            </copy>
+        </assign>
+        <invoke name="InvokePublishLoanDetail" inputVariable="InvokePublishLoanDetail_Produce_Message_InputVariable" partnerLink="PublishLoanDetails" portType="ns1:Produce_Message_ptt" operation="Produce_Message" bpelx:invokeAsDetail="no" id="BpInv0"/>
+        <terminate name="EndProcess" id="BpTer0"/>
+    </sequence>
+</process><!--
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  Oracle JDeveloper BPEL Designer 
+  
+  Created: Wed Oct 23 18:42:33 EDT 2013
+  Author:  viachary
+  Type: BPEL 1.1 Process
+  Purpose: One Way BPEL Process
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-->

@@ -1,0 +1,13 @@
+<adapter-config name="PublishLoanDetails" adapter="jms" wsdlLocation="PublishLoanDetails.wsdl"
+                xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="eis/wls/LoanOrig" UIJmsProvider="WLSJMS" UIConnectionName="BPM12cConn"/>
+  <endpoint-interaction portType="Produce_Message_ptt" operation="Produce_Message">
+    <interaction-spec className="oracle.tip.adapter.jms.outbound.JmsProduceInteractionSpec">
+      <property name="TimeToLive" value="3600000"/>
+      <property name="PayloadType" value="TextMessage"/>
+      <property name="DeliveryMode" value="Persistent"/>
+      <property name="DestinationName" value="jms/LoanOrigQueue"/>
+      <property name="Priority" value="3"/>
+    </interaction-spec>
+  </endpoint-interaction>
+</adapter-config>

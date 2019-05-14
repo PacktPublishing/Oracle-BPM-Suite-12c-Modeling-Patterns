@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.97" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="Payment">
+        <topicDocumentations>
+            <topicDocumentation name="Payment">
+                <descriptions>
+                    <description locale="en">Payment</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT10129387385572">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+            </topicDocumentation>
+            <topicDocumentation name="EVT10129387385792">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf42"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

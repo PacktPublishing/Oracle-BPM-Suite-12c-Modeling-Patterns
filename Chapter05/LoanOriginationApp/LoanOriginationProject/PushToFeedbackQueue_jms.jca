@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<adapter-config name="PushToFeedbackQueue" adapter="jms" wsdlLocation="PushToFeedbackQueue.wsdl" xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  
+  <connection-factory location="eis/wls/Queue" UIJmsProvider="WLSJMS" UIConnectionName="dev_soa_osb"/>
+  <endpoint-interaction portType="Produce_Message_ptt" operation="Produce_Message">
+    <interaction-spec className="oracle.tip.adapter.jms.outbound.JmsProduceInteractionSpec">
+      <property name="TimeToLive" value="3600000"/>
+      <property name="PayloadType" value="TextMessage"/>
+      <property name="DeliveryMode" value="Persistent"/>
+      <property name="DestinationName" value="jms/LOFeedbackQueue"/>
+      <property name="Priority" value="2"/>
+    </interaction-spec>
+  </endpoint-interaction>
+
+</adapter-config>

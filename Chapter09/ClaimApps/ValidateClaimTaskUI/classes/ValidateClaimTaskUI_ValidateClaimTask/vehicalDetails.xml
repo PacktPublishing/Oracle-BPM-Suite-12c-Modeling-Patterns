@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.64.93"
+          id="vehicalDetails" Package="ValidateClaimTaskUI_ValidateClaimTask"
+          BeanClass="ValidateClaimTaskUI_ValidateClaimTask.vehicalDetails"
+          isJavaBased="false">
+  <AccessorAttribute id="vehicalBuild" IsCollection="true"
+                     BeanClass="ValidateClaimTaskUI_ValidateClaimTask.VehicalBuild"
+                     CollectionBeanClass="ValidateClaimTaskUI_ValidateClaimTask.VehicalBuild_vehicalBuild_Operations">
+    <Properties>
+      <Property Name="nextSiblingNamespace"
+                Value="http://www.Claim4Insurance.org"/>
+      <Property Name="nextSibling" Value="vehicalDamage"/>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Vehical Build"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="vehicalBuild"/>
+      <Property Name="targetNamespace" Value="http://www.Claim4Insurance.org"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="vehicalDamage" IsCollection="true"
+                     BeanClass="ValidateClaimTaskUI_ValidateClaimTask.VehicalDamage"
+                     CollectionBeanClass="ValidateClaimTaskUI_ValidateClaimTask.VehicalDamage_vehicalDamage_Operations">
+    <Properties>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Vehical Damage"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="vehicalDamage"/>
+      <Property Name="targetNamespace" Value="http://www.Claim4Insurance.org"/>
+    </Properties>
+  </AccessorAttribute>
+</JavaBean>

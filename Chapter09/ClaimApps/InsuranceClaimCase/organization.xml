@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.97" fileRevision="20090820"?>
+<ns1:organization xmlns:ns2="http://xmlns.oracle.com/bpm/lpg/peopleQuery" xmlns:ns1="http://xmlns.oracle.com/bpm/organization" xmlns:ns4="http://xmlns.oracle.com/bpel/workflow/task" xmlns:ns3="http://xmlns.oracle.com/bpel/workflow/taskQuery" xmlns:ns5="http://xmlns.oracle.com/bpm/identity">
+    <ns1:updateExistingObjects>false</ns1:updateExistingObjects>
+    <ns1:organizationalUnits/>
+    <ns1:applicationRoles>
+        <ns1:applicationRole isProcessRole="false" id="InsuranceClaimCase.ProcessOwner">
+            <ns5:name>InsuranceClaimCase.ProcessOwner</ns5:name>
+            <ns1:processRole name="Process Owner" id="ProcessOwner"/>
+        </ns1:applicationRole>
+        <ns1:applicationRole isProcessRole="true" id="InsuranceClaimCase.CSR">
+            <ns5:name>InsuranceClaimCase.CSR</ns5:name>
+            <ns1:member type="USER">
+                <ns1:name>jcooper</ns1:name>
+            </ns1:member>
+            <ns1:processRole name="CSR" id="CSR"/>
+        </ns1:applicationRole>
+        <ns1:applicationRole isProcessRole="true" id="InsuranceClaimCase.RegularAgent">
+            <ns5:name>InsuranceClaimCase.RegularAgent</ns5:name>
+            <ns1:member type="USER">
+                <ns1:name>fkafka</ns1:name>
+            </ns1:member>
+            <ns1:processRole name="RegularAgent" id="RegularAgent"/>
+        </ns1:applicationRole>
+        <ns1:applicationRole isProcessRole="true" id="InsuranceClaimCase.ExpertAgent">
+            <ns5:name>InsuranceClaimCase.ExpertAgent</ns5:name>
+            <ns1:member type="USER">
+                <ns1:name>jstein</ns1:name>
+            </ns1:member>
+            <ns1:processRole name="ExpertAgent" id="ExpertAgent"/>
+        </ns1:applicationRole>
+        <ns1:applicationRole isProcessRole="true" id="InsuranceClaimCase.CaseManager">
+            <ns5:name>InsuranceClaimCase.CaseManager</ns5:name>
+            <ns1:member type="USER">
+                <ns1:name>weblogic</ns1:name>
+            </ns1:member>
+            <ns1:processRole name="CaseManager" id="CaseManager"/>
+        </ns1:applicationRole>
+        <ns1:applicationRole isProcessRole="false" id="InsuranceClaimCase.Customer">
+            <ns5:name>InsuranceClaimCase.Customer</ns5:name>
+            <ns1:member type="USER">
+                <ns1:name>achrist</ns1:name>
+            </ns1:member>
+            <ns1:processRole name="Customer" id="Customer"/>
+        </ns1:applicationRole>
+    </ns1:applicationRoles>
+    <ns1:applicationRoleOrgUnitCalendarAssociations/>
+    <ns1:participantPropertiesList/>
+    <ns1:holidayRules/>
+    <ns1:calendarRules/>
+</ns1:organization>

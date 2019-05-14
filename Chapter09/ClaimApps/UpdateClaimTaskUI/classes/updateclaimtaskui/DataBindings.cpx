@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.64.93" id="DataBindings" SeparateXMLFiles="false"
+             Package="updateclaimtaskui" ClientType="Generic">
+  <pageMap>
+    <page path="/taskDetails1.jspx"
+          usageId="updateclaimtaskui_taskDetails1PageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="updateclaimtaskui_taskDetails1PageDef"
+          path="updateclaimtaskui.pageDefs.taskDetails1PageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="UpdateClaimTaskUI_UpdateClaimTask"
+        path="updateclaimtaskui.UpdateClaimTaskUI_UpdateClaimTask"/>
+  </dataControlUsages>
+</Application>

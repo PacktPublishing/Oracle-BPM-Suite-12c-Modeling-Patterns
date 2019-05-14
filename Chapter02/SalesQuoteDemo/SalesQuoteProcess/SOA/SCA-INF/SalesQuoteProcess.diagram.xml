@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dgm:gDiagram xmlns:dgm="http://xmlns.oracle.com/sca/soadgm">
+    <dgm:gService name="CheckInventory.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="286" width="137" height="84">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="279" width="156" height="98">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="CheckInventory.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/CheckInventory#wsdl.interface(CheckInventoryPortType)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>start</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="MIWithPriorDesignTimeKnowledge.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="156" width="137" height="96">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="149" width="156" height="110">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="MIWithPriorDesignTimeKnowledge.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/MIWithPriorDesignTimeKnowledge#wsdl.interface(MIWithPriorDesignTimeKnowledgePortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/MIWithPriorDesignTimeKnowledge#wsdl.interface(MIWithPriorDesignTimeKnowledgePortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>start</dgm:item>
+            <dgm:item>end</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="MIwithoutPriorRunTimeKnowledge.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="26" width="137" height="96">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="19" width="156" height="110">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="MIwithoutPriorRunTimeKnowledge.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/MIwithoutPriorRunTimeKnowledge#wsdl.interface(MIwithoutPriorRunTimeKnowledgePortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/MIwithoutPriorRunTimeKnowledge#wsdl.interface(MIwithoutPriorRunTimeKnowledgePortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>start</dgm:item>
+            <dgm:item>end</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gComponent name="MIWithPriorDesignTimeKnowledge">
+        <dgm:body borderWidth="2" arcRad="20" X="262" Y="183" width="130" height="86">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="252" Y="176" width="150" height="102">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="MIWithPriorDesignTimeKnowledge.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/MIWithPriorDesignTimeKnowledge#wsdl.interface(MIWithPriorDesignTimeKnowledgePortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/MIWithPriorDesignTimeKnowledge#wsdl.interface(MIWithPriorDesignTimeKnowledgePortTypeCallBack)"/>
+        <dgm:outputPort name="HumanTasks.AcceptQuoteTask.reference" X="120" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:outputPort name="CheckInventory.reference" X="120" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/CheckInventory#wsdl.interface(CheckInventoryPortType)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="AcceptQuoteTask">
+        <dgm:body borderWidth="2" arcRad="20" X="496" Y="152" width="130" height="61">
+            <dgm:borderColor r="109" g="136" b="65"/>
+            <dgm:lightBgColor r="201" g="224" b="155"/>
+            <dgm:darkBgColor r="157" g="195" b="93"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="486" Y="145" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="TaskService" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/workflow/resources/images/humantask_20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="CheckInventory">
+        <dgm:body borderWidth="2" arcRad="20" X="496" Y="247" width="130" height="61">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="486" Y="240" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="CheckInventory.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/CheckInventory#wsdl.interface(CheckInventoryPortType)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="MIwithoutPriorRunTimeKnowledge">
+        <dgm:body borderWidth="2" arcRad="20" X="262" Y="63" width="130" height="86">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="252" Y="56" width="150" height="102">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="MIwithoutPriorRunTimeKnowledge.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/MIwithoutPriorRunTimeKnowledge#wsdl.interface(MIwithoutPriorRunTimeKnowledgePortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/MIwithoutPriorRunTimeKnowledge#wsdl.interface(MIwithoutPriorRunTimeKnowledgePortTypeCallBack)"/>
+        <dgm:outputPort name="HumanTasks.AcceptQuoteTask.reference" X="120" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:outputPort name="HumanTasks.SeekLineApprovalTask.reference" X="120" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="SeekLineApprovalTask">
+        <dgm:body borderWidth="2" arcRad="20" X="496" Y="48" width="130" height="61">
+            <dgm:borderColor r="109" g="136" b="65"/>
+            <dgm:lightBgColor r="201" g="224" b="155"/>
+            <dgm:darkBgColor r="157" g="195" b="93"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="486" Y="41" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="TaskService" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/workflow/resources/images/humantask_20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gWireLink source="MIWithPriorDesignTimeKnowledge/HumanTasks.AcceptQuoteTask.reference" target="AcceptQuoteTask/TaskService" width="2">
+        <dgm:gSegment X1="402" Y1="208" X2="426" Y2="208"/>
+        <dgm:gSegment X1="426" Y1="208" X2="426" Y2="177"/>
+        <dgm:gSegment X1="426" Y1="177" X2="486" Y2="177"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="CheckInventory.service" target="CheckInventory/CheckInventory.service" width="2">
+        <dgm:gSegment X1="168" Y1="296" X2="426" Y2="296"/>
+        <dgm:gSegment X1="426" Y1="296" X2="426" Y2="272"/>
+        <dgm:gSegment X1="426" Y1="272" X2="486" Y2="272"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="MIWithPriorDesignTimeKnowledge/CheckInventory.reference" target="CheckInventory/CheckInventory.service" width="2">
+        <dgm:gSegment X1="402" Y1="233" X2="441" Y2="233"/>
+        <dgm:gSegment X1="441" Y1="233" X2="441" Y2="272"/>
+        <dgm:gSegment X1="441" Y1="272" X2="486" Y2="272"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="MIWithPriorDesignTimeKnowledge.service" target="MIWithPriorDesignTimeKnowledge/MIWithPriorDesignTimeKnowledge.service" width="2">
+        <dgm:gSegment X1="168" Y1="166" X2="192" Y2="166"/>
+        <dgm:gSegment X1="192" Y1="166" X2="192" Y2="208"/>
+        <dgm:gSegment X1="192" Y1="208" X2="252" Y2="208"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="MIwithoutPriorRunTimeKnowledge/HumanTasks.AcceptQuoteTask.reference" target="AcceptQuoteTask/TaskService" width="2">
+        <dgm:gSegment X1="402" Y1="88" X2="441" Y2="88"/>
+        <dgm:gSegment X1="441" Y1="88" X2="441" Y2="177"/>
+        <dgm:gSegment X1="441" Y1="177" X2="486" Y2="177"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="MIwithoutPriorRunTimeKnowledge/HumanTasks.SeekLineApprovalTask.reference" target="SeekLineApprovalTask/TaskService" width="2">
+        <dgm:gSegment X1="402" Y1="113" X2="426" Y2="113"/>
+        <dgm:gSegment X1="426" Y1="113" X2="426" Y2="73"/>
+        <dgm:gSegment X1="426" Y1="73" X2="486" Y2="73"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="MIwithoutPriorRunTimeKnowledge.service" target="MIwithoutPriorRunTimeKnowledge/MIwithoutPriorRunTimeKnowledge.service" width="2">
+        <dgm:gSegment X1="168" Y1="36" X2="192" Y2="36"/>
+        <dgm:gSegment X1="192" Y1="36" X2="192" Y2="88"/>
+        <dgm:gSegment X1="192" Y1="88" X2="252" Y2="88"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+</dgm:gDiagram>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.64.93" id="DataBindings" SeparateXMLFiles="false"
+             Package="validateclaimtaskui" ClientType="Generic">
+  <pageMap>
+    <page path="/taskDetails1.jspx"
+          usageId="validateclaimtaskui_taskDetails1PageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="validateclaimtaskui_taskDetails1PageDef"
+          path="validateclaimtaskui.pageDefs.taskDetails1PageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="ValidateClaimTaskUI_ValidateClaimTask"
+        path="validateclaimtaskui.ValidateClaimTaskUI_ValidateClaimTask"/>
+  </dataControlUsages>
+</Application>

@@ -1,0 +1,28 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<wsdl:definitions
+     name="LoanOriginationEventService"
+     targetNamespace="http://xmlns.oracle.com/LoanOriginationProcess/LoanOrigination/LoanOriginationEventService"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:client="http://xmlns.oracle.com/LoanOriginationProcess/LoanOrigination/LoanOriginationEventService"
+     xmlns:ns1="http://www.myloanoriginationsystem.org"
+     xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+    >
+    <plnk:partnerLinkType name="LoanOriginationEventService">
+        <plnk:role name="LoanOriginationEventServiceProvider" portType="client:LoanOriginationEventService"/>
+    </plnk:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:client="http://xmlns.oracle.com/LoanOriginationProcess/LoanOrigination/LoanOriginationEventService"
+             xmlns:ns1="http://www.myloanoriginationsystem.org" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
+            <import namespace="http://www.myloanoriginationsystem.org" schemaLocation="../Schemas/LoanOrigination.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="LoanOriginationEventServiceRequestMessage">
+        <wsdl:part name="payload" element="ns1:LoanRequest"/>
+    </wsdl:message>
+    <wsdl:portType name="LoanOriginationEventService">
+        <wsdl:operation name="process">
+            <wsdl:input message="client:LoanOriginationEventServiceRequestMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

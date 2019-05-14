@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<definitions xmlns="http://schemas.oracle.com/events/edl" targetNamespace="http://xmlns.oracle.com/ClaimApps/InsuranceClaim/CustomerRejectionEvent">
+   <schema-import location="../Schemas/InsuranceClaim.xsd" namespace="http://www.Claim4Insurance.org"/>
+   <event-definition name="CustomerRejectionEvent">
+      <content xmlns:ns1="http://www.Claim4Insurance.org" element="ns1:Claim"/>
+   </event-definition>
+</definitions>

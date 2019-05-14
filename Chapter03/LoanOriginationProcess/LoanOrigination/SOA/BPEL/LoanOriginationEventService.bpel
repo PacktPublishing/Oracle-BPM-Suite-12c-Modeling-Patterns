@@ -1,0 +1,80 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!--
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  Oracle JDeveloper BPEL Designer 
+  
+  Created: Fri Jul 25 11:01:36 EDT 2014
+  Author:  vacharya
+  Type: BPEL 2.0 Process
+  Purpose: One Way BPEL Process
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-->
+<process name="LoanOriginationEventService"
+               targetNamespace="http://xmlns.oracle.com/LoanOriginationProcess/LoanOrigination/LoanOriginationEventService"
+               xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+               xmlns:client="http://xmlns.oracle.com/LoanOriginationProcess/LoanOrigination/LoanOriginationEventService"
+               xmlns:ora="http://schemas.oracle.com/xpath/extension"
+               xmlns:ui="http://xmlns.oracle.com/soa/designer"
+               xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+         xmlns:bpelx="http://schemas.oracle.com/bpel/extension" xmlns:ns1="http://www.myloanoriginationsystem.org"
+         xmlns:ns2="http://xmlns.oracle.com/LoanOriginationProcess/LoanOrigination/LoanEvent">
+  <import namespace="http://www.myloanoriginationsystem.org" location="../Schemas/LoanOrigination.xsd"
+          importType="http://www.w3.org/2001/XMLSchema"/>
+  <import ui:processWSDL="true" namespace="http://xmlns.oracle.com/LoanOriginationProcess/LoanOrigination/LoanOriginationEventService" location="../WSDLs/LoanOriginationEventService.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+  <!-- 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      PARTNERLINKS                                                      
+      List of services participating in this BPEL process               
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  --> 
+  <partnerLinks>
+    <!-- 
+      The 'client' role represents the requester of this service. It is 
+      used for callback. The location and correlation information associated
+      with the client role are automatically set using WS-Addressing.
+    -->
+    <partnerLink name="loanoriginationeventservice_client" partnerLinkType="client:LoanOriginationEventService" myRole="LoanOriginationEventServiceProvider"/>
+  </partnerLinks>
+
+  <!-- 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      VARIABLES                                                        
+      List of messages and XML documents used within this BPEL process 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  -->
+  <variables>
+    <!-- Reference to the message passed as input during initiation -->
+    <variable name="inputVariable" messageType="client:LoanOriginationEventServiceRequestMessage"/>
+    <variable name="RaiseLoanOriginationEvent_InputVariable" element="ns1:LoanRequest"/>
+  </variables>
+
+  <!-- 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     ORCHESTRATION LOGIC                                               
+     Set of activities coordinating the flow of messages across the    
+     services integrated within this business process                  
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  -->
+  <sequence name="main">
+
+    <!-- Receive input from requestor. (Note: This maps to operation defined in LoanOriginationEventService.wsdl) -->
+    <receive name="receiveInput" partnerLink="loanoriginationeventservice_client" portType="client:LoanOriginationEventService" operation="process" variable="inputVariable" createInstance="yes"/>
+    <assign name="Assign_receiveInput_RiaseLoanOriginationVar">
+      <copy>
+        <from>$inputVariable.payload/ns1:LoanDetails</from>
+        <to>$RaiseLoanOriginationEvent_InputVariable/ns1:LoanDetails</to>
+      </copy>
+      <copy>
+        <from>$inputVariable.payload/ns1:ApplicantDetails</from>
+        <to>$RaiseLoanOriginationEvent_InputVariable/ns1:ApplicantDetails</to>
+      </copy>
+      <copy>
+        <from>$inputVariable.payload/ns1:LoanStatus</from>
+        <to>$RaiseLoanOriginationEvent_InputVariable/ns1:LoanStatus</to>
+      </copy>
+    </assign>
+    <invoke name="RaiseLoanOriginationEvent" bpelx:eventName="ns2:LoanOriginationEvent"
+            inputVariable="RaiseLoanOriginationEvent_InputVariable" bpelx:invokeAsDetail="no"/>
+    <exit name="EndProcess"/>
+  </sequence>
+</process>

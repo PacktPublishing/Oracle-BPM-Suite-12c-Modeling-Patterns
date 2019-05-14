@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns="http://schemas.oracle.com/events/edl" targetNamespace="http://schemas.oracle.com/events/edl/DispatchServiceProvider">
+    <schema-import location="xsd/InsuranceClaim.xsd" namespace="http://www.Claim4Insurance.org"/>
+    <event-definition name="DispatchServ iceProvider">
+        <content xmlns:ns0="http://www.Claim4Insurance.org" element="ns0:Claim"/>
+    </event-definition>
+</definitions>

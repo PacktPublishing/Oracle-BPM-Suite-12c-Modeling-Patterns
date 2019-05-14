@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dgm:gDiagram xmlns:dgm="http://xmlns.oracle.com/sca/soadgm">
+    <dgm:gService name="LOProcessOneRequestTwoResponse.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="1247" width="137" height="108">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="1240" width="156" height="122">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="LOProcessOneRequestTwoResponse.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessOneRequestTwoResponse#wsdl.interface(LOProcessOneRequestTwoResponsePortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessOneRequestTwoResponse#wsdl.interface(LOProcessOneRequestTwoResponsePortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>start</dgm:item>
+            <dgm:item>endApproved</dgm:item>
+            <dgm:item>endNotApproved</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="LOProcessAsService.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="1113" width="137" height="96">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="1106" width="156" height="110">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="LOProcessAsService.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessAsService#wsdl.interface(LOProcessAsServicePortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessAsService#wsdl.interface(LOProcessAsServicePortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>StartLoanOrigination</dgm:item>
+            <dgm:item>EndLoanOrigination</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="LOProcessSendReceive.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="985" width="137" height="96">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="978" width="156" height="110">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="LOProcessSendReceive.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessSendReceive#wsdl.interface(LOProcessSendReceivePortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessSendReceive#wsdl.interface(LOProcessSendReceivePortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>receiveLoanOriginationReq</dgm:item>
+            <dgm:item>sendLoanOriginationResp</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="ReceiveLOEmail">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="837" width="137" height="84">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="830" width="156" height="98">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="ReceiveLOEmail" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/pcbpel/adapter/ums/LoanOriginationProcess/LoanOrigination/ReceiveLOEmail#wsdl.interface(ReceiveLONotification_ptt)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/ums_adapter_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>ReceiveLONotification</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="loanoriginationeventservice_client_ep">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="695" width="137" height="84">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="688" width="156" height="98">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="loanoriginationeventservice_client_ep" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/LoanOriginationProcess/LoanOrigination/LoanOriginationEventService#wsdl.interface(LoanOriginationEventService)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>process</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="LOProcessMultiEvent.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="562" width="137" height="96">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="555" width="156" height="110">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="LOProcessMultiEvent.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessMultiEvent#wsdl.interface(LOProcessMultiEventPortType)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>newLoanApplication</dgm:item>
+            <dgm:item>reLoanApplication</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="ConsumeLoanRequest">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="423" width="137" height="84">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="416" width="156" height="98">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="ConsumeLoanRequest" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/pcbpel/adapter/jms/LoanOriginationProcess/LoanOrigination/ConsumeLoanRequest#wsdl.interface(Consume_Message_ptt)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/jms_adapter_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>Consume_Message</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gComponent name="LOProcessAsService">
+        <dgm:body borderWidth="2" arcRad="20" X="270" Y="1098" width="130" height="61">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="260" Y="1091" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="LOProcessAsService.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessAsService#wsdl.interface(LOProcessAsServicePortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessAsService#wsdl.interface(LOProcessAsServicePortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="LOProcessOneRequestTwoResponse">
+        <dgm:body borderWidth="2" arcRad="20" X="270" Y="1232" width="130" height="61">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="260" Y="1225" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="LOProcessOneRequestTwoResponse.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessOneRequestTwoResponse#wsdl.interface(LOProcessOneRequestTwoResponsePortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessOneRequestTwoResponse#wsdl.interface(LOProcessOneRequestTwoResponsePortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="LOProcessSendReceive">
+        <dgm:body borderWidth="2" arcRad="20" X="270" Y="970" width="130" height="61">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="260" Y="963" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="LOProcessSendReceive.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessSendReceive#wsdl.interface(LOProcessSendReceivePortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessSendReceive#wsdl.interface(LOProcessSendReceivePortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="LOProcessSchedule">
+        <dgm:body borderWidth="2" arcRad="20" X="270" Y="349" width="130" height="61">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="260" Y="342" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="LOProcessActivationFromEmail">
+        <dgm:body borderWidth="2" arcRad="20" X="270" Y="866" width="130" height="61">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="260" Y="859" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="References.Externals.ReceiveLOEmail.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/pcbpel/adapter/ums/LoanOriginationProcess/LoanOrigination/ReceiveLOEmail#wsdl.interface(ReceiveLONotification_ptt)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="LoanOriginationEventService">
+        <dgm:body borderWidth="2" arcRad="20" X="270" Y="640" width="130" height="110">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="260" Y="633" width="150" height="126">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="loanoriginationeventservice_client" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/LoanOriginationProcess/LoanOrigination/LoanOriginationEventService#wsdl.interface(LoanOriginationEventService)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/bpel/shared/plugins/resources/images/soa/process_20x20.png" X="23" Y="4" width="20" height="20"/>
+        <dgm:publishEvents>
+            <dgm:item>LoanOriginationEvent</dgm:item>
+        </dgm:publishEvents>
+        <dgm:publishPort name="" X="120" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/circleEvent.png"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="LOProcessActivationFromEvent">
+        <dgm:body borderWidth="2" arcRad="20" X="270" Y="121" width="130" height="110">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="260" Y="114" width="150" height="126">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="23" Y="4" width="20" height="20"/>
+        <dgm:subscribeEvents>
+            <dgm:item>LoanOriginationEvent</dgm:item>
+        </dgm:subscribeEvents>
+        <dgm:subscribePort name="" X="-10" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/circleEvent.png"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="LOProcessMultiEvent">
+        <dgm:body borderWidth="2" arcRad="20" X="270" Y="547" width="130" height="61">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="260" Y="540" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="LOProcessMultiEvent.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessMultiEvent#wsdl.interface(LOProcessMultiEventPortType)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="LOProcessHumanInitiation">
+        <dgm:body borderWidth="2" arcRad="20" X="270" Y="26" width="130" height="61">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="260" Y="19" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="HumanTasks.LOProcessHumanInitiationTask.reference" X="120" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="LOProcessHumanInitiationTask">
+        <dgm:body borderWidth="2" arcRad="20" X="512" Y="26" width="130" height="61">
+            <dgm:borderColor r="109" g="136" b="65"/>
+            <dgm:lightBgColor r="201" g="224" b="155"/>
+            <dgm:darkBgColor r="157" g="195" b="93"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="502" Y="19" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="TaskService" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/workflow/resources/images/humantask_20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="LOProcessActivationFromQueue">
+        <dgm:body borderWidth="2" arcRad="20" X="270" Y="444" width="130" height="61">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="260" Y="437" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="References.Externals.ConsumeLoanRequest.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/pcbpel/adapter/jms/LoanOriginationProcess/LoanOrigination/ConsumeLoanRequest#wsdl.interface(Consume_Message_ptt)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gWireLink source="LOProcessOneRequestTwoResponse.service" target="LOProcessOneRequestTwoResponse/LOProcessOneRequestTwoResponse.service" width="2">
+        <dgm:gSegment X1="168" Y1="1257" X2="260" Y2="1257"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="LOProcessAsService.service" target="LOProcessAsService/LOProcessAsService.service" width="2">
+        <dgm:gSegment X1="168" Y1="1123" X2="260" Y2="1123"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="LOProcessSendReceive.service" target="LOProcessSendReceive/LOProcessSendReceive.service" width="2">
+        <dgm:gSegment X1="168" Y1="995" X2="260" Y2="995"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="ReceiveLOEmail" target="LOProcessActivationFromEmail/References.Externals.ReceiveLOEmail.service" width="2">
+        <dgm:gSegment X1="168" Y1="847" X2="192" Y2="847"/>
+        <dgm:gSegment X1="192" Y1="847" X2="192" Y2="891"/>
+        <dgm:gSegment X1="192" Y1="891" X2="260" Y2="891"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="loanoriginationeventservice_client_ep" target="LoanOriginationEventService/loanoriginationeventservice_client" width="2">
+        <dgm:gSegment X1="168" Y1="705" X2="192" Y2="705"/>
+        <dgm:gSegment X1="192" Y1="705" X2="192" Y2="665"/>
+        <dgm:gSegment X1="192" Y1="665" X2="260" Y2="665"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="LOProcessMultiEvent.service" target="LOProcessMultiEvent/LOProcessMultiEvent.service" width="2">
+        <dgm:gSegment X1="168" Y1="572" X2="260" Y2="572"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="LOProcessHumanInitiation/HumanTasks.LOProcessHumanInitiationTask.reference" target="LOProcessHumanInitiationTask/TaskService" width="2">
+        <dgm:gSegment X1="410" Y1="51" X2="502" Y2="51"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="ConsumeLoanRequest" target="LOProcessActivationFromQueue/References.Externals.ConsumeLoanRequest.service" width="2">
+        <dgm:gSegment X1="168" Y1="433" X2="192" Y2="433"/>
+        <dgm:gSegment X1="192" Y1="433" X2="192" Y2="469"/>
+        <dgm:gSegment X1="192" Y1="469" X2="260" Y2="469"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+</dgm:gDiagram>

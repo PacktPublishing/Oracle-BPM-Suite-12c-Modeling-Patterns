@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.97" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="FNOL">
+        <topicDocumentations>
+            <topicDocumentation name="FNOL">
+                <descriptions>
+                    <description locale="en">FNOL</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT10121054994424">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT10121054994449">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT10121074397577">
+                <labels>
+                    <label locale="en">FNOLTask</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf22"/>
+            <topicDocumentation name="sf24"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

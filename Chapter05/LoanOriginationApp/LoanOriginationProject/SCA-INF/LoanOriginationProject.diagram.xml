@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dgm:gDiagram xmlns:dgm="http://xmlns.oracle.com/sca/soadgm">
+    <dgm:gService name="GetGeedbackDetails">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="756" width="137" height="84">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="749" width="156" height="98">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="GetGeedbackDetails" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/pcbpel/adapter/jms/LoanOriginationApp/LoanOriginationProject/GetGeedbackDetails#wsdl.interface(Consume_Message_ptt)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/jms_adapter_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>Consume_Message</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="FraudIntruption.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="328" width="137" height="96">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="321" width="156" height="110">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="FraudIntruption.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/FraudIntruption#wsdl.interface(FraudIntruptionPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/FraudIntruption#wsdl.interface(FraudIntruptionPortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>start</dgm:item>
+            <dgm:item>end</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="WEB.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="70" width="137" height="96">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="63" width="156" height="110">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="WEB.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/WEB#wsdl.interface(WEBPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/WEB#wsdl.interface(WEBPortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>start</dgm:item>
+            <dgm:item>end</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="BackgroundCheck.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="198" width="137" height="96">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="191" width="156" height="110">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="BackgroundCheck.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/BackgroundCheck#wsdl.interface(BackgroundCheckPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/BackgroundCheck#wsdl.interface(BackgroundCheckPortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="3" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>receiveBackgroungCheckReq</dgm:item>
+            <dgm:item>sendBackgroungCheckResp</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="LoanOrigination.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="458" width="137" height="96">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="451" width="156" height="110">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="LoanOrigination.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/LoanOrigination#wsdl.interface(LoanOriginationPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/LoanOrigination#wsdl.interface(LoanOriginationPortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>startLO</dgm:item>
+            <dgm:item>endLO</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gService name="BackOffice.service">
+        <dgm:body borderWidth="2" arcRad="20" X="21" Y="588" width="137" height="96">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="11" Y="581" width="156" height="110">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:outputPort name="BackOffice.service" X="127" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/BackOffice#wsdl.interface(BackOfficePortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/BackOffice#wsdl.interface(BackOfficePortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="20" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>startBO</dgm:item>
+            <dgm:item>end</dgm:item>
+        </dgm:operations>
+    </dgm:gService>
+    <dgm:gReference name="BPM-NotificationService">
+        <dgm:body borderWidth="2" arcRad="20" X="988" Y="192" width="136" height="168">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="978" Y="185" width="156" height="182">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="BPM-NotificationService" X="-10" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/ias/pcbpel/NotificationService#wsdl.interface(NotificationService)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="27" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>sendIMNotification</dgm:item>
+            <dgm:item>sendFaxNotification</dgm:item>
+            <dgm:item>sendVoiceNotification</dgm:item>
+            <dgm:item>sendSMSNotification</dgm:item>
+            <dgm:item>sendPagerNotification</dgm:item>
+            <dgm:item>sendURINotification</dgm:item>
+            <dgm:item>sendEmailNotification</dgm:item>
+            <dgm:item>sendNotificationToUser</dgm:item>
+            <dgm:item>sendNotificationToGroup</dgm:item>
+        </dgm:operations>
+    </dgm:gReference>
+    <dgm:gReference name="CreditCheck">
+        <dgm:body borderWidth="2" arcRad="20" X="988" Y="525" width="136" height="84">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="978" Y="518" width="156" height="98">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="CreditCheck" X="-10" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/LoanOriginationApp/CreditCheckPrj/CreditCheckService#wsdl.interface(CreditCheckService)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="27" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>process</dgm:item>
+        </dgm:operations>
+    </dgm:gReference>
+    <dgm:gReference name="FraudCheck">
+        <dgm:body borderWidth="2" arcRad="20" X="988" Y="394" width="136" height="96">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="978" Y="387" width="156" height="110">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="FraudCheck" X="-10" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/LoanOriginationApp/FraudCheck/FraudCheck#wsdl.interface(FraudCheck)" callbackInterface="http://xmlns.oracle.com/LoanOriginationApp/FraudCheck/FraudCheck#wsdl.interface(FraudCheckCallback)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/soap_service_20x20.png" X="27" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>process</dgm:item>
+            <dgm:item>processResponse</dgm:item>
+        </dgm:operations>
+    </dgm:gReference>
+    <dgm:gReference name="PushToFeedbackQueue">
+        <dgm:body borderWidth="2" arcRad="20" X="988" Y="642" width="136" height="84">
+            <dgm:borderColor r="153" g="153" b="153"/>
+            <dgm:bgColor r="255" g="255" b="255"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="978" Y="635" width="156" height="98">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="PushToFeedbackQueue" X="-10" Y="0" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/pcbpel/adapter/jms/LoanOriginationApp/LoanOriginationProject/PushToFeedbackQueue#wsdl.interface(Produce_Message_ptt)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/adapters/designtime/adapter/images/jms_adapter_20x20.png" X="27" Y="4" width="20" height="20"/>
+        <dgm:operations>
+            <dgm:item>Produce_Message</dgm:item>
+        </dgm:operations>
+    </dgm:gReference>
+    <dgm:gComponent name="LoanOrigination">
+        <dgm:body borderWidth="2" arcRad="20" X="496" Y="430" width="130" height="161">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="486" Y="423" width="150" height="177">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="LoanOrigination.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/LoanOrigination#wsdl.interface(LoanOriginationPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/LoanOrigination#wsdl.interface(LoanOriginationPortTypeCallBack)"/>
+        <dgm:outputPort name="NotificationService.ACT813866880967" X="120" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/ias/pcbpel/NotificationService#wsdl.interface(NotificationService)"/>
+        <dgm:outputPort name="BackgroundCheck.reference" X="120" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/BackgroundCheck#wsdl.interface(BackgroundCheckPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/BackgroundCheck#wsdl.interface(BackgroundCheckPortTypeCallBack)"/>
+        <dgm:outputPort name="FraudIntruption.reference" X="120" Y="65" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/FraudIntruption#wsdl.interface(FraudIntruptionPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/FraudIntruption#wsdl.interface(FraudIntruptionPortTypeCallBack)"/>
+        <dgm:outputPort name="Services.Externals.CreditCheck.reference" X="120" Y="90" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/LoanOriginationApp/CreditCheckPrj/CreditCheckService#wsdl.interface(CreditCheckService)"/>
+        <dgm:outputPort name="HumanTasks.ApplicationVerificationTask.reference" X="120" Y="115" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="BackOffice">
+        <dgm:body borderWidth="2" arcRad="20" X="262" Y="490" width="130" height="135">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="252" Y="483" width="150" height="151">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="BackOffice.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/BackOffice#wsdl.interface(BackOfficePortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/BackOffice#wsdl.interface(BackOfficePortTypeCallBack)"/>
+        <dgm:outputPort name="BackOffice_BackOffice_LoanOrigination.reference" X="120" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/LoanOrigination#wsdl.interface(LoanOriginationPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/LoanOrigination#wsdl.interface(LoanOriginationPortTypeCallBack)"/>
+        <dgm:outputPort name="BackOffice_BackOffice_Feedback.reference" X="120" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/pcbpel/adapter/jms/LoanOriginationApp/LoanOriginationProject/PushToFeedbackQueue#wsdl.interface(Produce_Message_ptt)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="23" Y="4" width="20" height="20"/>
+        <dgm:subscribeEvents>
+            <dgm:item>Feedback</dgm:item>
+        </dgm:subscribeEvents>
+        <dgm:subscribePort name="" X="-10" Y="65" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/circleEvent.png"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="BackgroundCheck">
+        <dgm:body borderWidth="2" arcRad="20" X="754" Y="353" width="130" height="61">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="744" Y="346" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="BackgroundCheck.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/BackgroundCheck#wsdl.interface(BackgroundCheckPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/BackgroundCheck#wsdl.interface(BackgroundCheckPortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="FraudIntruption">
+        <dgm:body borderWidth="2" arcRad="20" X="754" Y="448" width="130" height="61">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="744" Y="441" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="FraudIntruption.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpmn/bpmnProcess/FraudIntruption#wsdl.interface(FraudIntruptionPortType)" callbackInterface="http://xmlns.oracle.com/bpmn/bpmnProcess/FraudIntruption#wsdl.interface(FraudIntruptionPortTypeCallBack)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="Feedback">
+        <dgm:body borderWidth="2" arcRad="20" X="262" Y="741" width="130" height="110">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="252" Y="734" width="150" height="126">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="References.Externals.GetGeedbackDetails.service" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/pcbpel/adapter/jms/LoanOriginationApp/LoanOriginationProject/GetGeedbackDetails#wsdl.interface(Consume_Message_ptt)"/>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="23" Y="4" width="20" height="20"/>
+        <dgm:publishEvents>
+            <dgm:item>Feedback</dgm:item>
+        </dgm:publishEvents>
+        <dgm:publishPort name="" X="120" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/circleEvent.png"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="CatchFraudDetails">
+        <dgm:body borderWidth="2" arcRad="20" X="262" Y="26" width="130" height="110">
+            <dgm:borderColor r="69" g="113" b="140"/>
+            <dgm:lightBgColor r="166" g="208" b="230"/>
+            <dgm:darkBgColor r="99" g="162" b="201"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="252" Y="19" width="150" height="126">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:nodeIcon URI="/oracle/bpm/fusion/soa/msg/images/bpmncomponent20x20.png" X="23" Y="4" width="20" height="20"/>
+        <dgm:subscribeEvents>
+            <dgm:item>FraudDetails</dgm:item>
+        </dgm:subscribeEvents>
+        <dgm:subscribePort name="" X="-10" Y="40" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/circleEvent.png"/>
+    </dgm:gComponent>
+    <dgm:gComponent name="ApplicationVerificationTask">
+        <dgm:body borderWidth="2" arcRad="20" X="754" Y="565" width="130" height="61">
+            <dgm:borderColor r="109" g="136" b="65"/>
+            <dgm:lightBgColor r="201" g="224" b="155"/>
+            <dgm:darkBgColor r="157" g="195" b="93"/>
+        </dgm:body>
+        <dgm:shadow arcRad="20" X="744" Y="558" width="150" height="77">
+            <dgm:bgColor r="196" g="228" b="240"/>
+        </dgm:shadow>
+        <dgm:inputPort name="TaskService" X="-10" Y="15" diameter="20" imageURI="oracle/tip/tools/ide/fabric/resource/image/visuals_rd1/servicereference.png" interface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskService)" callbackInterface="http://xmlns.oracle.com/bpel/workflow/taskService#wsdl.interface(TaskServiceCallback)"/>
+        <dgm:nodeIcon URI="/oracle/tip/tools/ide/workflow/resources/images/humantask_20x20.png" X="10" Y="4" width="20" height="20"/>
+    </dgm:gComponent>
+    <dgm:gWireLink source="LoanOrigination/NotificationService.ACT813866880967" target="BPM-NotificationService" width="2">
+        <dgm:gSegment X1="636" Y1="455" X2="660" Y2="455"/>
+        <dgm:gSegment X1="660" Y1="455" X2="660" Y2="202"/>
+        <dgm:gSegment X1="660" Y1="202" X2="978" Y2="202"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="LoanOrigination/BackgroundCheck.reference" target="BackgroundCheck/BackgroundCheck.service" width="2">
+        <dgm:gSegment X1="636" Y1="480" X2="675" Y2="480"/>
+        <dgm:gSegment X1="675" Y1="480" X2="675" Y2="378"/>
+        <dgm:gSegment X1="675" Y1="378" X2="744" Y2="378"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="LoanOrigination/FraudIntruption.reference" target="FraudIntruption/FraudIntruption.service" width="2">
+        <dgm:gSegment X1="636" Y1="505" X2="690" Y2="505"/>
+        <dgm:gSegment X1="690" Y1="505" X2="690" Y2="473"/>
+        <dgm:gSegment X1="690" Y1="473" X2="744" Y2="473"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="BackOffice/BackOffice_BackOffice_LoanOrigination.reference" target="LoanOrigination/LoanOrigination.service" width="2">
+        <dgm:gSegment X1="402" Y1="515" X2="426" Y2="515"/>
+        <dgm:gSegment X1="426" Y1="515" X2="426" Y2="455"/>
+        <dgm:gSegment X1="426" Y1="455" X2="486" Y2="455"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="BackOffice/BackOffice_BackOffice_Feedback.reference" target="PushToFeedbackQueue" width="2">
+        <dgm:gSegment X1="402" Y1="540" X2="426" Y2="540"/>
+        <dgm:gSegment X1="426" Y1="540" X2="426" Y2="652"/>
+        <dgm:gSegment X1="426" Y1="652" X2="978" Y2="652"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="LoanOrigination/Services.Externals.CreditCheck.reference" target="CreditCheck" width="2">
+        <dgm:gSegment X1="636" Y1="530" X2="660" Y2="530"/>
+        <dgm:gSegment X1="660" Y1="530" X2="660" Y2="535"/>
+        <dgm:gSegment X1="660" Y1="535" X2="978" Y2="535"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="LoanOrigination/HumanTasks.ApplicationVerificationTask.reference" target="ApplicationVerificationTask/TaskService" width="2">
+        <dgm:gSegment X1="636" Y1="555" X2="660" Y2="555"/>
+        <dgm:gSegment X1="660" Y1="555" X2="660" Y2="590"/>
+        <dgm:gSegment X1="660" Y1="590" X2="744" Y2="590"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="GetGeedbackDetails" target="Feedback/References.Externals.GetGeedbackDetails.service" width="2">
+        <dgm:gSegment X1="168" Y1="766" X2="252" Y2="766"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="FraudIntruption.service" target="FraudIntruption/FraudIntruption.service" width="2">
+        <dgm:gSegment X1="168" Y1="338" X2="705" Y2="338"/>
+        <dgm:gSegment X1="705" Y1="338" X2="705" Y2="473"/>
+        <dgm:gSegment X1="705" Y1="473" X2="744" Y2="473"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="BackgroundCheck.service" target="BackgroundCheck/BackgroundCheck.service" width="2">
+        <dgm:gSegment X1="168" Y1="208" X2="192" Y2="208"/>
+        <dgm:gSegment X1="192" Y1="208" X2="192" Y2="246"/>
+        <dgm:gSegment X1="192" Y1="246" X2="720" Y2="246"/>
+        <dgm:gSegment X1="720" Y1="246" X2="720" Y2="378"/>
+        <dgm:gSegment X1="720" Y1="378" X2="744" Y2="378"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="LoanOrigination.service" target="LoanOrigination/LoanOrigination.service" width="2">
+        <dgm:gSegment X1="168" Y1="468" X2="192" Y2="468"/>
+        <dgm:gSegment X1="192" Y1="468" X2="192" Y2="455"/>
+        <dgm:gSegment X1="192" Y1="455" X2="486" Y2="455"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+    <dgm:gWireLink source="BackOffice.service" target="BackOffice/BackOffice.service" width="2">
+        <dgm:gSegment X1="168" Y1="598" X2="192" Y2="598"/>
+        <dgm:gSegment X1="192" Y1="598" X2="192" Y2="515"/>
+        <dgm:gSegment X1="192" Y1="515" X2="252" Y2="515"/>
+        <dgm:baseColor r="153" g="153" b="153"/>
+        <dgm:selectedColor r="49" g="106" b="196"/>
+    </dgm:gWireLink>
+</dgm:gDiagram>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="12.1.3.0.0.00.00" fileRevision="20120601"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+   <component name="SalesQuoteSimpleMerge">
+      <topicDocumentations>
+         <topicDocumentation name="SalesQuoteSimpleMerge"/>
+         <topicDocumentation name="ACT10515013718016">
+            <labels>
+               <label locale="en">SalesRepApprovalTask</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10515032190712">
+            <labels>
+               <label locale="en">LegalApproval</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10515051420560">
+            <labels>
+               <label locale="en">TermsApproval</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10514996724276">
+            <labels>
+               <label locale="en">Start</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10514996724251">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW10515024107042">
+            <labels>
+               <label locale="en">SplitQuoteApproval</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW10515024597066">
+            <labels>
+               <label locale="en">MergeQuoteApproval</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="sf10514996724391"/>
+         <topicDocumentation name="sf10515019755723"/>
+         <topicDocumentation name="sf10515024597080">
+            <labels>
+               <label locale="en"></label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10515024597016"/>
+         <topicDocumentation name="sf10515041239879">
+            <labels>
+               <label locale="en"></label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10515056838759">
+            <labels>
+               <label locale="en"></label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10515059346941"/>
+         <topicDocumentation name="sf10515071940044"/>
+      </topicDocumentations>
+   </component>
+</processDocumentation>

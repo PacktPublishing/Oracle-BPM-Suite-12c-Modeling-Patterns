@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<wsdl:definitions targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/LoanOrigination" xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnProcess/LoanOrigination"  xmlns:tns3="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessMultiEvent"  xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"  xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop"  xmlns:tns2="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessAsService" >
+    <vprop:property name="CorrProperty_Async" type="xsd:string"/>
+    <vprop:propertyAlias propertyName="tns:CorrProperty_Async" part="parameters" messageType="tns2:StartLoanOrigination">
+        <vprop:query xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessAsService" xmlns:tns3="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessMultiEvent" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnProcess/LoanOrigination" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns2="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessAsService" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://www.myloanoriginationsystem.org">
+            /ns:StartLoanOrigination/ns1:LoanRequest/ns1:LoanDetails/ns1:ApplicantID
+        </vprop:query>
+    </vprop:propertyAlias>
+    <vprop:propertyAlias propertyName="tns:CorrProperty_Async" part="parameters" messageType="tns3:reLoanApplication">
+        <vprop:query xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessMultiEvent" xmlns:tns3="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessMultiEvent" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnProcess/LoanOrigination" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns2="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessAsService" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://www.myloanoriginationsystem.org">
+            /ns:reLoanApplication/ns1:LoanRequest/ns1:LoanDetails/ns1:ApplicantID
+        </vprop:query>
+    </vprop:propertyAlias>
+    <vprop:propertyAlias propertyName="tns:CorrProperty_Async" part="parameters" messageType="tns3:newLoanApplication">
+        <vprop:query xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessMultiEvent" xmlns:tns3="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessMultiEvent" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnProcess/LoanOrigination" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns2="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessAsService" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://www.myloanoriginationsystem.org">
+            /ns:newLoanApplication/ns1:LoanRequest/ns1:LoanDetails/ns1:ApplicantID
+        </vprop:query>
+    </vprop:propertyAlias>
+    <vprop:propertyAlias propertyName="tns:CorrProperty_Async" part="parameters" messageType="tns2:getAdditionalLoanInfo">
+        <vprop:query xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessAsService" xmlns:tns3="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessMultiEvent" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnProcess/LoanOrigination" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns2="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessAsService" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://www.myloanoriginationsystem.org">
+            /ns:getAdditionalLoanInfo/ns1:LoanRequest/ns1:LoanDetails/ns1:ApplicantID
+        </vprop:query>
+    </vprop:propertyAlias>
+</wsdl:definitions>

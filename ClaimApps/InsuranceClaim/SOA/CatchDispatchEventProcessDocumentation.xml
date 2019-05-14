@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="12.1.3.0.0.00.00" fileRevision="20120601"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+   <component name="CatchDispatchEventProcess">
+      <topicDocumentations>
+         <topicDocumentation name="CatchDispatchEventProcess"/>
+         <topicDocumentation name="EVT10436477610769">
+            <labels>
+               <label locale="en">Start</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT1043647761070">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10436487298420">
+            <labels>
+               <label locale="en">DispatchingActivities</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10436477610879"/>
+         <topicDocumentation name="sf10436489404287"/>
+      </topicDocumentations>
+   </component>
+</processDocumentation>

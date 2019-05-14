@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<wsdl:definitions targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/SalesQuoteProject" xmlns:tns2="http://xmlns.oracle.com/bpmn/bpmnProcess/ExclusiveChoiceSimpleMerge"  xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"  xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnProcess/SalesQuoteProject"  xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" >
+    <vprop:property name="propertyOpportunityID" type="xsd:string"/>
+    <vprop:propertyAlias propertyName="tns:propertyOpportunityID" part="parameters" messageType="tns2:quoteDocsReceived">
+        <vprop:query xmlns:ns="http://xmlns.oracle.com/bpmn/bpmnProcess/ExclusiveChoiceSimpleMerge" xmlns:ns1="http://www.mycompany.com/ns/salesquote">
+            /ns:quoteDocsReceived/ns1:QuoteRequest/ns1:Summary/ns1:OpportunityID
+        </vprop:query>
+    </vprop:propertyAlias>
+    <vprop:propertyAlias propertyName="tns:propertyOpportunityID" part="parameters" messageType="tns2:newQuoteApplication">
+        <vprop:query xmlns:ns="http://xmlns.oracle.com/bpmn/bpmnProcess/ExclusiveChoiceSimpleMerge" xmlns:ns1="http://www.mycompany.com/ns/salesquote">
+            /ns:newQuoteApplication/ns1:QuoteRequest/ns1:Summary/ns1:OpportunityID
+        </vprop:query>
+    </vprop:propertyAlias>
+    <vprop:propertyAlias propertyName="tns:propertyOpportunityID" part="parameters" messageType="tns2:reQuoteApplication">
+        <vprop:query xmlns:ns="http://xmlns.oracle.com/bpmn/bpmnProcess/ExclusiveChoiceSimpleMerge" xmlns:ns1="http://www.mycompany.com/ns/salesquote">
+            /ns:reQuoteApplication/ns1:QuoteRequest/ns1:Summary/ns1:OpportunityID
+        </vprop:query>
+    </vprop:propertyAlias>
+</wsdl:definitions>

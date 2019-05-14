@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<JLibraryNode nselem="JLibraryNode" class="oracle.jdeveloper.library.JLibraryNode" deployedByDefault="true" xmlns="http://xmlns.oracle.com/jdeveloper/110000jlibrarynode">
+   <classPath>
+      <entries>
+         <Item path="../../../../../../../../../Oracle/Middleware12c/Oracle_Home/lib/commonj.jar" jar-entry=""/>
+         <Item path="../../../../../../../../../Oracle/Middleware12c/Oracle_Home/soa/soa/modules/composer/soaComposerTemplates.jar" jar-entry=""/>
+         <Item path="../../../../../../../../../Oracle/Middleware12c/Oracle_Home/soa/soa/modules/jrf/jps-api.jar" jar-entry=""/>
+         <Item path="../../../../../../../../../Oracle/Middleware12c/Oracle_Home/soa/soa/modules/jrf/jps-unsupported-api.jar" jar-entry=""/>
+         <Item path="../../../../../../../../../Oracle/Middleware12c/Oracle_Home/soa/soa/modules/oracle.soa.worklist_11.1.1/common-userprefs.jar" jar-entry=""/>
+         <Item path="../../../../../../../../../Oracle/Middleware12c/Oracle_Home/soa/soa/modules/rulesComponents/adflibGenericDCs.jar" jar-entry=""/>
+         <Item path="../../../../../../../../../Oracle/Middleware12c/Oracle_Home/soa/soa/modules/rulesComponents/adflibRulesSharedDC.jar" jar-entry=""/>
+         <Item path="../../../../../../../../../Oracle/Middleware12c/Oracle_Home/soa/soa/modules/rulesComponents/rulesSharedUtils.jar" jar-entry=""/>
+      </entries>
+   </classPath>
+   <docPath/>
+   <locked>true</locked>
+   <name>ADF Library Dependencies</name>
+   <sourcePath/>
+</JLibraryNode>

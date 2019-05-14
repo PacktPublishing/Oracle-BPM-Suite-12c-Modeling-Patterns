@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="12.1.3.0.0.00.00" fileRevision="20120601"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+   <component name="VerificationProcess">
+      <topicDocumentations>
+         <topicDocumentation name="VerificationProcess"/>
+         <topicDocumentation name="ACT10325139620772">
+            <labels>
+               <label locale="en">EVerificationUserTask</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10325149764563">
+            <labels>
+               <label locale="en">RVerificationUserTask</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10323951467936">
+            <labels>
+               <label locale="en">Start</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10323951467948">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW10323961377976">
+            <labels>
+               <label locale="en">Sensitivity?</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW10436045311984">
+            <labels>
+               <label locale="en">Sensitivity</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10323951468062"/>
+         <topicDocumentation name="sf10323962518756">
+            <labels>
+               <label locale="en">Expert</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf1032514362476"/>
+         <topicDocumentation name="sf10325154331153">
+            <labels>
+               <label locale="en">Regular</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10325154661229"/>
+         <topicDocumentation name="sf1043605676354"/>
+      </topicDocumentations>
+   </component>
+</processDocumentation>

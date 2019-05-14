@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns="http://schemas.oracle.com/events/edl" targetNamespace="http://schemas.oracle.com/events/edl/FraudDetails">
+    <schema-import location="xsd/LoanOrig.xsd" namespace="http://www.samplebank.org"/>
+    <event-definition name="FraudDetails">
+        <content xmlns:ns0="http://www.samplebank.org" element="ns0:LoanRequest"/>
+    </event-definition>
+</definitions>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<wsdl:definitions targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessAsService" xmlns:tns6="http://www.myloanoriginationsystem.org"  xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/"  xmlns:xsd="http://www.w3.org/2001/XMLSchema"  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"  xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"  xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessAsService" >
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://xmlns.oracle.com/bpmn/bpmnProcess/LOProcessAsService">
+            <xsd:import namespace="http://www.myloanoriginationsystem.org" schemaLocation="../Schemas/LoanOrigination.xsd"/>
+            <xsd:element name="EndLoanOriginationResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="LOProcessAsServiceOUT" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="StartLoanOrigination">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element ref="tns6:LoanRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="EndLoanOriginationResponse">
+        <wsdl:part name="parameters" element="tns:EndLoanOriginationResponse"/>
+    </wsdl:message>
+    <wsdl:message name="StartLoanOrigination">
+        <wsdl:part name="parameters" element="tns:StartLoanOrigination"/>
+    </wsdl:message>
+    <wsdl:portType name="LOProcessAsServicePortType">
+        <wsdl:operation name="StartLoanOrigination">
+            <wsdl:input message="tns:StartLoanOrigination"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:portType name="LOProcessAsServicePortTypeCallBack">
+        <wsdl:operation name="EndLoanOrigination">
+            <wsdl:input message="tns:EndLoanOriginationResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <plnk:partnerLinkType name="LOProcessAsServicePortTypePartnerLinkType">
+        <plnk:role name="LOProcessAsServicePortTypeProvider">
+            <plnk:portType name="tns:LOProcessAsServicePortType"/>
+        </plnk:role>
+    </plnk:partnerLinkType>
+</wsdl:definitions>

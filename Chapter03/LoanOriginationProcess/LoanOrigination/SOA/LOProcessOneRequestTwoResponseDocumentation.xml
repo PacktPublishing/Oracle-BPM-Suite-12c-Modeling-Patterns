@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="12.1.3.0.0.00.00" fileRevision="20120601"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+   <component name="LOProcessOneRequestTwoResponse">
+      <topicDocumentations>
+         <topicDocumentation name="LOProcessOneRequestTwoResponse"/>
+         <topicDocumentation name="EVT10463827457081">
+            <labels>
+               <label locale="en">Start</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="EVT1046382745712">
+            <labels>
+               <label locale="en">Approved</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT1046384728756">
+            <labels>
+               <label locale="en">NotApproved</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10463855076922">
+            <labels>
+               <label locale="en">Activity</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="GTW10463857127268">
+            <labels>
+               <label locale="en">CheckLoan?</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10463827457116"/>
+         <topicDocumentation name="sf10463855336810"/>
+         <topicDocumentation name="sf10463857490314"/>
+         <topicDocumentation name="sf10463857975584">
+            <labels>
+               <label locale="en"></label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+      </topicDocumentations>
+   </component>
+</processDocumentation>

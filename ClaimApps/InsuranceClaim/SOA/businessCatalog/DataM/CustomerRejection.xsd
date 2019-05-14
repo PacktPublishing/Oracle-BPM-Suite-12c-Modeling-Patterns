@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?bpmo version="12.1.3.0.0.00.00" build="02.10" fullName="DataM.CustomerRejection" modifiers="[exception]"?>
+<!--########################################################################################-->
+<!--####                                                                                ####-->
+<!--####          THIS IS AN AUTO GENERATED FILE. PLEASE DO NOT MANUALLY MODIFY         ####-->
+<!--#### CHANGES TO THIS FILE MAY PRODUCE UNEXPECTED BEHAVIOR AND WOULD BE OVERWRITTEN  ####-->
+<!--####                                                                                ####-->
+<!--########################################################################################-->
+<xs:schema targetNamespace="http://xmlns.oracle.com/bpm/bpmobject/DataM/CustomerRejection" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"  xmlns="http://xmlns.oracle.com/bpm/bpmobject/DataM/CustomerRejection"  xmlns:bpmo="http://xmlns.oracle.com/bpm/bpmobject/" >
+    <xs:complexType name="CustomerRejectionType">
+        <xs:sequence>
+            <xs:element name="errorInfo" nillable="true" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="CustomerRejection" type="CustomerRejectionType"/>
+</xs:schema>

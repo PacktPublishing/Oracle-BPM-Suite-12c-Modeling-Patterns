@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.64.93"
+          id="ValidateClaimTaskPayloadType"
+          Package="ValidateClaimTaskUI_ValidateClaimTask"
+          BeanClass="ValidateClaimTaskUI_ValidateClaimTask.ValidateClaimTaskPayloadType"
+          isJavaBased="false">
+  <AccessorAttribute id="Claim" IsCollection="true"
+                     BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Claim"
+                     CollectionBeanClass="ValidateClaimTaskUI_ValidateClaimTask.Claim_Claim_Operations">
+    <Properties>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Claim"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="Claim"/>
+      <Property Name="targetNamespace" Value="http://www.Claim4Insurance.org"/>
+    </Properties>
+  </AccessorAttribute>
+</JavaBean>

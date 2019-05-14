@@ -1,0 +1,12 @@
+<adapter-config name="SendToEmail" adapter="ums" wsdlLocation="SendToEmail.wsdl"
+                xmlns="http://platform.integration.oracle/blocks/adapter/fw/metadata">
+  <connection-factory location="eis/ums/UMSAdapterOutbound"/>
+  <endpoint-interaction portType="SendNotification_ptt" operation="SendNotification">
+    <interaction-spec className="oracle.tip.adapter.ums.outbound.UmsInteractionSpec">
+      <property name="DeliveryType" value="Email"/>
+      <property name="Subject" value="Loan Origination Request"/>
+      <property name="To" value="weblogic0009@gmail.com"/>
+      <property name="From" value="loanofficer@mybank.com"/>
+    </interaction-spec>
+  </endpoint-interaction>
+</adapter-config>

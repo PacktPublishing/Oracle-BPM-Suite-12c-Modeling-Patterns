@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="12.1.3.0.0.00.00" fileRevision="20120601"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+   <component name="MIDynamicPartialJoin">
+      <topicDocumentations>
+         <topicDocumentation name="MIDynamicPartialJoin">
+            <labels>
+               <label locale="en">MIDynamicPartialJoin</label>
+            </labels>
+            <descriptions>
+               <description locale="en">MI Dynamic Partial Join</description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10541465718454">
+            <labels>
+               <label locale="en">AcceptQuoteTask</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10541488078829">
+            <labels>
+               <label locale="en">DynamicPartialJoinSubprocess</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="ACT10541520954450">
+            <labels>
+               <label locale="en">SeekLineApprovalTask</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10541488234898">
+            <labels>
+               <label locale="en">Start</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10541488234876">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+         </topicDocumentation>
+         <topicDocumentation name="GTW10541514808753">
+            <labels>
+               <label locale="en">LineApprovalRequired?</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10541488234982"/>
+         <topicDocumentation name="sf1054151620261"/>
+         <topicDocumentation name="sf10541527322762"/>
+         <topicDocumentation name="sf10541539710423"/>
+         <topicDocumentation name="EVT10541443116712">
+            <labels>
+               <label locale="en">Start</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="EVT10541443116822">
+            <labels>
+               <label locale="en">End</label>
+            </labels>
+            <descriptions>
+               <description locale="en"></description>
+            </descriptions>
+         </topicDocumentation>
+         <topicDocumentation name="sf10541477542636"/>
+         <topicDocumentation name="sf1054151223124"/>
+         <topicDocumentation name="sf10541538005263"/>
+      </topicDocumentations>
+   </component>
+</processDocumentation>

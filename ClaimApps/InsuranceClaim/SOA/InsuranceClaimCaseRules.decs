@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decisionServices xmlns="http://xmlns.oracle.com/bpel/rules" name="InsuranceClaimCaseRules">
+   <ruleEngineProvider provider="Oracle_11.0.0.0.0" name="myRuleEngine">
+      <repository type="SCA-Archive">
+         <path>InsuranceClaim/oracle/rules/InsuranceClaimCaseRules.rules</path>
+      </repository>
+   </ruleEngineProvider>
+   <decisionService name="InsuranceClaimCaseRules_InsuranceClaimCaseRules" ruleEngineProviderReference="myRuleEngine" targetNamespace="http://xmlns.oracle.com/bpm/case/caseDecision/InsuranceClaimCaseRules_InsuranceClaimCaseRules">
+      <catalog>InsuranceClaimCaseRules</catalog>
+      <pattern name="CallFunctionStateless">
+         <arguments>
+            <call>InsuranceClaimCaseRules.InsuranceClaimCaseRules</call>
+         </arguments>
+      </pattern>
+      <pattern name="CallFunctionStateful">
+         <arguments>
+            <call>InsuranceClaimCaseRules.InsuranceClaimCaseRules</call>
+         </arguments>
+      </pattern>
+   </decisionService>
+</decisionServices>

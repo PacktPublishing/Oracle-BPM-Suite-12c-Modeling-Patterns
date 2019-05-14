@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.64.93"
+          id="Claim" Package="ValidateClaimTaskUI_ValidateClaimTask"
+          BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Claim"
+          isJavaBased="false">
+  <AccessorAttribute id="DeclainClaim" IsCollection="true"
+                     BeanClass="ValidateClaimTaskUI_ValidateClaimTask.DeclineClaim"
+                     CollectionBeanClass="ValidateClaimTaskUI_ValidateClaimTask.DeclineClaim_DeclainClaim_Operations">
+    <Properties>
+      <Property Name="nextSiblingNamespace"
+                Value="http://www.Claim4Insurance.org"/>
+      <Property Name="nextSibling" Value="Settlement"/>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Declain Claim"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="DeclainClaim"/>
+      <Property Name="targetNamespace" Value="http://www.Claim4Insurance.org"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="Settlement" IsCollection="true"
+                     BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Settlement"
+                     CollectionBeanClass="ValidateClaimTaskUI_ValidateClaimTask.Settlement_Settlement_Operations">
+    <Properties>
+      <Property Name="nextSiblingNamespace"
+                Value="http://www.Claim4Insurance.org"/>
+      <Property Name="nextSibling" Value="FNOL"/>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Settlement"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="Settlement"/>
+      <Property Name="targetNamespace" Value="http://www.Claim4Insurance.org"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="FNOL" IsCollection="true"
+                     BeanClass="ValidateClaimTaskUI_ValidateClaimTask.FNOL"
+                     CollectionBeanClass="ValidateClaimTaskUI_ValidateClaimTask.FNOL_FNOL_Operations">
+    <Properties>
+      <Property Name="nextSiblingNamespace"
+                Value="http://www.Claim4Insurance.org"/>
+      <Property Name="nextSibling" Value="CloseClaimCase"/>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="FNOL"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="FNOL"/>
+      <Property Name="targetNamespace" Value="http://www.Claim4Insurance.org"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="CloseClaimCase" IsCollection="true"
+                     BeanClass="ValidateClaimTaskUI_ValidateClaimTask.CloseClaim"
+                     CollectionBeanClass="ValidateClaimTaskUI_ValidateClaimTask.CloseClaim_CloseClaimCase_Operations">
+    <Properties>
+      <Property Name="nextSiblingNamespace"
+                Value="http://www.Claim4Insurance.org"/>
+      <Property Name="nextSibling" Value="Appraisal"/>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Close Claim Case"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="CloseClaimCase"/>
+      <Property Name="targetNamespace" Value="http://www.Claim4Insurance.org"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="Appraisal" IsCollection="true"
+                     BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Appraisal"
+                     CollectionBeanClass="ValidateClaimTaskUI_ValidateClaimTask.Appraisal_Appraisal_Operations">
+    <Properties>
+      <Property Name="nextSiblingNamespace"
+                Value="http://www.Claim4Insurance.org"/>
+      <Property Name="nextSibling" Value="Evaluation"/>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Appraisal"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="Appraisal"/>
+      <Property Name="targetNamespace" Value="http://www.Claim4Insurance.org"/>
+    </Properties>
+  </AccessorAttribute>
+  <AccessorAttribute id="Evaluation" IsCollection="true"
+                     BeanClass="ValidateClaimTaskUI_ValidateClaimTask.Evaluation"
+                     CollectionBeanClass="ValidateClaimTaskUI_ValidateClaimTask.Evaluation_Evaluation_Operations">
+    <Properties>
+      <Property Name="minOccurs" Value="1"/>
+      <Property Name="maxOccurs" Value="1"/>
+      <Property Name="LABEL" Value="Evaluation"/>
+      <Property Name="nillable" Value="false"/>
+      <Property Name="originalName" Value="Evaluation"/>
+      <Property Name="targetNamespace" Value="http://www.Claim4Insurance.org"/>
+    </Properties>
+  </AccessorAttribute>
+</JavaBean>

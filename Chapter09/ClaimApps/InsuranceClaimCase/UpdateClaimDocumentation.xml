@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?oracleBPM version="11.1.1.7.0.0.97" fileRevision="20120217"?>
+<processDocumentation xmlns="http://xmlns.oracle.com/bpm/taskMetadataService/processDocumentation">
+    <component name="UpdateClaim">
+        <topicDocumentations>
+            <topicDocumentation name="UpdateClaim">
+                <descriptions>
+                    <description locale="en">UpdateClaim</description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT10124253506950">
+                <labels>
+                    <label locale="en">Start</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="EVT10124253507069">
+                <labels>
+                    <label locale="en">End</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT10124266557681">
+                <labels>
+                    <label locale="en">UpdateClaimTask</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="ACT10124283717825">
+                <labels>
+                    <label locale="en">AssignSensitivity</label>
+                </labels>
+                <descriptions>
+                    <description locale="en"></description>
+                </descriptions>
+            </topicDocumentation>
+            <topicDocumentation name="sf28"/>
+            <topicDocumentation name="sf30"/>
+            <topicDocumentation name="sf31"/>
+        </topicDocumentations>
+    </component>
+</processDocumentation>

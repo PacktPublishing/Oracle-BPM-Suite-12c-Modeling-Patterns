@@ -1,0 +1,30 @@
+2014-07-24 21:04:46.762/2.074 Oracle Coherence 12.1.3.0.0 <Info> (thread=main, member=n/a): Loaded operational configuration from "jar:file:/C:/Oracle/OMiddleware/Oracle_Home/coherence/lib/coherence.jar!/tangosol-coherence.xml"
+2014-07-24 21:04:46.843/2.155 Oracle Coherence 12.1.3.0.0 <Info> (thread=main, member=n/a): Loaded operational overrides from "jar:file:/C:/Oracle/OMiddleware/Oracle_Home/coherence/lib/coherence.jar!/tangosol-coherence-override-dev.xml"
+2014-07-24 21:04:46.845/2.157 Oracle Coherence 12.1.3.0.0 <D5> (thread=main, member=n/a): Optional configuration override "/tangosol-coherence-override.xml" is not specified
+2014-07-24 21:04:46.851/2.163 Oracle Coherence 12.1.3.0.0 <D5> (thread=main, member=n/a): Optional configuration override "cache-factory-config.xml" is not specified
+2014-07-24 21:04:46.852/2.164 Oracle Coherence 12.1.3.0.0 <D5> (thread=main, member=n/a): Optional configuration override "cache-factory-builder-config.xml" is not specified
+2014-07-24 21:04:46.854/2.166 Oracle Coherence 12.1.3.0.0 <D5> (thread=main, member=n/a): Optional configuration override "/custom-mbeans.xml" is not specified
+
+Oracle Coherence Version 12.1.3.0.0 Build 52031
+ Grid Edition: Development mode
+Copyright (c) 2000, 2014, Oracle and/or its affiliates. All rights reserved.
+
+2014-07-24 21:04:46.995/2.307 Oracle Coherence GE 12.1.3.0.0 <Info> (thread=main, member=n/a): Created cache factory com.tangosol.net.DefaultConfigurableCacheFactory
+Jul 24, 2014 9:04:47 PM oracle.fabric.common.wsdl.SchemaManager isIncrementalBuildSupported
+INFO: XMLSchema incremental build enabled.
+Jul 24, 2014 9:04:48 PM com.collaxa.cube.CubeLogger info
+INFO: validating "SendLoanOriginationRequest.bpel" ...
+Jul 24, 2014 9:04:48 PM oracle.integration.platform.blocks.PlatformConfigurationProvider getPlatformConfigurationProvider
+WARNING: JRF is unable to determine the current application server platform.
+Jul 24, 2014 9:04:48 PM com.collaxa.cube.CubeLogger info
+INFO: Composed "SendLoanOriginationRequest" in 90.9 milliseconds [nodes 7=0+7, 77.0 nodes/sec]
+Jul 24, 2014 9:04:50 PM CubeProcessGenerator compile
+INFO: RegularFileObject[D:\REWRITE_MYBOOK\12c_C333\Chapter3\LoanOriginationProcess\PushToEmail\SCA-INF\bpel\SendLo~0\src\orabpel\sendloanoriginationrequest\L0.java] D:\REWRITE_MYBOOK\12c_C333\Chapter3\LoanOriginationProcess\PushToEmail\SCA-INF\bpel\SendLo~0\src\orabpel\sendloanoriginationrequest\L0.java uses unchecked or unsafe operations.
+Jul 24, 2014 9:04:50 PM CubeProcessGenerator compile
+INFO: RegularFileObject[D:\REWRITE_MYBOOK\12c_C333\Chapter3\LoanOriginationProcess\PushToEmail\SCA-INF\bpel\SendLo~0\src\orabpel\sendloanoriginationrequest\L0.java] Recompile with -Xlint:unchecked for details.
+Jul 24, 2014 9:04:50 PM com.collaxa.cube.CubeLogger info
+INFO: Compiled "SendLoanOriginationRequest" in 1.334 seconds
+Jul 24, 2014 9:04:50 PM com.collaxa.cube.CubeLogger info
+INFO: Gathered 4 files in 2.1 milliseconds
+Jul 24, 2014 9:04:50 PM com.collaxa.cube.CubeLogger info
+INFO: Packaged "SendLoanOriginationRequest" in 11.4 milliseconds
