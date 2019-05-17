@@ -55,7 +55,6 @@ or reach him at http://acharyavivek.wordp
 
 [Oracle Blockchain Services Quick Start Guide](https://www.packtpub.com/big-data-and-business-intelligence/oracle-blockchain-services-quick-start-guide?utm_source=github&utm_medium=repository&utm_campaign=9781789804164 )
 
-[
 
 ### Suggestions and Feedback
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSdy7dATC6QmEL81FIUuymZ0Wy9vH1jHkvpY57OiMeKGqib_Ow/viewform) if you have any feedback or suggestions.
