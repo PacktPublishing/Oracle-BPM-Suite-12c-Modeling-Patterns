@@ -1,3 +1,15 @@
+
+### Get this product for $5
+
+<i>Packt is having its biggest sale of the year. Get this eBook or any other book, video, or course that you like just for $5 each</i>
+
+
+<b><p align='center'>[Buy now](https://packt.link/9781849689021)</p></b>
+
+
+<b><p align='center'>[Buy similar titles for just $5](https://subscription.packtpub.com/search)</p></b>
+
+
 # Oracle BPM Suite 12c Modeling Patterns
 
 <a href="https://www.packtpub.com/application-development/oracle-bpm-suite-12c-modeling-patterns?utm_source=github&utm_medium=repository&utm_campaign=9781849689021 "><img src="https://dz13w8afd47il.cloudfront.net/sites/default/files/imagecache/ppv4_main_book_cover/9021EN_Oracle%20BPM%20Suite%2012c%20Modeling%20Patterns_Cover.jpg" alt="Oracle BPM Suite 12c Modeling Patterns" height="256px" align="right"></a>
